@@ -5,9 +5,6 @@
     lua-language-server
     yaml-language-server
     ruby_3_3
-    ruby_3_3.withPackages (p: with p; [
-      solargraph
-    ])
     vscode-langservers-extracted
     prettierd
     shfmt
