@@ -19,6 +19,7 @@
     playerctl
     # zeroad
     gimp
+    nwg-displays
     gthumb
     feh
     libnotify
