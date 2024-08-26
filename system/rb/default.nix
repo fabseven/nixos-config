@@ -11,13 +11,6 @@
     firewall.allowedTCPPorts = [ 22 80 443 ];
   };
 
-  stylix.fonts.sizes = lib.mkForce {
-    applications = 14;
-    desktop = 14;
-    popups = 15;
-    terminal = 15;
-  };
-
   programs.nm-applet.enable = true;
 
   powerManagement.enable = true;
