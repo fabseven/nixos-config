@@ -2,7 +2,7 @@
   imports = [
     ../modules/common.nix
     ../modules/bluetooth.nix
-    ./hardware-configuration.nix
+    ./hardware.nix
   ];
 
   environment.systemPackages = with pkgs; [ powertop libinput acpi ];
