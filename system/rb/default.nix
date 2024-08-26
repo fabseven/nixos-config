@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, lib ... }: {
   imports = [
     ../modules/common.nix
     ../modules/bluetooth.nix
