@@ -4,8 +4,8 @@
       mainBar = {
         modules-right = [
           #"cpu"
-          "temperature#cpu"
-          "custom/ectool-fan"
+          #"temperature#cpu"
+          #"custom/ectool-fan"
           "memory"
           "network"
           "pulseaudio"
