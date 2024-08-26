@@ -1,0 +1,17 @@
+{ ... }: {
+  users.users = {
+    billy = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" "video" "nginx" ];
+      homeMode = "750"; # for nginx to read assets
+    };
+  };
+
+  security.sudo = {
+    execWheelOnly = true;
+    wheelNeedsPassword = true;
+    extraConfig = ''
+      Defaults        timestamp_timeout=600
+    '';
+  };
+}

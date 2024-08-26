@@ -1,30 +1,43 @@
 {
-	description = "NixOS configuration";
+  description = "Yoinked nixos";
 
-	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
-		home-manager = {
-			url = "github:nix-community/home-manager/release-23.11";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-		nixos-hardware.url = "github:NixOS/nixos-hardware";
-	};
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
+    # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
 
-	outputs = inputs@{ nixpkgs, nixos-hardware, home-manager, ... }: {
-		nixosConfigurations = {
-			poopi = nixpkgs.lib.nixosSystem {
-				system = "x86_64-linux";
-				modules = [
-					./configuration.nix
-						home-manager.nixosModules.home-manager
-						{
-							home-manager.useGlobalPkgs = true;
-							home-manager.useUserPackages = true;
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-							home-manager.users.dk = import ./home.nix;
-						}
-				];
-			};
-		};
-	};
+    stylix = {
+      url = "github:danth/stylix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+  };
+
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }@inputs:
+    let
+      inherit (self) outputs;
+      inherit (nixpkgs.lib) nixosSystem;
+      specialArgs = { inherit inputs outputs; };
+    in {
+      nixosConfigurations = {
+        rb = nixosSystem {
+          specialArgs = specialArgs;
+          modules = [
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.users.billy = import ./home/rb;
+              home-manager.extraSpecialArgs = specialArgs;
+            }
+            ./system/rb
+          ];
+        };
+      };
+    };
 }
