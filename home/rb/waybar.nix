@@ -3,7 +3,7 @@
     settings = {
       mainBar = {
         modules-right = [
-          "cpu"
+          #"cpu"
           "temperature#cpu"
           "custom/ectool-fan"
           "memory"
