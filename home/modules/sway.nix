@@ -20,17 +20,17 @@ with config.lib.stylix.colors.withHashtag; {
         names = [ "DejaVu Sans" ];
         size = 0.5;
       };
-      modifier = "Mod1";
+      modifier = "Mod4";
       terminal = "kitty -1";
-      left = "n";
-      right = "e";
-      down = "h";
-      up = "l";
+      left = "h";
+      right = "l";
+      down = "j";
+      up = "k";
       menu = "bemenu-run -H 40 | xargs swaymsg exec --";
       input = {
         "type:keyboard" = {
           xkb_layout = "us,fi";
-          xkb_variant = "qwerty,";
+          xkb_variant = "qwerty";
           repeat_rate = "64";
           repeat_delay = "180";
         };
@@ -92,8 +92,6 @@ with config.lib.stylix.colors.withHashtag; {
         "${modifier}+shift+Down" = "move down";
         "${modifier}+shift+Up" = "move up";
         "${modifier}+shift+Right" = "move right";
-
-        "F2" = "exec 'systemctl --user restart lila'";
 
         "${modifier}+${left}" = "focus left";
         "${modifier}+${right}" = "focus right";

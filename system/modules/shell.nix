@@ -5,7 +5,7 @@
   environment.variables = {
     EDITOR = "nvim";
     TERMINAL = "wezterm -1";
-    TERM = "xterm-wezterm";
+    TERM = "xterm-kitty";
   };
 
   environment.sessionVariables = rec {

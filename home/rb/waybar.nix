@@ -15,7 +15,7 @@
           "idle_inhibitor"
           # "custom/lan-mouse"
           "tray"
-          "clock#utc"
+          #"clock#utc"
           "clock#local"
         ];
         "cpu" = {
@@ -52,9 +52,9 @@
             warning = 50;
             critical = 25;
           };
-          format = "{icon} {capacity}% {power:2.1f}W";
-          format-charging = " {capacity}% {power:2.1f}W";
-          format-plugged = " {capacity}% {power:2.1f}W";
+          format = "{icon} {capacity}%";
+          format-charging = " {capacity}%";
+          format-plugged = " {capacity}%";
           format-alt = "{icon} {time}";
           format-icons = [ "" "" "" "" "" ];
         };

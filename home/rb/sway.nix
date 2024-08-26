@@ -16,7 +16,7 @@
         inherit (config.wayland.windowManager.sway.config) modifier menu;
         spotify = "${pkgs.playerctl}/bin/playerctl -p spotify";
       in lib.mkAfter {
-        "${modifier}+equal" = "exec ${menu}";
+        "${modifier}+d" = "exec ${menu}";
         "XF86MonBrightnessDown" = "exec 'light -U 10'";
         "XF86MonBrightnessUp" = "exec 'light -A 10'";
         "XF86AudioRaiseVolume" =

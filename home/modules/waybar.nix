@@ -30,10 +30,6 @@
             <tt><small>{calendar}</small></tt>'';
           format-alt = "{:%Y-%m-%d}";
         };
-        "clock#utc" = {
-          timezone = "UTC";
-          format-alt = "{:%Y-%m-%d}";
-        };
         "memory" = {
           format = " {percentage}%  {swapPercentage}%";
           states = {
@@ -109,9 +105,6 @@
         }
         #workspaces button.urgent {
           background-color: @base09;
-        }
-        #clock.utc {
-          margin: 0;
         }
         #clock.local {
           font-weight: bold;
