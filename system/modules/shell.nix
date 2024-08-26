@@ -27,7 +27,7 @@
     keychain
     zoxide
     fira-code
-    fire-code-nerdfont
+    fira-code-nerdfont
     nerdfonts
     noto-fonts-color-emoji
     pass
