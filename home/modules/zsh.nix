@@ -10,9 +10,6 @@
 
     constants = # sh
       ''
-
-        # Load private configuration
-        source ~/.zshrc.local
         # tells the cd command to look in this colon-separated list of directories for your destination.
         CDPATH=$HOME:..
         # https://github.com/zsh-users/zsh-autosuggestions?tab=readme-ov-file#suggestion-strategy
