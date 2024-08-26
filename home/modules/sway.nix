@@ -97,8 +97,6 @@ with config.lib.stylix.colors.withHashtag; {
         "${modifier}+${right}" = "focus right";
         "${modifier}+${down}" = "focus down";
         "${modifier}+${up}" = "focus up";
-        "${modifier}+o" = "focus parent";
-        "${modifier}+i" = "focus child";
 
         "${modifier}+shift+minus" = "move scratchpad";
         "${modifier}+minus" = "scratchpad show";

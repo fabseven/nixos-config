@@ -27,7 +27,7 @@
         "XF86AudioPlay" = "exec '${spotify} play-pause'";
         "XF86AudioNext" = "exec '${spotify} next'";
         "XF86AudioPrev" = "exec '${spotify} previous'";
-        "Print" = "exec 'screenshot.sh clipboard'";
+        "${modifier}+shift+s" = "exec 'screenshot.sh clipboard'";
       };
     };
   };
