@@ -3,8 +3,8 @@
     settings = {
       mainBar = {
         modules-right = [
-          #"cpu"
-          #"temperature#cpu"
+          "cpu"
+          "temperature#cpu"
           #"custom/ectool-fan"
           "memory"
           "network"
