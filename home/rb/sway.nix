@@ -23,7 +23,8 @@
           "exec 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1.0'";
         "XF86AudioLowerVolume" =
           "exec 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1.0'";
-        "XF86AudioMute" = "exec 'wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle'";
+        "XF86AudioMute" = "exec 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'";
+        "XF86AudioMicMute" = "exec 'wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle'";
         "XF86AudioPlay" = "exec '${spotify} play-pause'";
         "XF86AudioNext" = "exec '${spotify} next'";
         "XF86AudioPrev" = "exec '${spotify} previous'";

@@ -21,6 +21,9 @@
   # Enable touchpad support
   services.libinput.enable = true;
 
+	# Steam
+	programs.steam.enable = true;
+
   # Display backlight
   programs.light.enable = true;
   hardware.sensor.iio.enable = true;
