@@ -2,7 +2,7 @@
 
 let
   colorScheme = nix-colors.colorSchemes.paraiso;
-  wallpaper = /home/billy/.config/swaylock/digital.jpg;
+  wallpaper = ../digital.jpg;
 in {
   home.file.".config/swaylock/config".text = ''
     daemonize
