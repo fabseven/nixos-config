@@ -1,74 +1,34 @@
-{
-  config,
-  lib,
-  pkgs,
-  namespace,
-  ...
-}:
+{ pkgs, config, ... }:
+
 let
-  inherit (lib) mkIf;
-  inherit (lib) mkBoolOpt;
-
-in
-{
-  config = mkIf cfg.enable {
-    programs.swaylock = {
-      enable = true;
-
-      package = pkgs.swaylock-effects;
-      settings = {
-        ignore-empty-password = true;
-        disable-caps-lock-text = true;
-        font = "JetBrains Mono";
-        grace = 300;
-
-        clock = true;
-        timestr = "%R";
-        datestr = "%a, %e of %B";
-
-        fade-in = "0.2";
-
-        effect-blur = "10x2";
-        effect-scale = "0.1";
-
-        indicator = true;
-        indicator-radius = 240;
-        indicator-thickness = 20;
-        indicator-caps-lock = true;
-
-        key-hl-color = "#8aadf4";
-        bs-hl-color = "#ed8796";
-        caps-lock-key-hl-color = "#f5a97f";
-        caps-lock-bs-hl-color = "#ed8796";
-
-        separator-color = "#181926";
-
-        inside-color = "#24273a";
-        inside-clear-color = "#24273a";
-        inside-caps-lock-color = "#24273a";
-        inside-ver-color = "#24273a";
-        inside-wrong-color = "#24273a";
-
-        ring-color = "#1e2030";
-        ring-clear-color = "#8aadf4";
-        ring-caps-lock-color = "231f20D9";
-        ring-ver-color = "#1e2030";
-        ring-wrong-color = "#ed8796";
-
-        line-color = "#8aadf4";
-        line-clear-color = "#8aadf4";
-        line-caps-lock-color = "#f5a97f";
-        line-ver-color = "#181926";
-        line-wrong-color = "#ed8796";
-
-        text-color = "#8aadf4";
-        text-clear-color = "#24273a";
-        text-caps-lock-color = "#f5a97f";
-        text-ver-color = "#24273a";
-        text-wrong-color = "#24273a";
-
-        debug = true;
-      };
-    };
-  };
+  palette = config.colorScheme.palette;
+in {
+  home.file.".config/swaylock/config".text = ''
+    daemonize
+    clock
+    indicator
+    datestr=%a, %B %e
+    timestr=%I:%M %p
+    effect-blur=5x5
+    indicator-caps-lock
+    show-failed-attempts
+    ignore-empty-password
+    indicator-thickness=10
+    indicator-radius=120
+    hide-keyboard-layout
+    ring-color=${palette.base0D}
+    key-hl-color=${palette.base00}
+    line-color=00000000
+    inside-color=00000088
+    inside-clear-color=00000088
+    separator-color=00000000
+    ring-ver-color=${palette.base04}
+    inside-ver-color=00000000
+    text-color=${palette.base05}
+    text-ver-color=${palette.base05}
+    text-clear-color=${palette.base05}
+    bs-hl-color=${palette.base0F}
+    ring-clear-color=${palette.base0F}
+    font=JetBrains Mono
+  '';
 }
