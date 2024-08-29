@@ -2,7 +2,6 @@
 
 let
   colorScheme = nix-colors.colorSchemes.paraiso;
-  palette = config.colorScheme.palette;
 in {
   home.file.".config/swaylock/config".text = ''
     daemonize
@@ -17,7 +16,7 @@ in {
     indicator-thickness=10
     indicator-radius=120
     hide-keyboard-layout
-    ring-color=${palette.base0D}
+    ring-color=${config.colorScheme.palette.base05}
     key-hl-color=${palette.base00}
     line-color=00000000
     inside-color=00000088
