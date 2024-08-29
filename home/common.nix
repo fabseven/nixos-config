@@ -10,6 +10,7 @@
     ./modules/waybar.nix
     ./modules/xdg.nix
     ./modules/zsh.nix
+    ./modules/swaylock.nix
     # ./modules/lan-mouse.nix
     # ./services/gammarelay.nix
   ];
