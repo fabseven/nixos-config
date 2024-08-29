@@ -19,9 +19,10 @@
         home-manager.follows = "home-manager";
       };
     };
+    nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-colors, ... }@inputs:
     let
       inherit (self) outputs;
       inherit (nixpkgs.lib) nixosSystem;
@@ -30,6 +31,7 @@
       nixosConfigurations = {
         rb = nixosSystem {
           specialArgs = specialArgs;
+          extraSpecialArgs = { inherit nix-colors; };
           modules = [
             home-manager.nixosModules.home-manager
             {
