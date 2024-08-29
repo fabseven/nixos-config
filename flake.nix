@@ -26,7 +26,11 @@
     let
       inherit (self) outputs;
       inherit (nixpkgs.lib) nixosSystem;
-      specialArgs = { inherit inputs outputs nix-colors; };
+      specialArgs = {
+        inherit inputs;
+        inherit outputs;
+        inherit nix-colors;
+      };
 
     in {
       nixosConfigurations = {
