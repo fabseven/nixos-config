@@ -11,7 +11,7 @@ in {
     datestr=%a, %B %e
     timestr=%I:%M %p
     effect-blur=5x5
-    wallpaper=
+    wallpaper=${wallpaper}
     indicator-caps-lock
     show-failed-attempts
     ignore-empty-password
