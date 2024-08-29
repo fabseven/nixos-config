@@ -13,7 +13,7 @@ let
 in
 {
   options.programs.graphical.screenlockers.swaylock = {
-    enable = mkBoolOpt false "Whether to enable swaylock in the desktop environment.";
+    enable = true;
   };
 
   config = mkIf cfg.enable {
