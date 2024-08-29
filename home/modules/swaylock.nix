@@ -1,7 +1,8 @@
 { pkgs, config, nix-colors, ... }:
 
 let
-  palette = nix-colors.colorSchemes.paraiso;
+  colorScheme = nix-colors.colorSchemes.paraiso;
+  palette = config.colors.palette;
 in {
   home.file.".config/swaylock/config".text = ''
     daemonize
