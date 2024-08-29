@@ -16,19 +16,19 @@ in {
     indicator-thickness=10
     indicator-radius=120
     hide-keyboard-layout
-    ring-color=${config.colorScheme.palette.base05}
-    key-hl-color=${config.colorScheme.palette.base00}
+    ring-color=${palette.base0D}
+    key-hl-color=${palette.base00}
     line-color=00000000
     inside-color=00000088
     inside-clear-color=00000088
     separator-color=00000000
-    ring-ver-color=${config.colorScheme.palette.base04}
+    ring-ver-color=${palette.base04}
     inside-ver-color=00000000
-    text-color=${config.colorScheme.palette.base05}
-    text-ver-color=${config.colorScheme.palette.base05}
-    text-clear-color=${config.colorScheme.palette.base05}
-    bs-hl-color=${config.colorScheme.palette.base0F}
-    ring-clear-color=${config.colorScheme.palette.base0F}
+    text-color=${palette.base05}
+    text-ver-color=${palette.base05}
+    text-clear-color=${palette.base05}
+    bs-hl-color=${palette.base0F}
+    ring-clear-color=${palette.base0F}
     font=JetBrains Mono
   '';
 }
