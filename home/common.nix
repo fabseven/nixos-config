@@ -16,7 +16,7 @@
   ];
 
   home = rec {
-    username = "dk";
+    username = "billy";
     homeDirectory = "/home/${username}";
     file.".local/bin".source =
       config.lib.file.mkOutOfStoreSymlink "${homeDirectory}/nixos-config/scripts";
