@@ -12,10 +12,6 @@ let
   cfg = config.programs.graphical.screenlockers.swaylock;
 in
 {
-  options.programs.graphical.screenlockers.swaylock = {
-    enable = true;
-  };
-
   config = mkIf cfg.enable {
     programs.swaylock = {
       enable = true;
