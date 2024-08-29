@@ -28,7 +28,6 @@
       inherit (nixpkgs.lib) nixosSystem;
       specialArgs = { inherit inputs outputs nix-colors; };
 
-      nixColorsContrib = nix-colors.lib.contrib { inherit pkgs; };
     in {
       nixosConfigurations = {
         rb = nixosSystem {
