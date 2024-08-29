@@ -2,6 +2,7 @@
 
 let
   colorScheme = nix-colors.colorSchemes.paraiso;
+  wallpaper = /home/billy/.config/swaylock/digital.jpg
 in {
   home.file.".config/swaylock/config".text = ''
     daemonize
@@ -10,7 +11,7 @@ in {
     datestr=%a, %B %e
     timestr=%I:%M %p
     effect-blur=5x5
-    wallpaper=${$HOME/.config/swaylock/digital.jpg}
+    wallpaper=
     indicator-caps-lock
     show-failed-attempts
     ignore-empty-password
