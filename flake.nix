@@ -31,7 +31,6 @@
       nixosConfigurations = {
         rb = nixosSystem {
           specialArgs = specialArgs;
-          extraSpecialArgs = { inherit nix-colors; };
           modules = [
             home-manager.nixosModules.home-manager
             {
