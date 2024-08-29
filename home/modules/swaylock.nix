@@ -9,7 +9,6 @@ let
   inherit (lib) mkIf;
   inherit (lib) mkBoolOpt;
 
-  cfg = config.programs.graphical.screenlockers.swaylock;
 in
 {
   config = mkIf cfg.enable {
