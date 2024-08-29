@@ -10,6 +10,7 @@ in {
     datestr=%a, %B %e
     timestr=%I:%M %p
     effect-blur=5x5
+    wallpaper=digital.jpg
     indicator-caps-lock
     show-failed-attempts
     ignore-empty-password
