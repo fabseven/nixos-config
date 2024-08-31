@@ -31,7 +31,6 @@
         inherit outputs;
         inherit nix-colors;
       };
-
     in {
       nixosConfigurations = {
         rb = nixosSystem {
