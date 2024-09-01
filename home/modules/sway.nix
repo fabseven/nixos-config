@@ -9,6 +9,10 @@ with config.lib.stylix.colors.withHashtag; {
 
   programs.bemenu = { enable = true; };
 
+	programs.rofi = {
+		enable = true;
+	};
+
   gtk = { enable = true; };
 
   wayland.windowManager.sway = {
@@ -17,7 +21,7 @@ with config.lib.stylix.colors.withHashtag; {
     checkConfig = false;
     config = rec {
       fonts = lib.mkForce {
-        names = [ "DejaVu Sans" ];
+        names = [ "JetBrains Mono" ];
         size = 0.5;
       };
       modifier = "Mod4";
@@ -26,7 +30,7 @@ with config.lib.stylix.colors.withHashtag; {
       right = "l";
       down = "j";
       up = "k";
-      menu = "bemenu-run -H 40 | xargs swaymsg exec --";
+      menu = "wofi -show drun | xargs swaymsg exec --";
       input = {
         "type:keyboard" = {
           xkb_layout = "us,fi";

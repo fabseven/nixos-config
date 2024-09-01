@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/dk/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/dk/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/dk/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/dk/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/dk/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
+local package_path_str = "/home/dk/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?.lua;/home/dk/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?/init.lua;/home/dk/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?.lua;/home/dk/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/dk/.cache/nvim/packer_hererocks/2.1.1713773202/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -115,7 +115,7 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["copilot-cmp"] = {
-    config = { "\27LJ\2\ns\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\nevent\1\0\1\14fix_pairs\2\1\3\0\0\16InsertEnter\14LspAttach\nsetup\16copilot_cmp\frequire\0" },
+    config = { "\27LJ\2\nz\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\nevent\1\0\2\14fix_pairs\2\nevent\0\1\3\0\0\16InsertEnter\14LspAttach\nsetup\16copilot_cmp\frequire\0" },
     load_after = {
       ["copilot.lua"] = true
     },
@@ -127,7 +127,7 @@ _G.packer_plugins = {
   ["copilot.lua"] = {
     after = { "copilot-cmp" },
     commands = { "Copilot" },
-    config = { "\27LJ\2\n‰\4\0\0\5\0\16\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\0025\3\n\0005\4\v\0=\4\5\3=\3\f\0025\3\r\0=\3\14\0024\3\0\0=\3\15\2B\0\2\1K\0\1\0\26server_opts_overrides\14filetypes\1\0\n\ago\2\6.\1\bcvs\1\bsvn\1\rhgcommit\1\14gitrebase\1\14gitcommit\1\thelp\1\rmarkdown\2\tyaml\1\15suggestion\1\0\6\tnext\n<M-]>\16accept_line\1\fdismiss\n<C-]>\tprev\n<M-[>\vaccept\n<M-l>\16accept_word\1\1\0\3\fenabled\1\17auto_trigger\2\rdebounce\3ô\3\npanel\1\0\1\25copilot_node_command\tnode\vlayout\1\0\2\rposition\vbottom\nratio\4æÌ™³\6æÌ™ÿ\3\vkeymap\1\0\5\frefresh\agr\14jump_prev\a[[\14jump_next\a]]\vaccept\n<C-N>\topen\n<C-t>\1\0\2\17auto_refresh\2\fenabled\2\nsetup\fcopilot\frequire\0" },
+    config = { "\27LJ\2\nÖ\4\0\0\5\0\16\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\0025\3\n\0005\4\v\0=\4\5\3=\3\f\0025\3\r\0=\3\14\0024\3\0\0=\3\15\2B\0\2\1K\0\1\0\26server_opts_overrides\14filetypes\1\0\n\rhgcommit\1\14gitrebase\1\14gitcommit\1\thelp\1\rmarkdown\2\tyaml\1\6.\1\ago\2\bcvs\1\bsvn\1\15suggestion\1\0\6\fdismiss\n<C-]>\vaccept\n<M-l>\tprev\n<M-[>\16accept_word\1\16accept_line\1\tnext\n<M-]>\1\0\4\17auto_trigger\2\rdebounce\3ô\3\vkeymap\0\fenabled\1\npanel\1\0\5\npanel\0\15suggestion\0\26server_opts_overrides\0\25copilot_node_command\tnode\14filetypes\0\vlayout\1\0\2\rposition\vbottom\nratio\4æÌ™³\6æÌ™ÿ\3\vkeymap\1\0\5\frefresh\agr\topen\n<C-t>\14jump_next\a]]\vaccept\n<C-N>\14jump_prev\a[[\1\0\4\vkeymap\0\vlayout\0\17auto_refresh\2\fenabled\2\nsetup\fcopilot\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
