@@ -3,6 +3,6 @@ NixOS dotfiles that are compiled from different sources.
 Still a work in progress.
 
 TODOs:
-- [] Add swaylock support
-- [] Add syncthing support
-- [] 
+- [ ] Add swaylock support
+- [ ] Add syncthing support
+- [ ] Remove bemenu and add rofi instead
