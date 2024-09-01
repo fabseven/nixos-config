@@ -1,6 +1,6 @@
 
 {
-  description = "Yoinked nixo";
+  description = "Yoinked nixos";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -38,10 +38,21 @@
           modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.users.billy = import ./home/rb;
+              home-manager.users.dk = import ./home/rb;
               home-manager.extraSpecialArgs = specialArgs;
             }
             ./system/rb
+          ];
+        };
+        thinkpad = nixosSystem {
+          specialArgs = specialArgs;
+          modules = [
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.users.dk = import ./home/thinkpad;
+              home-manager.extraSpecialArgs = specialArgs;
+            }
+            ./system/thinkpad
           ];
         };
       };

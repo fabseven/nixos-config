@@ -1,6 +1,6 @@
 { ... }: {
   users.users = {
-    billy = {
+    dk = {
       isNormalUser = true;
       extraGroups = [ "wheel" "video" "nginx" ];
       homeMode = "750"; # for nginx to read assets
