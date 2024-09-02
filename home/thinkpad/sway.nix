@@ -12,11 +12,6 @@
           pointer_accel = "0.4"; # set mouse sensitivity (between -1 and 1)
         };
       };
-      startup = [
-        {
-          command = "kanshi";
-        }
-      ];
       keybindings = let
         inherit (config.wayland.windowManager.sway.config) modifier menu;
         spotify = "${pkgs.playerctl}/bin/playerctl -p spotify";
