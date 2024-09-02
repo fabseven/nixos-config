@@ -3,18 +3,32 @@ theme = "tsodish"
 [editor]
 bufferline = "always"
 line-number = "relative"
-auto-completion=true
-auto-save=true
-auto-format=true
-text-width=80
+auto-completion = true
+auto-save = true
+auto-format = true
+text-width = 80
 gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
 soft-wrap.enable = true
-soft-wrap.max-indent-retain=80
+soft-wrap.max-indent-retain = 80
 
 [editor.statusline]
-left = ["mode", "spinner", "file-modification-indicator", "read-only-indicator"]
+left = [
+  "mode",
+  "version-control",
+  "spinner",
+  "file-modification-indicator",
+  "read-only-indicator",
+]
 center = ["file-name"]
-right = ["diagnostics", "register", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = [
+  "diagnostics",
+  "register",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
 separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -24,8 +38,8 @@ mode.select = "VISUAL"
 hidden = false
 
 [editor.lsp]
-enable=true
-auto-signature-help=true
+enable = true
+auto-signature-help = true
 display-messages = true
 
 [editor.indent-guides]
@@ -33,3 +47,62 @@ render = true
 character = "┊"
 skip-levels = 1
 
+[keys.select]
+j = "extend_char_left"
+k = "extend_visual_line_down"
+l = "extend_visual_line_up"
+"ö" = "extend_char_right"
+"ß" = "extend_to_line_end"
+"0" = "extend_to_line_start"
+"C-n" = "extend_search_next"
+"C-p" = "extend_search_prev"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+y = "yank_to_clipboard"
+Y = "yank_joined_to_clipboard"
+R = "replace_selections_with_clipboard"
+
+[keys.normal]
+a = [
+  "ensure_selections_forward",
+  "collapse_selection",
+  "move_char_right",
+  "insert_mode",
+]
+j = "move_char_left"
+k = "move_visual_line_down"
+l = "move_visual_line_up"
+K = "join_selections"
+J = "keep_selections"
+X = "extend_line_above"
+"ö" = "move_char_right"
+"ß" = "goto_line_end"
+"0" = "goto_line_start"
+"C-n" = "extend_search_next"
+"C-p" = "extend_search_prev"
+d = "delete_selection_noyank"
+c = "change_selection_noyank"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+y = "yank_to_clipboard"
+Y = "yank_joined_to_clipboard"
+R = "replace_selections_with_clipboard"
+"C-c" = ":write-quit"
+
+[keys.normal.g]
+j = "goto_line_start"
+k = "move_line_down"
+l = "move_line_up"
+a = "code_action"
+q = ":reflow"
+"ö" = "goto_line_end"
+
+[keys.normal.z]
+k = "scroll_down"
+l = "scroll_up"
+
+[keys.normal.space]
+c = "toggle_comments"
+
+[keys.select.space]
+c = "toggle_comments"
