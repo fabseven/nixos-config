@@ -45,7 +45,7 @@ home.packages = with pkgs; [
           }
         ];
       };
-  }
+  };
 
   # I love TOML configs more
   home.file.".config/helix".source = config.lib.file.mkOutOfStoreSymlink
