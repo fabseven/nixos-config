@@ -1,4 +1,8 @@
 { config, lib, ... }: {
+
+  let 
+    wallpaper = ../digital.jpg;
+  in {
   programs.swaylock = {
     enable = true;
     settings = {
@@ -27,4 +31,5 @@
       text-wrong-color = lib.mkDefault "00000000";
     };
   };
+  };  
 }
