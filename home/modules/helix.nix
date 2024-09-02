@@ -35,7 +35,7 @@
     ];
 
     settings = {
-      theme = "tsodish";
+      theme = "../helix/tsodish.toml";
       editor = {
         color-modes = true;
         cursorline = true;
