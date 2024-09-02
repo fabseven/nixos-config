@@ -36,7 +36,6 @@
 
     settings = {
       theme = "tsodish";
-
       editor = {
         color-modes = true;
         cursorline = true;
