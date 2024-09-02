@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
 
-home.packages.programs.helix = with pkgs; [
+home.packages = with pkgs; [
       bash-language-server
       biome
       clang-tools
@@ -30,7 +30,9 @@ home.packages.programs.helix = with pkgs; [
       typescript
       vscode-langservers-extracted
       yaml-language-server
+  ];
 
+  programs.helix = {
       languages = {
         language = [
           {
@@ -43,7 +45,7 @@ home.packages.programs.helix = with pkgs; [
           };
         ];
       };
-  ];
+  }
 
   # I love TOML configs more
   home.file.".config/helix".source = config.lib.file.mkOutOfStoreSymlink
