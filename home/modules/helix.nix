@@ -31,7 +31,8 @@ home.packages = with pkgs; [
       vscode-langservers-extracted
       yaml-language-server
   ];
-  # Too lazy to add it separately
+
+  # I love TOML configs more
   home.file.".config/helix".source = config.lib.file.mkOutOfStoreSymlink
     "${config.home.homeDirectory}/nixos-config/helix";
 }
