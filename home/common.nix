@@ -11,6 +11,7 @@
     ./modules/xdg.nix
     ./modules/zsh.nix
     ./modules/swaylock.nix
+    ./modules/helix.nix
     # ./modules/lan-mouse.nix
     # ./services/gammarelay.nix
   ];
