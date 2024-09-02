@@ -36,6 +36,7 @@
     http-server
     meld
     ansible
+    vscode
   ];
 
   programs.java.enable = true;
