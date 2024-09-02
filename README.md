@@ -6,3 +6,4 @@ TODOs:
 - [ ] Add swaylock support
 - [ ] Add syncthing support
 - [x] Remove bemenu and add rofi instead
+- [ ] Add helix support
