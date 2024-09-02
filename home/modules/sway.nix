@@ -7,8 +7,6 @@ with config.lib.stylix.colors.withHashtag; {
   #   fi
   # '';
 
-  programs.bemenu = { enable = true; };
-
 	programs.wofi = {
 		enable = true;
 	};
