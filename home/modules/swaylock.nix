@@ -1,7 +1,7 @@
 { config, ... }: {
   programs.swaylock = {
     enable = true;
-    lib.mkForce.settings = {
+    settings = {
       color = "111111";
       ignore-empty-password = true;
       indicator-radius = "100";
