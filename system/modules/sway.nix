@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     sway
     glib # gsettings
+    swaylock
     swayidle
     grim
     slurp
