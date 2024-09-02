@@ -5,4 +5,4 @@ Still a work in progress.
 TODOs:
 - [ ] Add swaylock support
 - [ ] Add syncthing support
-- [ ] Remove bemenu and add rofi instead
+- [x] Remove bemenu and add rofi instead
