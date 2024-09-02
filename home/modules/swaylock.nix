@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       color = lib.mkDefault "111111";
-      image = lib.mkForce "../wallpaper.jpg";
+      image = lib.mkForce "../digital.jpg";
       ignore-empty-password = true;
       indicator-radius = "100";
       indicator-thickness = "10";
