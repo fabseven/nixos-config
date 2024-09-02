@@ -1,5 +1,8 @@
 { config, pkgs, ... }: {
+  home.file.".config/helix".source = config.lib.file.mkOutOfStoreSymlink
+    "${config.home.homedirectory}/nixos-config/helix";
   home-manager.users.${config.user}.programs.helix = with pkgs; {
+
     enable = true;
     defaultEditor = true;
     extraPackages = [
@@ -35,7 +38,7 @@
     ];
 
     settings = {
-      theme = "../helix/tsodish.toml";
+      theme = "./tsodish.toml";
       editor = {
         color-modes = true;
         cursorline = true;
