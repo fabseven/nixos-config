@@ -6,7 +6,7 @@
       ignore-empty-password = true;
       indicator-radius = "100";
       indicator-thickness = "10";
-      inside-clear-color = "222222";
+      inside-clear-color = lib.mkDefault "222222";
       inside-color = "1d2021";
       inside-ver-color = "ff99441c";
       inside-wrong-color = "ffffff1c";
