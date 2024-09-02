@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   home.file.".config/helix".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homedirectory}/nixos-config/helix";
+    "${config.home.homeDirectory}/nixos-config/helix";
 # home-manager.users.${config.user}.programs.helix = with pkgs; {
 #   enable = true;
 #   defaultEditor = true;
