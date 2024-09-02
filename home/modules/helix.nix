@@ -42,7 +42,7 @@ home.packages = with pkgs; [
               command = "goimports";
             };
             auto-format = true;
-          };
+          }
         ];
       };
   }
