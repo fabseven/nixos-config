@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     lua-language-server
     yaml-language-server
-    ruby_3_3
     vscode-langservers-extracted
     prettierd
     shfmt
@@ -14,5 +13,5 @@
 
   # Use the external dotfiles nvim config for quicker hacking
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homeDirectory}/nixos-config/nvim";
+    "${config.home.homedirectory}/nixos-config/nvim";
 }
