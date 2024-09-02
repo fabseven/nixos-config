@@ -1,8 +1,10 @@
 { config, lib, ... }: {
   programs.swaylock = {
+    wallpaper = "../digital.jpg";
     enable = true;
     settings = {
       color = lib.mkDefault "111111";
+      image = "${wallpaper}";
       ignore-empty-password = true;
       indicator-radius = "100";
       indicator-thickness = "10";
