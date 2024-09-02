@@ -15,6 +15,8 @@
 
     image = ../../home/wallpaper.jpg;
 
+		cursor.size = 18;
+
     fonts = rec {
       sansSerif = {
         package = pkgs.dejavu_fonts;

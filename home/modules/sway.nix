@@ -9,7 +9,7 @@ with config.lib.stylix.colors.withHashtag; {
 
   programs.bemenu = { enable = true; };
 
-	programs.rofi = {
+	programs.wofi = {
 		enable = true;
 	};
 
@@ -30,13 +30,14 @@ with config.lib.stylix.colors.withHashtag; {
       right = "l";
       down = "j";
       up = "k";
-      menu = "wofi -show drun | xargs swaymsg exec --";
+      menu = "wofi --show drun | xargs swaymsg exec --";
       input = {
         "type:keyboard" = {
           xkb_layout = "us,fi";
           xkb_variant = "qwerty";
-          repeat_rate = "64";
-          repeat_delay = "180";
+					xkb_options = "caps:ctrl_modifier";
+          repeat_rate = "50";
+          repeat_delay = "250";
         };
       };
       colors = let
@@ -120,6 +121,7 @@ with config.lib.stylix.colors.withHashtag; {
         "${modifier}+8" = "workspace number 8";
         "${modifier}+9" = "workspace number 9";
         "${modifier}+0" = "workspace number 10";
+
         # Move focused container to workspace
         "${modifier}+Shift+1" = "move container to workspace number 1";
         "${modifier}+Shift+2" = "move container to workspace number 2";
