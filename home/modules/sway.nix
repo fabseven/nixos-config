@@ -106,6 +106,8 @@ with config.lib.stylix.colors.withHashtag; {
 
         "${modifier}+shift+r" = "mode resize";
 
+        "${modifier}+0" = "exec 'swaylock & systemctl suspend'";
+
         # "${modifier}+t" = "splitv; exec kitty; resize set height 200 px";
 
         # Switch to workspace
