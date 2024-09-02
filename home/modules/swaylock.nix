@@ -1,13 +1,12 @@
 { config, lib, ... }: {
 
-  let 
-    wallpaper = ../digital.jpg;
-  in {
+  wallpaper = ../digital.jpg;
+
   programs.swaylock = {
     enable = true;
     settings = {
       color = lib.mkDefault "111111";
-      image = "../digital.jpg";
+      image = ${wallpaper};
       ignore-empty-password = true;
       indicator-radius = "100";
       indicator-thickness = "10";
@@ -31,5 +30,4 @@
       text-wrong-color = lib.mkDefault "00000000";
     };
   };
-  };  
 }
