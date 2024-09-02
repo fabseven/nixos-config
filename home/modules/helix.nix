@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
 
-home.packages = with pkgs; [
+home.packages.programs.helix = with pkgs; [
       bash-language-server
       biome
       clang-tools
@@ -30,18 +30,20 @@ home.packages = with pkgs; [
       typescript
       vscode-langservers-extracted
       yaml-language-server
-  ];
 
-  programs.helix = {
-    settings = {
-    languages = {
-      language-server.gpt = {
-        command = "helix-gpt";
-        args = [ "--handler" "copilot" ];
+      languages = {
+        language = [
+          {
+            name = "go";
+            language-servers = [ "gopls" "golangci-lint-lsp" "gpt"];
+            formatter = {
+              command = "goimports";
+            };
+            auto-format = true;
+          };
+        ];
       };
-    };
-    };
-  };
+  ];
 
   # I love TOML configs more
   home.file.".config/helix".source = config.lib.file.mkOutOfStoreSymlink
