@@ -2,7 +2,7 @@
   programs.swaylock = {
     enable = true;
     settings = {
-      color = "111111";
+      color = lib.mkDefault "111111";
       ignore-empty-password = true;
       indicator-radius = "100";
       indicator-thickness = "10";
