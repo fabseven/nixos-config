@@ -13,5 +13,5 @@
 
   # Use the external dotfiles nvim config for quicker hacking
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homedirectory}/nixos-config/nvim";
+    "${config.home.homeDirectory}/nixos-config/nvim";
 }
