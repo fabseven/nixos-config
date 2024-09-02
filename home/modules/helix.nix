@@ -32,6 +32,17 @@ home.packages = with pkgs; [
       yaml-language-server
   ];
 
+  programs.helix = {
+    settings = {
+    languages = {
+      language-server.gpt = {
+        command = "helix-gpt";
+        args = [ "--handler" "copilot" ];
+      };
+    };
+    };
+  };
+
   # I love TOML configs more
   home.file.".config/helix".source = config.lib.file.mkOutOfStoreSymlink
     "${config.home.homeDirectory}/nixos-config/helix";
