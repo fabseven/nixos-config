@@ -24,5 +24,5 @@ in {
     inside-ver-color=00000000
     font=JetBrains Mono
   '';  
-};
+}
 
