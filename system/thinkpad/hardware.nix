@@ -15,12 +15,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/972056c2-380f-4b31-87fa-51f24ec0fed3";
+    { device = "/dev/disk/by-uuid/a833f973-1f80-4c66-a256-66ce3b8dcaa1";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/563A-FD05";
+    { device = "/dev/disk/by-uuid/B751-1946";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077"];
     };
