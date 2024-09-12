@@ -4,6 +4,7 @@
     sway
     glib # gsettings
     swaylock
+		hyprlock
     swayidle
     grim
     slurp

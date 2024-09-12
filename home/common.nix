@@ -10,7 +10,8 @@
     ./modules/waybar.nix
     ./modules/xdg.nix
     ./modules/zsh.nix
-    ./modules/swaylock.nix
+/*     ./modules/swaylock.nix */
+    ./modules/hyprlock.nix
     ./modules/helix.nix
     # ./modules/lan-mouse.nix
     # ./services/gammarelay.nix
