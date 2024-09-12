@@ -1,34 +1,30 @@
 { config, lib, ... }: {
 
-  programs.swaylock = {
-    enable = true;
-    settings = {
-      clock = true;
-      timestr = "%R";
-      datestr = "%a, %e of %B";
-      color = lib.mkDefault "111111";
-      image = lib.mkDefault "../wallpaper.jpg";
-      ignore-empty-password = true;
-      indicator-radius = "100";
-      indicator-thickness = "10";
-      inside-clear-color = lib.mkDefault "222222";
-      inside-color = lib.mkDefault "1d2021";
-      inside-ver-color = lib.mkDefault "ff99441c";
-      inside-wrong-color = lib.mkDefault "ffffff1c";
-      key-hl-color = lib.mkDefault "ffffff80";
-      line-clear-color = lib.mkDefault "00000000";
-      line-color = lib.mkDefault "00000000";
-      line-ver-color = lib.mkDefault "00000000";
-      line-wrong-color = lib.mkDefault "00000000";
-      ring-clear-color = lib.mkDefault "ff994430";
-      ring-color = lib.mkDefault "282828";
-      ring-ver-color = lib.mkDefault "ffffff00";
-      ring-wrong-color = lib.mkDefault "ffffff55";
-      separator-color = lib.mkDefault "22222260";
-      text-caps-lock-color = lib.mkDefault "00000000";
-      text-clear-color = lib.mkDefault "222222";
-      text-ver-color = lib.mkDefault "00000000";
-      text-wrong-color = lib.mkDefault "00000000";
-    };
+programs.swaylock.enable = true;
+
+let
+  wallpaper = ../digital.jpg;
+in {
+  home.file.".config/swaylock/config".text = ''
+    daemonize
+    clock
+    indicator
+    datestr=%a, %B %e
+    timestr=%I:%M %p
+    effect-blur=5x5
+    wallpaper=${wallpaper}
+    indicator-caps-lock
+    show-failed-attempts
+    ignore-empty-password
+    indicator-thickness=10
+    indicator-radius=120
+    hide-keyboard-layout
+    line-color=00000000
+    inside-color=00000088
+    inside-clear-color=00000088
+    separator-color=00000000
+    inside-ver-color=00000000
+    font=JetBrains Mono
+  '';  
   };
 }
