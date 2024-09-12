@@ -34,5 +34,6 @@
 		slack
 		slack-term
 		kanshi
+    fastfetch
   ];
 }
