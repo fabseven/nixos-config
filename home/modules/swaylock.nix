@@ -6,7 +6,6 @@ in {
   home.file.".config/swaylock/config".text = ''
     daemonize
     font=JetBrains Mono
-    font-size 10
     color=1e1e2e
     bs-hl-color=f5e0dc
     caps-lock-bs-hl-color=f5e0dc
