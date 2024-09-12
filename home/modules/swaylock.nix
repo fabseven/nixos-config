@@ -3,6 +3,9 @@
   programs.swaylock = {
     enable = true;
     settings = {
+      clock = true;
+      timestr = "%R";
+      datestr = "%a, %e of %B";
       color = lib.mkDefault "111111";
       image = lib.mkDefault "../digital.jpg";
       ignore-empty-password = true;
