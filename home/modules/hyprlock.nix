@@ -52,7 +52,7 @@
           dots_spacing = 0.2; # Scale of dots' absolute size, 0.0 - 1.0
           dots_center = true;
           font_size = 18;
-          font_family = "SFProDisplay Nerd Font Bold";
+          font_family = "JetBrains Mono";
           position = "0, -180";
           halign = "center";
           valign = "center";
