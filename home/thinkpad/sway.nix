@@ -52,7 +52,7 @@
       }
       {
         timeout = 1200;
-        command = "${pkgs.systemd}/bin/systemctl suspend";
+        command = "${pkgs.systemd}/bin/systemctl suspend & swaylock";
         inherit resumeCommand;
       }
     ];
