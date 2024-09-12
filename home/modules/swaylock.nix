@@ -10,6 +10,9 @@ in {
     bs-hl-color=f5e0dc
     caps-lock-bs-hl-color=f5e0dc
     caps-lock-key-hl-color=a6e3a1
+    image=${wallpaper}
+    clock
+    scaling=fill
     inside-color=00000000
     inside-clear-color=00000000
     inside-caps-lock-color=00000000
