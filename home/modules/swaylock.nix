@@ -4,10 +4,8 @@ let
   wallpaper = ../digital.jpg;
 in {
   home.file.".config/swaylock/config".text = ''
+    daemonize
     font=JetBrains Mono
-
-    timestr=%R
-    datestr=%a, %e of %B
 
     wallpaper=${wallpaper}
 
