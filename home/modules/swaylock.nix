@@ -1,4 +1,4 @@
-{ config, lib, ... }: {
+{ config, lib, ... }: 
 
 let
   wallpaper = ../digital.jpg;
@@ -24,5 +24,5 @@ in {
     inside-ver-color=00000000
     font=JetBrains Mono
   '';  
-  };
-}
+};
+
