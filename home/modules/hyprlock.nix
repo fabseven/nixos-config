@@ -26,7 +26,7 @@
           text = ''cmd[update:1000] echo -e "$(date +"%A, %B %d")"'';
           color = "rgba(216, 222, 233, .7)";
           font_size = 28;
-          font_family = "SFProDisplay Nerd Font Bold";
+          font_family = "JetBrains Mono";
           position = "0, 490";
           halign = "center";
           valign = "center";
@@ -86,7 +86,7 @@
         inner_color = "rgba(255, 255, 255, 0.1)";
         font_color = "rgb(200, 200, 200)";
         fade_on_empty = false;
-        font_family = "SFProDisplay Nerd Font Bold";
+        font_family = "JetBrains Mono";
         placeholder_text =
           ''<i><span foreground="##ffffff99">🔒 Enter Pass</span></i>'';
         hide_input = false;
