@@ -1,7 +1,5 @@
 { config, lib, ... }: {
 
-programs.swaylock.enable = true;
-
 let
   wallpaper = ../digital.jpg;
 in {
