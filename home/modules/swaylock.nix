@@ -4,11 +4,16 @@ let
   wallpaper = ../digital.jpg;
 in {
   home.file.".config/swaylock/config".text = ''
-    clock
+    font=JetBrains Mono
+
     timestr=%R
     datestr=%a, %e of %B
 
     wallpaper=${wallpaper}
+
+    screenshots
+
+    fade-in=0.2
 
     effect-blur=20x2
     #effect-greyscale
