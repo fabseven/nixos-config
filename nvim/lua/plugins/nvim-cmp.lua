@@ -208,7 +208,7 @@ end
 
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig/configs'
-local servers = { 'rust_analyzer', 'gopls', 'lua_ls', 'solargraph', 'tsserver', 'pylsp', 'ocamllsp', 'ltex' }
+local servers = { 'rust_analyzer', 'gopls', 'lua_ls', 'solargraph', 'ts_ls', 'pylsp', 'ocamllsp', 'ltex' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		on_attach = on_attach,
