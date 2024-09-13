@@ -55,7 +55,7 @@
           dpms = "on";
         };
         eDP-1 = {
-          disable;
+          disable = true;
         };
       };
 
