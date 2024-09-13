@@ -109,6 +109,8 @@ with config.lib.stylix.colors.withHashtag; {
         "${modifier}+0" = "exec 'swaylock & systemctl suspend'";
         "${modifier}+ctrl+l" = "exec 'swaylock'";
 
+        "${modifier}+m" = "move workspace to output right";
+
         # "${modifier}+t" = "splitv; exec kitty; resize set height 200 px";
 
         # Switch to workspace
