@@ -54,9 +54,6 @@
           adaptive_sync = "off";
           dpms = "on";
         };
-        eDP-1 = {
-          disable = true;
-        };
       };
 
       startup = [
@@ -66,6 +63,9 @@
         }
       ];
     };
+    extraConfig = ''
+      output eDP-1 disable
+    ''; 
   };
 
   services.swayidle = {
