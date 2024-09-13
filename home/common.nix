@@ -13,7 +13,6 @@
     ./modules/swaylock.nix 
     # ./modules/hyprlock.nix
     ./modules/helix.nix
-    ./modules/secrets.nix
     # ./modules/lan-mouse.nix
     # ./services/gammarelay.nix
   ];
