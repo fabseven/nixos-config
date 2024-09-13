@@ -11,6 +11,10 @@
           accel_profile = "adaptive";
           pointer_accel = "0.4"; # set mouse sensitivity (between -1 and 1)
         };
+        "type:pointer" = {
+          accel_profile = "flat";
+          pointer_accel = "0.4";
+        };
       };
       keybindings = let
         inherit (config.wayland.windowManager.sway.config) modifier menu;
