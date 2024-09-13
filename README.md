@@ -9,3 +9,6 @@ TODOs:
 - [ ] Add swaylock with swayidle support
 - [ ] Add syncthing support
 - [ ] Add Ly login manager
+- [ ] Better notifications
+- [ ] Accel speed off of pointers
+- [ ] Monitor setup on work laptop
