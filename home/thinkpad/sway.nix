@@ -35,6 +35,8 @@
         "${modifier}+shift+s" = "exec 'screenshot.sh clipboard'";
       };
 
+      output.eDP-1.disable;
+
       output = {
         HDMI-A-1 = {
           mode = "2560x1440@59.951Hz";
@@ -53,9 +55,6 @@
           scale_filter = "nearest";
           adaptive_sync = "off";
           dpms = "on";
-        };
-        eDP-1 = {
-          disable = "true";
         };
       };
 
