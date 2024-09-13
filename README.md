@@ -8,3 +8,4 @@ TODOs:
 - [ ] Multi monitor support with sway (probably not possible)
 - [ ] Add swaylock with swayidle support
 - [ ] Add syncthing support
+- [ ] Add Ly login manager
