@@ -1,12 +1,12 @@
 { config, pkgs, ...}: {
   home.packages = with pkgs; [
     google-chrome
-    1password-gui
-    1password
+    _1password-gui
+    _1password
   ];
 
-  programs.1password.enable = true;
-  programs.1password-gui = {
+  programs._1password.enable = true;
+  programs._1password-gui = {
     enable = true;
     politPolicyOwners = [ "dk" ]
   };
