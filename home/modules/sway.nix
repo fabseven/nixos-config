@@ -141,7 +141,11 @@ with config.lib.stylix.colors.withHashtag; {
 				{
 					command = "kanshi";
 					always = true;
-				}
+				} 
+        {
+          command = "blueman-applet";
+          always = true;
+        }
 			];
 
       modes = {
