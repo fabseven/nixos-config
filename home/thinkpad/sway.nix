@@ -30,6 +30,13 @@
         "XF86AudioPrev" = "exec '${spotify} previous'";
         "${modifier}+shift+s" = "exec 'screenshot.sh clipboard'";
       };
+
+      startup = [
+        {
+          command = "blueman-applet";
+          always = true;
+        }
+      ];
     };
   };
 
