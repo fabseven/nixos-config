@@ -106,8 +106,8 @@ with config.lib.stylix.colors.withHashtag; {
 
         "${modifier}+shift+r" = "mode resize";
 
-        "${modifier}+0" = "exec 'swaylock & systemctl suspend'";
-        "${modifier}+ctrl+l" = "exec 'swaylock'";
+        "${modifier}+shift+0" = "exec 'swaylock & systemctl suspend'";
+        "${modifier}+0" = "exec 'swaylock'";
 
         "${modifier}+m" = "move workspace to output right";
 
@@ -133,7 +133,6 @@ with config.lib.stylix.colors.withHashtag; {
         "${modifier}+Shift+7" = "move container to workspace number 7";
         "${modifier}+Shift+8" = "move container to workspace number 8";
         "${modifier}+Shift+9" = "move container to workspace number 9";
-        "${modifier}+Shift+0" = "move container to workspace number 10";
         #
         "ctrl+f1" = "exec 'keyboard-switch-notify.sh'";
         "ctrl+f6" = "mode gaming";
