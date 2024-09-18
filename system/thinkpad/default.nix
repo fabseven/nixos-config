@@ -13,10 +13,14 @@
   };
 
   programs.nm-applet.enable = true;
+  programs._1password.enable = true;
+  programs._1password-gui.enable = true;
 
   powerManagement.enable = true;
 
   services.fwupd.enable = true;
+
+  services.gnome.gnome-keyring.enable = true;
 
   # Enable touchpad support
   services.libinput.enable = true;

@@ -31,6 +31,7 @@
     mpv
 		_1password-gui
     _1password
+    gnome-keyring
 		brave
 		slack
 		slack-term

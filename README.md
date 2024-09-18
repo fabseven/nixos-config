@@ -12,3 +12,11 @@ TODOs:
 - [ ] Better notifications
 - [ ] Accel speed off of pointers
 - [ ] Add 1Password proper support with unlockable web extension through tray
+- [ ] Vbox setup, user in vboxusers group
+- [ ] Kanshi setup
+- [ ] Printing support - https://github.com/Qeatrix/nixos-config
+- [ ] Garbage collector for old versions
+- [ ] Firefox setup - https://github.com/Qeatrix/nixos-config 
+- [ ] Powershell scripting
+- [ ] OpenVPN setup
+- [ ] Discord
