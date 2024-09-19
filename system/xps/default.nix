@@ -15,6 +15,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  services.displayManager.ly.enable = true;
+
   programs.nm-applet.enable = true;
   programs._1password.enable = true;
   programs._1password-gui.enable = true;
