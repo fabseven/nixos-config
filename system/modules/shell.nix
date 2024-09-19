@@ -14,7 +14,9 @@
     XDG_DATA_HOME = "$HOME/.local/share";
     XDG_STATE_HOME = "$HOME/.local/state";
     XDG_BIN_HOME = "$HOME/.local/bin";
-    PATH = [ "${XDG_BIN_HOME}" "$HOME/dk/.local/share/coursier/bin" ];
+    PATH = [ "${XDG_BIN_HOME}"
+     "$HOME/dk/.local/share/coursier/bin"
+     "/run/current-system/sw/bin/metals" ];
   };
 
   environment.systemPackages = with pkgs; [
