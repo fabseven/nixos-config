@@ -7,16 +7,18 @@ TODOs:
 - [x] Add helix support
 - [x] Monitor setup on work laptop
 - [x] Add swaylock with swayidle support
-- [ ] Add syncthing support
 - [ ] Add Ly login manager
 - [ ] Better notifications
 - [ ] Accel speed off of pointers
 - [x] Add 1Password proper support with unlockable web extension through tray
-- [ ] Vbox setup, user in vboxusers group
+- [x] Vbox setup, user in vboxusers group
 - [ ] Kanshi setup
 - [ ] Printing support - https://github.com/Qeatrix/nixos-config
 - [ ] Garbage collector for old versions
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config 
 - [ ] Powershell scripting
 - [ ] OpenVPN setup
-- [ ] Discord
+- [ ] Applications
+    - [ ] Discord
+    - [ ] Telegram
+    - [ ] Syncthing

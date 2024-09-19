@@ -25,8 +25,33 @@
 
   services.gnome.gnome-keyring.enable = true;
 
+  # Monitor hotswap
+  systemd.user.services.kanshi = {
+    description = "kanshi daemon";
+    serviceConfig = {
+      Type = "Simple";
+      ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
+    };
+  };
+
   # Enable touchpad support
   services.libinput.enable = true;
+
+  # SSH support
+  services.openssh.enable = true;
+
+  # Printing
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  # Copy the NixOS configuration file and link it from the resulting system
+  # (/run/current-system/configuration.nix). This is useful in case you
+  # accidentally delete configuration.nix.
+  system.copySystemConfiguration = false;
 
 	# Steam
 	programs.steam.enable = true;
@@ -44,6 +69,8 @@
 			driver = pkgs.libfprint-2-tod1-goodix;
 		};
 	};
+
+  environment.localBinInPath = true;
 
 
   virtualisation.virtualbox.host.enable = true;
