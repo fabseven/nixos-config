@@ -33,6 +33,7 @@
     _1password
     gnome-keyring
     google-chrome
+    telegram-desktop
     netflix
 		brave
 		slack
