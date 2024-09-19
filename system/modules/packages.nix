@@ -10,7 +10,7 @@
     ffmpeg
     btop
     firefox
-    google-chrome
+    google-chrome-stable
     unzip
     dtrx
     signal-desktop
