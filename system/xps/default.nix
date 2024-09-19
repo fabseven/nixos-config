@@ -29,15 +29,6 @@
 
   services.gnome.gnome-keyring.enable = true;
 
- # Monitor hotswap
- #systemd.user.services.kanshi = {
- #  description = "kanshi daemon";
- #  serviceConfig = {
- #    Type = "Simple";
- #    ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
- #  };
- #};
-
   # Enable touchpad support
   services.libinput.enable = true;
 
@@ -83,9 +74,9 @@
   #Nvidia drivers
   #services.xserver.videoDrivers = ["nvidia"];
 
-# hardware.graphics = {
-#   enable = true;
-# };
+ hardware.graphics = {
+   enable = true;
+ };
 
 # hardware.nvidia = {
 #   modesetting.enable = true;

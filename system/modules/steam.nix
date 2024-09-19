@@ -17,7 +17,7 @@ in {
 		# optionally enable 32bit pulseaudio support if pulseaudio is enabled
 		hardware.pulseaudio.support32Bit = config.hardware.pulseaudio.enable;
 
-		hardware.graphics.enable32Bit = config.hardware.graphics.enable;
+		#hardware.graphics.enable32Bit = config.hardware.graphics.enable;
 
 		hardware.steam-hardware.enable = true;
 
