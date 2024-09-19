@@ -25,14 +25,14 @@
 
   services.gnome.gnome-keyring.enable = true;
 
-  # Monitor hotswap
-  systemd.user.services.kanshi = {
-    description = "kanshi daemon";
-    serviceConfig = {
-      Type = "Simple";
-      ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
-    };
-  };
+ # Monitor hotswap
+ #systemd.user.services.kanshi = {
+ #  description = "kanshi daemon";
+ #  serviceConfig = {
+ #    Type = "Simple";
+ #    ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
+ #  };
+ #};
 
   # Enable touchpad support
   services.libinput.enable = true;
