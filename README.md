@@ -22,6 +22,6 @@ TODOs:
 - [x] OpenVPN setup
 - [ ] Applications
     - [ ] Discord
-    - [ ] Telegram
+    - [x] Telegram
     - [ ] Syncthing
-    - [x] Zed editor
+    - [x] Zed editor - https://github.com/NixOS/nixpkgs/issues/309662#issuecomment-2234031488
