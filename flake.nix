@@ -58,7 +58,7 @@
         xps = nixosSystem {
           specialArgs = specialArgs;
           modules = [
-            home.manager.nixosModules.home-manager
+            home-manager.nixosModules.home-manager
             {
               home-manager.users.dk = import ./home/xps;
               home-manager.extraSpecialArgs = specialArgs;
