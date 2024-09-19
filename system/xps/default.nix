@@ -67,16 +67,24 @@
 
   environment.localBinInPath = true;
 
-
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
+  nix = {
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
+
+  hardware.graphics = {
+    enable = true;
+  };
+
   #Nvidia drivers
   #services.xserver.videoDrivers = ["nvidia"];
-
- hardware.graphics = {
-   enable = true;
- };
 
 # hardware.nvidia = {
 #   modesetting.enable = true;
