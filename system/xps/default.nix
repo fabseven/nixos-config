@@ -45,24 +45,27 @@
 	};
 
   #Nvidia drivers
-  hardware.opengl = {
-    enable = true;
-  };
+# hardware.graphics = {
+#   enable = true;
+# };
+
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
   services.xserver.videoDrivers = ["nvidia"];
 
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    prime = {
-      intelBusId = "PCI:0:2:0";
-      nvidiaBusId = "PCI:14:0:0";
-    };
-  };
+# hardware.nvidia = {
+#   modesetting.enable = true;
+#   powerManagement.enable = false;
+#   powerManagement.finegrained = false;
+#   open = false;
+#   nvidiaSettings = true;
+#   package = config.boot.kernelPackages.nvidiaPackages.stable;
+#   prime = {
+#     intelBusId = "PCI:0:2:0";
+#     nvidiaBusId = "PCI:14:0:0";
+#   };
+# };
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 }
