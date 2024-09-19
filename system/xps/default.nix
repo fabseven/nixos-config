@@ -17,9 +17,11 @@
 
   services.displayManager.ly.enable = true;
 
-  programs.nm-applet.enable = true;
-  programs._1password.enable = true;
-  programs._1password-gui.enable = true;
+  programs = {
+    _1password.enable = true;
+    _1password-gui.enable = true;
+    nm-applet.enable = true;
+  };
 
   powerManagement.enable = true;
 
