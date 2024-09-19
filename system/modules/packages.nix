@@ -19,6 +19,7 @@
     # zeroad
     gimp
     nwg-displays
+    zed-editor
     gthumb
     feh
     libnotify

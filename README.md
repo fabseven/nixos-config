@@ -7,7 +7,7 @@ TODOs:
 - [x] Add helix support
 - [x] Monitor setup on work laptop
 - [x] Add swaylock with swayidle support
-- [ ] Add Ly login manager
+- [x] Add Ly login manager
 - [ ] Better notifications
 - [ ] Accel speed off of pointers
 - [x] Add 1Password proper support with unlockable web extension through tray
@@ -15,8 +15,8 @@ TODOs:
 - [x] Kanshi setup
     - [x] Add laptop setup
     - [ ] Add work setup
-- [ ] Printing support - https://github.com/Qeatrix/nixos-config
-- [ ] Garbage collector for old versions
+- [x] Printing support - https://github.com/Qeatrix/nixos-config
+- [x] Garbage collector for old versions
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config 
 - [ ] Powershell scripting
 - [x] OpenVPN setup
