@@ -10,7 +10,6 @@
     ffmpeg
     btop
     firefox
-    google-chrome-stable
     unzip
     dtrx
     signal-desktop
@@ -32,6 +31,7 @@
 		_1password-gui
     _1password
     gnome-keyring
+    google-chrome
 		brave
 		slack
 		slack-term

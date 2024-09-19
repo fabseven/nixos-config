@@ -20,6 +20,7 @@
   programs = {
     _1password.enable = true;
     _1password-gui.enable = true;
+    google-chrome.enable = true;
     nm-applet.enable = true;
   };
 
