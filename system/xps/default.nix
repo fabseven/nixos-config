@@ -32,9 +32,6 @@
   # Enable touchpad support
   services.libinput.enable = true;
 
-  # SSH support
-  services.openssh.enable = true;
-
   # Printing
   services.printing.enable = true;
   services.avahi = {

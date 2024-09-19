@@ -20,6 +20,7 @@
     ruby
     rubyPackages_3_3.solargraph
     sbt
+    scala
     coursier # required by metals
     scala-cli
     corepack

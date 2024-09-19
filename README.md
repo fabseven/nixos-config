@@ -24,4 +24,4 @@ TODOs:
     - [ ] Discord
     - [ ] Telegram
     - [ ] Syncthing
-    - [ ] Zed editor
+    - [x] Zed editor
