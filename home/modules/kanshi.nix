@@ -1,7 +1,7 @@
 { ... } : {
   services.kanshi = {
     enable = true;
-    settings = {
+    profiles = {
       laptop = {
         outputs = [
           {
