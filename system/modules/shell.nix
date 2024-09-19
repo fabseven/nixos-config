@@ -15,6 +15,7 @@
     XDG_STATE_HOME = "$HOME/.local/state";
     XDG_BIN_HOME = "$HOME/.local/bin";
     PATH = [ "${XDG_BIN_HOME}" ];
+    PATH = [ "$HOME/dk/.local/share/coursier/bin" ];
   };
 
   environment.systemPackages = with pkgs; [
