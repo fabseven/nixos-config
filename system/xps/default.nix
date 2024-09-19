@@ -11,6 +11,7 @@
     hostName = "cake";
     firewall.allowedTCPPorts = [ 22 80 443 ];
   };
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -44,15 +45,16 @@
 		};
 	};
 
-  #Nvidia drivers
-# hardware.graphics = {
-#   enable = true;
-# };
 
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
-  services.xserver.videoDrivers = ["nvidia"];
+  #Nvidia drivers
+  #services.xserver.videoDrivers = ["nvidia"];
+
+# hardware.graphics = {
+#   enable = true;
+# };
 
 # hardware.nvidia = {
 #   modesetting.enable = true;
