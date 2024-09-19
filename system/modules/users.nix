@@ -2,7 +2,7 @@
   users.users = {
     dk = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "video" "nginx" "onepassword" ];
+      extraGroups = [ "wheel" "video" "nginx" "onepassword" "audio"];
       homeMode = "750"; # for nginx to read assets
     };
   };
