@@ -33,6 +33,7 @@
     _1password
     gnome-keyring
     google-chrome
+    netflix
 		brave
 		slack
 		slack-term

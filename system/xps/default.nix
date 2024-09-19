@@ -43,11 +43,6 @@
     openFirewall = true;
   };
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  system.copySystemConfiguration = false;
-
 	# Steam
 	programs.steam.enable = true;
 
@@ -84,20 +79,20 @@
   };
 
   #Nvidia drivers
-  #services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["nvidia"];
 
-# hardware.nvidia = {
-#   modesetting.enable = true;
-#   powerManagement.enable = false;
-#   powerManagement.finegrained = false;
-#   open = false;
-#   nvidiaSettings = true;
-#   package = config.boot.kernelPackages.nvidiaPackages.stable;
-#   prime = {
-#     intelBusId = "PCI:0:2:0";
-#     nvidiaBusId = "PCI:14:0:0";
-#   };
-# };
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    prime = {
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:14:0:0";
+    };
+  };
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 }
