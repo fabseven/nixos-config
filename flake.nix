@@ -65,9 +65,9 @@
               home-manager.users.dk = import ./home/xps;
               home-manager.extraSpecialArgs = specialArgs;
             }
-           #hosts.nixosModule {
-           #  networking.stevenBlackHosts.enable = true;
-           #}
+            hosts.nixosModule {
+              networking.stevenBlackHosts.enable = true;
+            }
             ./system/xps
           ];
         };
