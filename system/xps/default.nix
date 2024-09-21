@@ -10,6 +10,12 @@
   networking = {
     hostName = "cake";
     firewall.allowedTCPPorts = [ 22 80 443 ];
+    stevenBlackHosts = {
+      blockFakenews = true;
+      blockGambling = true;
+      blockPorn = false;
+      blockSocial = false;
+    }
   };
 
   services.displayManager.ly.enable = true;
