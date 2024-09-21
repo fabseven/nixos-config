@@ -6,6 +6,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
+    hosts.url = "github:StevenBlack/hosts";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -22,7 +23,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-colors, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, ... }@inputs:
     let
       inherit (self) outputs;
       inherit (nixpkgs.lib) nixosSystem;
@@ -30,6 +31,7 @@
         inherit inputs;
         inherit outputs;
         inherit nix-colors;
+        inherit hosts;
       };
     in {
       nixosConfigurations = {
@@ -62,6 +64,9 @@
             {
               home-manager.users.dk = import ./home/xps;
               home-manager.extraSpecialArgs = specialArgs;
+            }
+            hosts.nixosModule {
+              networking.stevenBlackHosts.enable = true;
             }
             ./system/xps
           ];
