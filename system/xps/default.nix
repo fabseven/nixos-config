@@ -10,6 +10,10 @@
   networking = {
     hostName = "cake";
     firewall.allowedTCPPorts = [ 22 80 443 ];
+    extraHosts = let 
+      hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts;
+      hostsFile = builtins.fetchurl hostsPath;
+    in builtins.readFile "${hostsFile}";
   };
 
   services.displayManager.ly.enable = true;
