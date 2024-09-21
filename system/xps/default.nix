@@ -13,7 +13,7 @@
     stevenBlackHosts = {
       blockFakenews = true;
       blockGambling = true;
-      blockPorn = false;
+      blockPorn = true;
       blockSocial = false;
     };
   };
