@@ -15,7 +15,7 @@
       blockGambling = true;
       blockPorn = false;
       blockSocial = false;
-    }
+    };
   };
 
   services.displayManager.ly.enable = true;
