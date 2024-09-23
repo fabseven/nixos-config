@@ -66,13 +66,13 @@
     };
     style = # css
       ''
+				* {
+					font-size: 30px;
+					font-family: JetBrains Mono;
+				}
         window#waybar > box {
           opacity: 0.9;
         }
-				* {
-					font-family: "JetBrains Mono";
-					font-size: 12px;
-				}
         #workspaces {
           opacity: 0.6;
         }
