@@ -35,7 +35,6 @@
     google-chrome
     telegram-desktop
 		tailscale
-		trayscale
     netflix
 		brave
 		slack
