@@ -31,6 +31,7 @@
   services.fwupd.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
+	services.tailscale.enable = true;
 
   # Enable touchpad support
   services.libinput.enable = true;
