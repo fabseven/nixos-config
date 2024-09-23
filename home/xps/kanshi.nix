@@ -14,9 +14,15 @@
       work = {
         outputs = [
           {
-            criteria = "";
+            criteria = "Samsung Electric Company LS27A800U HNMR601821";
             mode = "2560x1440@60Hz";
-            position = "0,0";
+            position = "0,626";
+            scale = 1.0;
+          }
+          {
+            criteria = "Samsung Electric Company LS27A800U HNMR601813";
+            mode = "2560x1440@60Hz";
+            position = "2560,0";
             scale = 1.0;
           }
           {

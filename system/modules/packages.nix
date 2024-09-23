@@ -19,6 +19,7 @@
     # zeroad
     gimp
     nwg-displays
+		wdisplays
     zed-editor
     gthumb
     feh
