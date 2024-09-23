@@ -5,7 +5,7 @@
       mainBar = {
         layer = "top";
         position = "bottom";
-				height = 5;
+				height = 10;
         modules-left = [ "sway/workspaces" "sway/mode" ];
         modules-center = [ "sway/window" ];
         "sway/workspaces" = {
@@ -68,8 +68,9 @@
     style = # css
       ''
 				* {
-					font-size: 12px;
+					font-size: 9px;
 					font-family: Iosevka;
+					min-height: 0;
 				}
         window#waybar > box {
           opacity: 0.9;
