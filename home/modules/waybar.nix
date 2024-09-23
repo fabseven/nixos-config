@@ -67,7 +67,7 @@
     style = # css
       ''
 				* {
-					font-size: 30px;
+					font-size: 60px;
 					font-family: JetBrains Mono;
 				}
         window#waybar > box {
