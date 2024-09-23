@@ -18,7 +18,7 @@
     playerctl
     # zeroad
     gimp
-    nwg-displays
+/*     nwg-displays */
 		wdisplays
     zed-editor
     gthumb
