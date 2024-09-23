@@ -65,7 +65,7 @@
     };
     extraConfig = ''
       exec sleep 5; systemctl --user start kanshi.service
-			exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+			exec way-displays
     ''; 
   };
 
