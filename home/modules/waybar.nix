@@ -68,7 +68,7 @@
       ''
 				* {
 					font-size: 12px;
-					font-family: JetBrains Mono;
+					font-family: Iosevka;
 				}
         window#waybar > box {
           opacity: 0.9;
