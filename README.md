@@ -26,3 +26,4 @@ TODOs:
     - [ ] Syncthing
     - [x] Zed editor - https://github.com/NixOS/nixpkgs/issues/309662#issuecomment-2234031488
     - [ ] Bottles-unwrapped for gaming
+    - [ ] Tailscale
