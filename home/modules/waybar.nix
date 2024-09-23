@@ -69,7 +69,7 @@
       ''
 				* {
 					font-size: 9px;
-					font-family: Iosevka;
+					font-family: JetBrains Mono;
 					min-height: 0;
 				}
         window#waybar > box {
