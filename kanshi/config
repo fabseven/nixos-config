@@ -1,9 +1,14 @@
 profile thinkpad {
-  output "eDP-1" enable position 0,0 scale 1
+  output "eDP-1" mode 1920x1200@60Hz enable position 0,0 scale 1
 }
 
 profile work {
   output "Samsung Electric Company LS27A800U HNMR601821" mode 2560x1440@59.95Hz position 0,626 scale 1
   output "Samsung Electric Company LS27A800U HNMR601813" mode 2560x1440@59.95Hz position 2560,0 scale 1 transform 90
-  output "eDP-1" enable
+  output "eDP-1" disable
+}
+
+profile home {
+  output "eDP-1" mode 1920x1200@60Hz enable position 276,1440 scale 1
+  output "LG Electronics LG HDR 4K 0x00050BBE" mode 2560x1440@59.951000Hz enable position 0,0 scale 1
 }
