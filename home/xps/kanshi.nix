@@ -31,6 +31,9 @@
             status = "disable";
           }
         ];
+        extraConfig = ''
+          exec swaymsg cock
+        '';
       };
     };
   };
