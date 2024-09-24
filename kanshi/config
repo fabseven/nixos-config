@@ -5,5 +5,5 @@ profile thinkpad {
 profile work {
   output "Samsung Electric Company LS27A800U HNMR601821" mode 2560x1440@59.95Hz position 0,626 scale 1
   output "Samsung Electric Company LS27A800U HNMR601813" mode 2560x1440@59.95Hz position 2560,0 scale 1 transform 90
-  output "eDP-1" disable
+  output "eDP-1" enable
 }
