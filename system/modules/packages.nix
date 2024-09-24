@@ -40,7 +40,7 @@
 		brave
 		slack
 		slack-term
-/* 		kanshi */
+		kanshi
     fastfetch
   ];
 
