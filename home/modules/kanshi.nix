@@ -8,7 +8,7 @@
   xdg.configFile = {
     "kanshi/config" = {
       enable = true;
-      source = ../../Kanshi/config;
+      source = ../../kanshi/config;
     };
   };
 }
