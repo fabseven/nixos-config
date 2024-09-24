@@ -20,6 +20,7 @@
     gimp
 /*     nwg-displays */
 		way-displays
+    discord
 		wdisplays
     zed-editor
     gthumb

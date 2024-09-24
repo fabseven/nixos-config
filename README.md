@@ -12,6 +12,7 @@ TODOs:
 - [ ] Accel speed off of pointers
 - [x] Add 1Password proper support with unlockable web extension through tray
 - [x] Vbox setup, user in vboxusers group
+- [x] Add T14s to systems list
 - [x] Kanshi setup
     - [x] Add laptop setup
     - [x] Add work setup
