@@ -14,11 +14,12 @@ TODOs:
 - [x] Vbox setup, user in vboxusers group
 - [x] Kanshi setup
     - [x] Add laptop setup
-    - [ ] Add work setup
+    - [x] Add work setup
+    - [ ] Assign workspaces to specific monitors
 - [x] Printing support - https://github.com/Qeatrix/nixos-config
 - [x] Garbage collector for old versions
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config 
-- [ ] Powershell scripting
+- [x] Powershell scripting
 - [x] OpenVPN setup
 - [ ] Applications
     - [ ] Discord
@@ -26,4 +27,4 @@ TODOs:
     - [ ] Syncthing
     - [x] Zed editor - https://github.com/NixOS/nixpkgs/issues/309662#issuecomment-2234031488
     - [ ] Bottles-unwrapped for gaming
-    - [ ] Tailscale
+    - [x] Tailscale
