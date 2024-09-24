@@ -1,6 +1,6 @@
 # Dell XPS 15"
 { ... }: {
-  imports = [ ../common.nix ./sway.nix ./waybar.nix ./kanshi.nix ];
+  imports = [ ../common.nix ./sway.nix ./waybar.nix ];
 
 	/* lib.mkForce.home.pointerCursor = {
 		size = 14;
