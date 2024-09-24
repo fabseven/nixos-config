@@ -20,6 +20,7 @@
     gimp
 /*     nwg-displays */
 		way-displays
+		wdisplays
     zed-editor
     gthumb
     feh
