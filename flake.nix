@@ -71,6 +71,20 @@
             ./system/xps
           ];
         };
+        t14s = nixosSystem {
+          specialArgs = specialArgs;
+          modules = [
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.users.dk = import ./home/t14s;
+              home-manager.extraSpecialArgs = specialArgs;
+            }
+            hosts.nixosModule {
+              networking.stevenBlackHosts.enable = true;
+            }
+            ./system/t14s
+          ];
+        };
       };
     };
 }
