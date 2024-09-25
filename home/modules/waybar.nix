@@ -5,7 +5,7 @@
       mainBar = {
         layer = "top";
         position = "bottom";
-				height = 5;
+				height = 2;
         modules-left = [ "sway/workspaces" "sway/mode" ];
         modules-center = [ "sway/window" ];
         "sway/workspaces" = {
