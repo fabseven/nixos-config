@@ -6,5 +6,5 @@
 {
   services.syncthing = {
     enable = true;
-  }
+  };
 }
