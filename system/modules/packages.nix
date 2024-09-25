@@ -32,6 +32,7 @@
     mpv
 		_1password-gui
     _1password
+    networkmanager-openvpn
     gnome-keyring
     google-chrome
     telegram-desktop
