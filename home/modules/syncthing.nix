@@ -7,7 +7,6 @@
   services.syncthing = {
     enable = true;
     user = "dk";
-    dataDir = "/home/dk/Syncthing";
     overrideDevices = true;
     overrideFolders = true;
     settings.devices = {
