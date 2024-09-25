@@ -26,12 +26,6 @@
       config.lib.file.mkOutOfStoreSymlink "${homeDirectory}/nixos-config/scripts";
   };
 
-#customHelixTheme = pkgs.writeTextFile {
-#   name = "tsodish";
-#   destination = "../helix/tsodish.toml";
-#   text = builtins.readFile ../helix/tsodish.toml;
-# }; 
-
   programs.home-manager.enable = true;
 
   # Nicely reload system units when changing configs
