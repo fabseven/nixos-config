@@ -12,13 +12,11 @@
       _type = "literalMD";
         text = ''
           * if `stateVersion &gt;= 19.03`:
-
                 config.services.syncthing.dataDir + "/.config/syncthing"
           * otherwise:
-
                 config.services.syncthing.dataDir
         '';
-    }
+    };
     overrideDevices = true;
     overrideFolders = true;
     settings.devices = {
