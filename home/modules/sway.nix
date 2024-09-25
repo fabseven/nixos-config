@@ -195,6 +195,10 @@ with config.lib.stylix.colors.withHashtag; {
 
   services.swaync = {
     enable = true;
+    settings = {
+      positionX = "left";
+      positionY = "bottom"; 
+    }
   };
 
   # fixes:
