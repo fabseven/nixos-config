@@ -188,10 +188,14 @@ with config.lib.stylix.colors.withHashtag; {
   };
 
   services.mako = {
-    enable = true;
+    enable = false;
     defaultTimeout = 5000;
     ignoreTimeout = false;
   };
+
+  services.swaync = {
+    enable = true;
+  }
 
   # fixes:
   # Unable to connect to the compositor. If your compositor is running, check or set the WAYLAND_DISPLAY environment variable.
