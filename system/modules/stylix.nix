@@ -19,11 +19,11 @@
 
     fonts = rec {
       sansSerif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Sans";
+        package = pkgs.raleway;
+        name = "Raleway";
       };
 
-      serif = monospace;
+      serif = sansSerif;
 
       monospace = {
         package = pkgs.jetbrains-mono;
