@@ -200,7 +200,7 @@ with config.lib.stylix.colors.withHashtag; {
     extraConfig = ''
       [urgency=high]
       border-color=#fab387
-    ''
+    '';
   };
 
  #services.swaync = {
