@@ -198,7 +198,7 @@ with config.lib.stylix.colors.withHashtag; {
     settings = {
       positionX = "left";
       positionY = "bottom"; 
-    }
+    };
   };
 
   # fixes:
