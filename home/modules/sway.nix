@@ -187,11 +187,11 @@ with config.lib.stylix.colors.withHashtag; {
     '';
   };
 
-  services.mako = {
-    enable = false;
-    defaultTimeout = 5000;
-    ignoreTimeout = false;
-  };
+ #services.mako = {
+ #  enable = false;
+ #  defaultTimeout = 5000;
+ #  ignoreTimeout = false;
+ #};
 
   services.swaync = {
     enable = true;

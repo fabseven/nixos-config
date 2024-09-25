@@ -8,7 +8,7 @@
     swayidle
     grim
     slurp
-    mako # notification daemon
+    #mako # notification daemon
     wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
     xdg-utils
     waybar
