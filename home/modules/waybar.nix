@@ -5,6 +5,7 @@
       mainBar = {
         layer = "top";
         position = "bottom";
+				lib.mkForce.height = 5;
         modules-left = [ "sway/workspaces" "sway/mode" ];
         modules-center = [ "sway/window" ];
         "sway/workspaces" = {
