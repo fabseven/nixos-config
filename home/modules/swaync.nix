@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, nix-colors, ... }:
 
 let
   palette = config.colorScheme.palette;
