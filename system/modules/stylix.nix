@@ -23,7 +23,7 @@
         name = "Raleway";
       };
 
-      serif = sansSerif;
+      serif = monospace;
 
       monospace = {
         package = pkgs.jetbrains-mono;
