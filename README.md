@@ -17,14 +17,14 @@ TODOs:
 - [x] Kanshi setup
     - [x] Add laptop setup
     - [x] Add work setup
-    - [ ] Assign workspaces to specific monitors
+    - [/] Assign workspaces to specific monitors - won't do since it's a pain, I have a hotkey to move workspaces
 - [x] Printing support - https://github.com/Qeatrix/nixos-config
 - [x] Garbage collector for old versions
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config 
 - [x] Powershell scripting
 - [x] OpenVPN setup
 - [ ] Applications
-    - [ ] Discord
+    - [x] Discord
     - [x] Telegram
     - [ ] Syncthing
     - [x] Zed editor - https://github.com/NixOS/nixpkgs/issues/309662#issuecomment-2234031488
