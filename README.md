@@ -8,7 +8,8 @@ TODOs:
 - [x] Monitor setup on work laptop
 - [x] Add swaylock with swayidle support
 - [x] Add Ly login manager
-- [ ] Better notifications
+- [x] Better notifications
+    - [x] Mako is good enough
 - [ ] Accel speed off of pointers
 - [x] Add 1Password proper support with unlockable web extension through tray
 - [x] Vbox setup, user in vboxusers group
