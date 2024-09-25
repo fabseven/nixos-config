@@ -18,12 +18,13 @@
 		cursor.size = 18;
 
     fonts = rec {
-      sansSerif = {
+      /* sansSerif = {
         package = pkgs.raleway;
         name = "Raleway";
-      };
+      }; */
 
       serif = monospace;
+      sansSerif = monospace;
 
       monospace = {
         package = pkgs.jetbrains-mono;
