@@ -191,15 +191,7 @@ with config.lib.stylix.colors.withHashtag; {
     icons = true;
     enable = true;
     defaultTimeout = 5000;
-    lib.mkForce.backgroundColor= "#1e1e2e";
-    lib.mkForce.textColor = "#cdd6f4";
-    lib.mkForce.borderColor = "#89b4fa";
-    lib.mkForce.progressColor = "#313244";
     ignoreTimeout = false;
-    lib.mkForce.extraConfig = ''
-      [urgency=high]
-      border-color=#fab387
-    '';
   };
 
  #services.swaync = {
