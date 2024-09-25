@@ -5,7 +5,7 @@
       mainBar = {
         layer = "top";
         position = "bottom";
-				height = 2;
+				height = 3;
         modules-left = [ "sway/workspaces" "sway/mode" ];
         modules-center = [ "sway/window" ];
         "sway/workspaces" = {
@@ -68,7 +68,7 @@
     style = # css
       ''
 				* {
-					font-size: 9px;
+					font-size: 6px;
 					font-family: JetBrains Mono;
 					min-height: 0;
 				}
