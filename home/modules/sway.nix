@@ -195,7 +195,7 @@ with config.lib.stylix.colors.withHashtag; {
 
   services.swaync = {
     enable = true;
-  }
+  };
 
   # fixes:
   # Unable to connect to the compositor. If your compositor is running, check or set the WAYLAND_DISPLAY environment variable.
