@@ -11,7 +11,6 @@
     ./modules/xdg.nix
     ./modules/zsh.nix
     ./modules/swaylock.nix 
-    ./modules/swaync.nix
     # ./modules/hyprlock.nix
     ./modules/kanshi.nix
     ./modules/helix.nix
