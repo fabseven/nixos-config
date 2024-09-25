@@ -67,11 +67,6 @@
     };
     style = # css
       ''
-				* {
-					font-size: 6px;
-					font-family: JetBrains Mono;
-					min-height: 0;
-				}
         window#waybar > box {
           opacity: 0.9;
         }
