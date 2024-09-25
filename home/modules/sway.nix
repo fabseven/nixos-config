@@ -188,7 +188,6 @@ with config.lib.stylix.colors.withHashtag; {
   };
 
   services.mako = {
-    font = "JetBrains Mono";
     icons = true;
     enable = true;
     defaultTimeout = 5000;
