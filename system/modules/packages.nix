@@ -34,6 +34,7 @@
     mpv
 		_1password-gui
     _1password
+    wlogout
     gnome-keyring
     bottles-unwrapped
     google-chrome

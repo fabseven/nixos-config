@@ -76,6 +76,7 @@
   };
 
   #Nvidia drivers
+  #https://nixos.wiki/wiki/Nvidia - check the local settings to set with steam to use nvidia
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
