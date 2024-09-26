@@ -13,7 +13,7 @@
     ./modules/swaylock.nix 
     ./modules/syncthing.nix
     # ./modules/hyprlock.nix
-    ./modules/kanshi.nix
+    #./modules/kanshi.nix
     ./modules/helix.nix
     # ./modules/lan-mouse.nix
     # ./services/gammarelay.nix
