@@ -13,6 +13,8 @@
     unzip
     dtrx
     signal-desktop
+    ranger
+    thunar
     neofetch
     spotify
     playerctl
@@ -32,7 +34,6 @@
     mpv
 		_1password-gui
     _1password
-    networkmanager-openvpn
     gnome-keyring
     google-chrome
     telegram-desktop

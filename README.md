@@ -2,6 +2,8 @@ NixOS dotfiles that are compiled from different sources.
 
 Still a work in progress.
 
+App options list: https://mynixos.com/
+
 TODOs:
 - [x] Remove bemenu and add rofi instead
 - [x] Add helix support
@@ -29,4 +31,6 @@ TODOs:
     - [ ] Syncthing
     - [x] Zed editor - https://github.com/NixOS/nixpkgs/issues/309662#issuecomment-2234031488
     - [ ] Bottles-unwrapped for gaming
+    - [ ] Thunar
+    - [ ] Ranger
     - [x] Tailscale
