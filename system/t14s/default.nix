@@ -23,7 +23,6 @@
   programs = {
     _1password.enable = true;
     _1password-gui.enable = true;
-    nm-applet.enable = true;
   };
 
   powerManagement.enable = true;
