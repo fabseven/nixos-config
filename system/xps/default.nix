@@ -23,7 +23,6 @@
   programs = {
     _1password.enable = true;
     _1password-gui.enable = true;
-    nm-applet.enable = true;
   };
 
   powerManagement.enable = true;
@@ -75,10 +74,6 @@
     };
   };
 
-  hardware.graphics = {
-    enable = true;
-  };
-
   #Nvidia drivers
   services.xserver.videoDrivers = ["nvidia"];
 
@@ -86,7 +81,7 @@
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
-    open = false;
+    open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     prime = {
