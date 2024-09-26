@@ -14,7 +14,7 @@
     dtrx
     signal-desktop
     ranger
-    thunar
+    xfce.thunar
     neofetch
     spotify
     playerctl
