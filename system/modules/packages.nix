@@ -35,6 +35,7 @@
 		_1password-gui
     _1password
     gnome-keyring
+    bottles-unwrapped
     google-chrome
     telegram-desktop
 		tailscale
