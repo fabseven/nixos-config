@@ -4,6 +4,8 @@ with lib;
 
 let
   cfg = config.services.gam;
+  gamConfigDir = "$HOME/gam";
+  gamCacheDir = "$HOME/cache/gam";
 in {
   options.services.gam = {
     enable = mkEnableOption "GAM";
@@ -36,10 +38,10 @@ in {
           setuptools
         ];
         makeWrapperArgs = [
-          ''--run 'export GAMUSERCONFIGDIR="''${XDG_CONFIG_HOME:-$HOME/.config}/gam"' ''
-          ''--run 'export GAMSITECONFIGDIR="''${XDG_CONFIG_HOME:-$HOME/.config}/gam"' ''
-          ''--run 'export GAMCACHEDIR="''${XDG_CACHE_HOME:-$HOME/.cache}/gam"' ''
-          ''--run 'export GAMDRIVEDIR="$PWD"' ''
+          "--set GAMUSERCONFIGDIR ${gamConfigDir}"
+          "--set GAMSITECONFIGDIR ${gamConfigDir}"
+          "--set GAMCACHEDIR ${gamCacheDir}"
+          "--set GAMDRIVEDIR /tmp"
         ];
         installPhase = ''
           runHook preInstall
@@ -69,10 +71,20 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = [ cfg.package ];
+
+    # Create necessary directories
+    system.activationScripts.gamDirs = ''
+      mkdir -p ${gamConfigDir}
+      mkdir -p ${gamCacheDir}
+      chmod 755 ${gamConfigDir}
+      chmod 755 ${gamCacheDir}
+    '';
+
+    # Set global environment variables
     environment.variables = {
-      GAMUSERCONFIGDIR = "$XDG_CONFIG_HOME/gam";
-      GAMSITECONFIGDIR = "$XDG_CONFIG_HOME/gam";
-      GAMCACHEDIR = "$XDG_CACHE_HOME/gam";
+      GAMUSERCONFIGDIR = gamConfigDir;
+      GAMSITECONFIGDIR = gamConfigDir;
+      GAMCACHEDIR = gamCacheDir;
     };
   };
 }
