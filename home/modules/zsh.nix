@@ -126,11 +126,11 @@
       "l" = "ls -la";
       "h" = "history";
       "man" = "batman";
+      "gam" = "/run/current-system/sw/bin/gam";
       # Add suffix alias for less
       "-g L" = "| less";
       "v" = "nvim";
       "vim" = "nvim";
-			"nrbt" = "sudo nixos-rebuild switch --flake .#thinkpad";
 			"nwg" = "nwg-displays";
       "x" = "dtrx";
       "reload" = ". ~/.zshrc";
