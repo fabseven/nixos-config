@@ -34,6 +34,7 @@
     mpv
 		_1password-gui
     _1password
+    gam
     ticktick
     wlogout
     gnome-keyring
