@@ -10,7 +10,7 @@
   services.gam = {
     enable = true;
     user = "dk";
-  }
+  };
 
   networking = {
     hostName = "cake";
