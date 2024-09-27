@@ -4,8 +4,9 @@
     ../modules/bluetooth.nix
     ../modules/gam.nix
     ./hardware.nix
-    ./gam.nix
   ];
+
+  gam = pkgs.callPackage ./gam.nix {};
 
   environment.systemPackages = with pkgs; [ powertop libinput acpi gam ];
 
