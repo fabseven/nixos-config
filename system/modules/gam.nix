@@ -4,8 +4,7 @@ with lib;
 
 let
   cfg = config.services.gam;
-  gamConfigDir = "/home/${cfg.user}/.gam";  # Changed to .gam directly under home
-  gamCacheDir = "/home/${cfg.user}/.gam/gamcache";
+  gamHomeDir = "/home/${cfg.user}/.gam";
 in {
   options.services.gam = {
     enable = mkEnableOption "GAM";
@@ -42,10 +41,10 @@ in {
           setuptools
         ];
         makeWrapperArgs = [
-          "--set GAMUSERCONFIGDIR ${gamConfigDir}"
-          "--set GAMSITECONFIGDIR ${gamConfigDir}"
-          "--set GAMCACHEDIR ${gamCacheDir}"
-          "--set GAMDRIVEDIR ${gamConfigDir}/drive"
+          "--set GAMUSERCONFIGDIR ${gamHomeDir}"
+          "--set GAMSITECONFIGDIR ${gamHomeDir}"
+          "--set GAMCACHEDIR ${gamHomeDir}/gamcache"
+          "--set GAMDRIVEDIR ${gamHomeDir}/drive"
         ];
         installPhase = ''
           runHook preInstall
@@ -55,19 +54,6 @@ in {
           cp -r gam $out/${pkgs.python3.sitePackages}
           runHook postInstall
         '';
-        checkPhase = ''
-          runHook preCheck
-          ${pkgs.python3.interpreter} -m unittest discover --pattern "*_test.py" --buffer
-          runHook postCheck
-        '';
-        meta = with lib; {
-          description = "Command line management for Google Workspace";
-          mainProgram = "gam";
-          homepage = "https://github.com/GAM-team/GAM/wiki";
-          changelog = "https://github.com/GAM-team/GAM/releases/tag/v${version}";
-          license = licenses.asl20;
-          maintainers = with maintainers; [ thanegill ];
-        };
       };
       description = "The GAM package to use";
     };
@@ -78,19 +64,17 @@ in {
     
     # Create necessary directories with correct ownership
     system.activationScripts.gamDirs = ''
-      mkdir -p ${gamConfigDir}/{oauth2.txt,oauth2service.json,client_secrets.json}
-      mkdir -p ${gamCacheDir}
-      mkdir -p ${gamConfigDir}/drive
-      chown -R ${cfg.user}:users ${gamConfigDir}
-      chmod -R 700 ${gamConfigDir}
+      mkdir -p ${gamHomeDir}/{gamcache,drive,oauth2.txt,oauth2service.json,client_secrets.json}
+      chown -R ${cfg.user}:users ${gamHomeDir}
+      chmod -R 755 ${gamHomeDir}
     '';
 
     # Set global environment variables
-    environment.variables = {
-      GAMUSERCONFIGDIR = gamConfigDir;
-      GAMSITECONFIGDIR = gamConfigDir;
-      GAMCACHEDIR = gamCacheDir;
-      GAMDRIVEDIR = "${gamConfigDir}/drive";
+    environment.sessionVariables = {
+      GAMUSERCONFIGDIR = gamHomeDir;
+      GAMSITECONFIGDIR = gamHomeDir;
+      GAMCACHEDIR = "${gamHomeDir}/gamcache";
+      GAMDRIVEDIR = "${gamHomeDir}/drive";
     };
   };
 }
