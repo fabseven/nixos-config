@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 
 let
-  gam = import ./gam.nix {
-    inherit (pkgs) lib fetchFromGitHub python3;
-  };
+  gam = pkgs.callPackage (
+    { lib, fetchFromGitHub, python3 }:
+    import ./gam.nix { inherit lib fetchFromGitHub python3; }
+  ) {};
 in
 {
   environment.systemPackages = [ gam ];
