@@ -7,6 +7,8 @@
 
   environment.systemPackages = with pkgs; [ powertop libinput acpi ];
 
+  services.gam.enable = true;
+
   networking = {
     hostName = "cake";
     firewall.allowedTCPPorts = [ 22 80 443 ];
