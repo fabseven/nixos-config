@@ -19,7 +19,6 @@ TODOs:
 - [x] Kanshi setup
     - [x] Add laptop setup
     - [x] Add work setup
-    - [/] Assign workspaces to specific monitors - won't do since it's a pain, I have a hotkey to move workspaces
 - [x] Printing support - https://github.com/Qeatrix/nixos-config
 - [x] Garbage collector for old versions
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config 
@@ -34,3 +33,4 @@ TODOs:
     - [x] Thunar
     - [x] Ranger
     - [x] Tailscale
+    - [ ] Ticktick
