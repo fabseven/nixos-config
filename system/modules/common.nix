@@ -13,6 +13,7 @@
     ./nix.nix
     ./packages.nix
     ./python.nix
+    ./gam.nix
     ./shell.nix
     ./sound.nix
     ./stylix.nix
