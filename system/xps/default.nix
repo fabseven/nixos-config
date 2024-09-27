@@ -6,7 +6,7 @@
     ./gam.nix
   ];
 
-  environment.systemPackages = with pkgs; [ powertop libinput acpi ];
+  environment.systemPackages = with pkgs; [ powertop libinput acpi gam ];
 
   networking = {
     hostName = "cake";
