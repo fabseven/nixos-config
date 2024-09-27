@@ -4,8 +4,8 @@ with lib;
 
 let
   cfg = config.services.gam;
-  gamConfigDir = "$HOME/gam";
-  gamCacheDir = "$HOME/cache/gam";
+  gamConfigDir = "/home/dk/gam";
+  gamCacheDir = "/home/dk/cache/gam";
 in {
   options.services.gam = {
     enable = mkEnableOption "GAM";
