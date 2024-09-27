@@ -62,19 +62,30 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = [ cfg.package ];
     
-    # Create necessary directories with correct ownership
+    # Create necessary directories and files with correct ownership
     system.activationScripts.gamDirs = ''
-      mkdir -p ${gamHomeDir}/{gamcache,drive,oauth2.txt,oauth2service.json,client_secrets.json}
+      mkdir -p ${gamHomeDir}/{gamcache,drive}
+      touch ${gamHomeDir}/{oauth2.txt,oauth2service.json,client_secrets.json}
+      echo "cfgdir: ${gamHomeDir}" > ${gamHomeDir}/gam.cfg
       chown -R ${cfg.user}:users ${gamHomeDir}
       chmod -R 755 ${gamHomeDir}
+      chmod 600 ${gamHomeDir}/gam.cfg
     '';
 
     # Set global environment variables
-    environment.sessionVariables = {
+    environment.variables = {
       GAMUSERCONFIGDIR = gamHomeDir;
       GAMSITECONFIGDIR = gamHomeDir;
       GAMCACHEDIR = "${gamHomeDir}/gamcache";
       GAMDRIVEDIR = "${gamHomeDir}/drive";
     };
+
+    # Ensure the variables are also set for the user's shell
+    programs.bash.loginShellInit = ''
+      export GAMUSERCONFIGDIR="${gamHomeDir}"
+      export GAMSITECONFIGDIR="${gamHomeDir}"
+      export GAMCACHEDIR="${gamHomeDir}/gamcache"
+      export GAMDRIVEDIR="${gamHomeDir}/drive"
+    '';
   };
 }
