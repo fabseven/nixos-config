@@ -2,13 +2,10 @@
   imports = [
     ../modules/common.nix
     ../modules/bluetooth.nix
-    ../modules/gam.nix
     ./hardware.nix
   ];
 
-  gam = pkgs.callPackage ./gam.nix {};
-
-  environment.systemPackages = with pkgs; [ powertop libinput acpi gam ];
+  environment.systemPackages = with pkgs; [ powertop libinput acpi ];
 
   networking = {
     hostName = "cake";
