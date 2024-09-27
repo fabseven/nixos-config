@@ -4,11 +4,15 @@ with lib;
 
 let
   cfg = config.services.gam;
-  gamConfigDir = "/home/dk/gam";
-  gamCacheDir = "/home/dk/cache/gam";
+  gamConfigDir = "/home/${cfg.user}/.config/gam";
+  gamCacheDir = "/home/${cfg.user}/.cache/gam";
 in {
   options.services.gam = {
     enable = mkEnableOption "GAM";
+    user = mkOption {
+      type = types.str;
+      description = "The user under which GAM will run";
+    };
     package = mkOption {
       type = types.package;
       default = pkgs.python3.pkgs.buildPythonApplication rec {
@@ -72,12 +76,14 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = [ cfg.package ];
 
-    # Create necessary directories
+    # Create necessary directories with correct ownership
     system.activationScripts.gamDirs = ''
       mkdir -p ${gamConfigDir}
       mkdir -p ${gamCacheDir}
-      chmod 755 ${gamConfigDir}
-      chmod 755 ${gamCacheDir}
+      chown ${cfg.user}:users ${gamConfigDir}
+      chown ${cfg.user}:users ${gamCacheDir}
+      chmod 700 ${gamConfigDir}
+      chmod 700 ${gamCacheDir}
     '';
 
     # Set global environment variables
