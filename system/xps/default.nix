@@ -2,6 +2,7 @@
   imports = [
     ../modules/common.nix
     ../modules/bluetooth.nix
+    ../modules/gam.nix
     ./hardware.nix
     ./gam.nix
   ];
