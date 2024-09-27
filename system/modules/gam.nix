@@ -4,8 +4,8 @@ with lib;
 
 let
   cfg = config.services.gam;
-  gamConfigDir = "/home/${cfg.user}/gam";
-  gamCacheDir = "/home/${cfg.user}/gam";
+  gamConfigDir = "/home/${cfg.user}/.gam";  # Changed to .gam directly under home
+  gamCacheDir = "/home/${cfg.user}/.gam/gamcache";
 in {
   options.services.gam = {
     enable = mkEnableOption "GAM";
@@ -45,7 +45,7 @@ in {
           "--set GAMUSERCONFIGDIR ${gamConfigDir}"
           "--set GAMSITECONFIGDIR ${gamConfigDir}"
           "--set GAMCACHEDIR ${gamCacheDir}"
-          "--set GAMDRIVEDIR /tmp"
+          "--set GAMDRIVEDIR ${gamConfigDir}/drive"
         ];
         installPhase = ''
           runHook preInstall
@@ -75,15 +75,14 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = [ cfg.package ];
-
+    
     # Create necessary directories with correct ownership
     system.activationScripts.gamDirs = ''
-      mkdir -p ${gamConfigDir}
+      mkdir -p ${gamConfigDir}/{oauth2.txt,oauth2service.json,client_secrets.json}
       mkdir -p ${gamCacheDir}
-      chown ${cfg.user}:users ${gamConfigDir}
-      chown ${cfg.user}:users ${gamCacheDir}
-      chmod 700 ${gamConfigDir}
-      chmod 700 ${gamCacheDir}
+      mkdir -p ${gamConfigDir}/drive
+      chown -R ${cfg.user}:users ${gamConfigDir}
+      chmod -R 700 ${gamConfigDir}
     '';
 
     # Set global environment variables
@@ -91,6 +90,7 @@ in {
       GAMUSERCONFIGDIR = gamConfigDir;
       GAMSITECONFIGDIR = gamConfigDir;
       GAMCACHEDIR = gamCacheDir;
+      GAMDRIVEDIR = "${gamConfigDir}/drive";
     };
   };
 }

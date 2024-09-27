@@ -126,12 +126,13 @@
       "l" = "ls -la";
       "h" = "history";
       "man" = "batman";
-      "gam" = "/run/current-system/sw/bin/gam";
       # Add suffix alias for less
       "-g L" = "| less";
       "v" = "nvim";
       "vim" = "nvim";
-			"nwg" = "nwg-displays";
+      "ts" = "tailscale status";
+      "tsup" = "sudo tailscale up";
+      "tsdown" = "sudo tailscale down";
       "x" = "dtrx";
       "reload" = ". ~/.zshrc";
       # Stuff
