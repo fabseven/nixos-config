@@ -33,4 +33,6 @@ TODOs:
     - [x] Thunar
     - [x] Ranger
     - [x] Tailscale
-    - [ ] Ticktick
+    - [x] Ticktick
+    - [ ] Zoom
+    - [ ] GAM

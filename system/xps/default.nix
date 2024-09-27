@@ -3,6 +3,7 @@
     ../modules/common.nix
     ../modules/bluetooth.nix
     ./hardware.nix
+    ./gam.nix
   ];
 
   environment.systemPackages = with pkgs; [ powertop libinput acpi ];
