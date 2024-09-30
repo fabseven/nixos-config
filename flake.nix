@@ -43,6 +43,9 @@
               home-manager.users.dk = import ./home/rb;
               home-manager.extraSpecialArgs = specialArgs;
             }
+            hosts.nixosModule {
+              networking.stevenBlackHosts.enable = true;
+            }
             ./system/rb
           ];
         };
@@ -53,6 +56,9 @@
             {
               home-manager.users.dk = import ./home/thinkpad;
               home-manager.extraSpecialArgs = specialArgs;
+            }
+            hosts.nixosModule {
+              networking.stevenBlackHosts.enable = true;
             }
             ./system/thinkpad
           ];

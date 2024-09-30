@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, config, ... }: {
   imports = [
     ../modules/common.nix
     ../modules/bluetooth.nix
@@ -7,23 +7,47 @@
 
   environment.systemPackages = with pkgs; [ powertop libinput acpi ];
 
+  #services.gam = {
+  #  enable = true;
+  #  user = "dk";
+  #};
+
   networking = {
-    hostName = "thinkpad";
+    hostName = "cke";
     firewall.allowedTCPPorts = [ 22 80 443 ];
+    stevenBlackHosts = {
+      blockFakenews = true;
+      blockGambling = true;
+      blockPorn = true;
+      blockSocial = false;
+    };
   };
 
-  programs.nm-applet.enable = true;
-  programs._1password.enable = true;
-  programs._1password-gui.enable = true;
+  services.displayManager.ly.enable = true;
+
+  programs = {
+    _1password.enable = true;
+    _1password-gui.enable = true;
+    nm-applet.enable = true; 
+  };
 
   powerManagement.enable = true;
 
   services.fwupd.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
+	services.tailscale.enable = true;
 
   # Enable touchpad support
   services.libinput.enable = true;
+
+  # Printing
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
 	# Steam
 	programs.steam.enable = true;
@@ -42,6 +66,19 @@
 		};
 	};
 
+  environment.localBinInPath = true;
+
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+
+  nix = {
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 }
