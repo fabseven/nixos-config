@@ -35,19 +35,6 @@
 		_1password-gui
     _1password
     gam
-    python312Packages.cryptography
-    python312Packages.chardet
-    python312Packages.distro
-    python312Packages.filelock
-    python312Packages.google-api-python-client
-    python312Packages.google-auth
-    python312Packages.google-auth-oauthlib
-    python312Packages.httplib2
-    python312Packages.lxml
-    python312Packages.passlib
-    python312Packages.pathvalidate
-    python312Packages.python-dateutil
-    python312Packages.setuptools
     ticktick
     wlogout
     gnome-keyring
