@@ -10,6 +10,7 @@
           httpx
           h2
           websocket-client
+          cryptography
           pymongo
           chess
           networkx
@@ -17,6 +18,19 @@
           zstandard
           urllib3
           numpy
+          chardet
+          cryptography
+          distro
+          filelock
+          google-api-python-client
+          google-auth
+          google-auth-oauthlib
+          httplib2
+          lxml
+          passlib
+          pathvalidate
+          python-dateutil
+          setuptools
         ]))
     ];
 }
