@@ -34,5 +34,5 @@ TODOs:
     - [x] Ranger
     - [x] Tailscale
     - [x] Ticktick
-    - [ ] Zoom
+    - [x] Zoom
     - [ ] GAM - this is so painchamp, doesn't work properly

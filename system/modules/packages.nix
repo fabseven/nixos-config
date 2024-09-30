@@ -35,6 +35,7 @@
 		_1password-gui
     _1password
     gam
+    zoom-us
     ticktick
     wlogout
     gnome-keyring
