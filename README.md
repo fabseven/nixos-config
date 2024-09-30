@@ -35,4 +35,4 @@ TODOs:
     - [x] Tailscale
     - [x] Ticktick
     - [ ] Zoom
-    - [ ] GAM
+    - [ ] GAM - this is so painchamp, doesn't work properly
