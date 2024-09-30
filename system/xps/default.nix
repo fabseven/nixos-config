@@ -7,10 +7,10 @@
 
   environment.systemPackages = with pkgs; [ powertop libinput acpi ];
 
-  services.gam = {
-    enable = true;
-    user = "dk";
-  };
+  #services.gam = {
+  #  enable = true;
+  #  user = "dk";
+  #};
 
   networking = {
     hostName = "cake";
