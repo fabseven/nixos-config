@@ -77,18 +77,18 @@
             ./system/xps
           ];
         };
-        t14s = nixosSystem {
+        fusion  = nixosSystem {
           specialArgs = specialArgs;
           modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.users.dk = import ./home/t14s;
+              home-manager.users.dk = import ./home/fusion;
               home-manager.extraSpecialArgs = specialArgs;
             }
             hosts.nixosModule {
               networking.stevenBlackHosts.enable = true;
             }
-            ./system/t14s
+            ./system/fusion
           ];
         };
       };

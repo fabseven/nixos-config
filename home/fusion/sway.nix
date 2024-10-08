@@ -35,19 +35,30 @@
         "${modifier}+shift+s" = "exec 'screenshot.sh clipboard'";
       };
 
-      startup = [
-        {
-          command = "blueman-applet";
-          always = true;
-        }
-        {
-          command = "nm-applet";
-          always = true;
-        }
-      ];
+      # output = {
+      #   HDMI-A-1 = {
+      #     mode = "2560x1440@59.951Hz";
+      #     pos = "2560 0";
+      #     transform = "270";
+      #     scale = "1.0";
+      #     scale_filter = "nearest";
+      #     adaptive_sync = "off";
+      #     dpms = "on";
+      #   };
+      #   DP-2 = {
+      #     mode = "2560x1440@59.951Hz";
+      #     pos = "0 519";
+      #     transform = "normal";
+      #     scale = "1.0";
+      #     scale_filter = "nearest";
+      #     adaptive_sync = "off";
+      #     dpms = "on";
+      #   };
+      # };
+
     };
     extraConfig = ''
-      exec sleep 5; systemctl --user start kanshi.service
+      
     ''; 
   };
 

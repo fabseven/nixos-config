@@ -1,6 +1,6 @@
-# Thinkpad T14s with Intel
+# Thinkbook E14
 { ... }: {
-  imports = [ ../common.nix ./sway.nix ./waybar.nix ../modules/kanshi.nix ];
+  imports = [ ../common.nix ./sway.nix ./waybar.nix ];
 
 	/* lib.mkForce.home.pointerCursor = {
 		size = 14;

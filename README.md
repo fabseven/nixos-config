@@ -12,7 +12,7 @@ TODOs:
 - [x] Add Ly login manager
 - [x] Better notifications
     - [x] Mako is good enough
-- [ ] Accel speed off of pointers
+- [x] Accel speed off of pointers
 - [x] Add 1Password proper support with unlockable web extension through tray
 - [x] Vbox setup, user in vboxusers group
 - [x] Add T14s to systems list
@@ -24,6 +24,7 @@ TODOs:
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config 
 - [x] Powershell scripting
 - [x] OpenVPN setup
+- [ ] VMWare Fusion setup for Mac VM
 - [ ] Applications
     - [x] Discord
     - [x] Telegram
