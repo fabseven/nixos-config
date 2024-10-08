@@ -27,6 +27,8 @@
   
   environment.localBinInPath = true;
 
+  nixpkgs.config.allowUnsupportedSystem = true;
+
   nix = {
     settings.auto-optimise-store = true;
     gc = {
