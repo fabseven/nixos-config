@@ -24,7 +24,7 @@ TODOs:
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config 
 - [x] Powershell scripting
 - [x] OpenVPN setup
-- [ ] VMWare Fusion setup for Mac VM
+- [/] VMWare Fusion setup for Mac VM -- not going to do as I can just use darwin instead
 - [ ] Applications
     - [x] Discord
     - [x] Telegram
@@ -36,4 +36,4 @@ TODOs:
     - [x] Tailscale
     - [x] Ticktick
     - [x] Zoom
-    - [ ] GAM - this is so painchamp, doesn't work properly
+    - [/] GAM - this is so painchamp, doesn't work properly
