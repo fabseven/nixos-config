@@ -37,3 +37,4 @@ TODOs:
     - [x] Ticktick
     - [x] Zoom
     - [/] GAM - this is so painchamp, doesn't work properly
+    - [ ] Distrobox for the painchamp thing above
