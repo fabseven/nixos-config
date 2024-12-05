@@ -1,10 +1,10 @@
 
 {
-  description = "Yoinked nixos";
+  description = "Ghetto nixos";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     hosts.url = "github:StevenBlack/hosts";
 
@@ -75,20 +75,6 @@
               networking.stevenBlackHosts.enable = true;
             }
             ./system/xps
-          ];
-        };
-        fusion  = nixosSystem {
-          specialArgs = specialArgs;
-          modules = [
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.users.dk = import ./home/fusion;
-              home-manager.extraSpecialArgs = specialArgs;
-            }
-            hosts.nixosModule {
-              networking.stevenBlackHosts.enable = true;
-            }
-            ./system/fusion
           ];
         };
       };
