@@ -19,6 +19,7 @@
     ./stylix.nix
     ./sway.nix
     ./users.nix
+    ./gnome.nix
   ];
 
   services.dbus.enable = true;
