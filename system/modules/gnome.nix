@@ -12,11 +12,9 @@
   environment = {
     systemPackages = with pkgs; [
       adwaita-icon-theme
-      gnomeExtensions = {
-        appindicator
-        blur-my-shell
-        pop-shell
-      };
+      gnomeExtensions.appindicator
+      gnomeExtensions.blur-my-shell
+      gnomeExtensions.pop-shell
     ];
   };
 }
