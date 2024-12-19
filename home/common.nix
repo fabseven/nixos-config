@@ -6,11 +6,11 @@
     ./modules/lazygit.nix
     ./modules/neovim.nix
     ./modules/ssh.nix
-    ./modules/sway.nix
-    ./modules/waybar.nix
+    #./modules/sway.nix
+    #./modules/waybar.nix
     ./modules/xdg.nix
     ./modules/zsh.nix
-    ./modules/swaylock.nix 
+    #./modules/swaylock.nix
     ./modules/syncthing.nix
     # ./modules/hyprlock.nix
     #./modules/kanshi.nix
