@@ -21,10 +21,21 @@ TODOs:
     - [x] Add work setup
 - [x] Printing support - https://github.com/Qeatrix/nixos-config
 - [x] Garbage collector for old versions
-- [ ] Firefox setup - https://github.com/Qeatrix/nixos-config 
+- [ ] Gnome stuff
+    - [ ] Extensions
+        - [ ] Alphabetical App Grid
+        - [ ] Blur my shell
+        - [ ] Just Perfection
+        - [ ] Notification Banner Position
+        - [ ] Space Bar
+        - [ ] Tactile
+        - [ ] TopHat
+        - [ ] Tray Icons
+        - [ ] Undecorate Window
+        - [ ] (Ubuntu) Appindicators
+- [ ] Firefox setup - https://github.com/Qeatrix/nixos-config
 - [x] Powershell scripting
 - [x] OpenVPN setup
-- [/] VMWare Fusion setup for Mac VM -- not going to do as I can just use darwin instead
 - [ ] Applications
     - [x] Discord
     - [x] Telegram
@@ -36,5 +47,5 @@ TODOs:
     - [x] Tailscale
     - [x] Ticktick
     - [x] Zoom
-    - [/] GAM - this is so painchamp, doesn't work properly
+    - [ ] GAM - this is so painchamp, doesn't work properly
     - [ ] Distrobox for the painchamp thing above
