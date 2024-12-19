@@ -23,12 +23,12 @@
     };
   };
 
-  services.displayManager.ly.enable = true;
+  hardware.pulseaudio.enable = false;
 
   programs = {
     _1password.enable = true;
     _1password-gui.enable = true;
-    nm-applet.enable = true; 
+    nm-applet.enable = true;
   };
 
   powerManagement.enable = true;

@@ -1,7 +1,4 @@
 { config, pkgs, lib, ... }: {
-  hardware = {
-    pulseaudio.enable = false;
-  };
   services = {
     xserver = {
       enable = true;
