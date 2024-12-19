@@ -57,14 +57,14 @@
   hardware.sensor.iio.enable = true;
 
   # fingerprint sensor
-	security.pam.services.login.fprintAuth = true;
-	services.fprintd = {
-		enable = true;
-		tod = {
-			enable = true;
-			driver = pkgs.libfprint-2-tod1-goodix;
-		};
-	};
+	#security.pam.services.login.fprintAuth = true;
+	#services.fprintd = {
+	#	enable = true;
+	#	tod = {
+	#		enable = true;
+	#		driver = pkgs.libfprint-2-tod1-goodix;
+	#	};
+	#};
 
   environment.localBinInPath = true;
 
