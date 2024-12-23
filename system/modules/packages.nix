@@ -5,6 +5,8 @@
     wlr-randr
     wget
     tldr
+		pciutils
+		lshw
     xdg-utils
     glib
     ffmpeg
