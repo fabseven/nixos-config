@@ -12,6 +12,7 @@
   environment = {
     systemPackages = with pkgs; [
       adwaita-icon-theme
+			gnome-tweaks
       gnomeExtensions.appindicator
       gnomeExtensions.blur-my-shell
       gnomeExtensions.pop-shell
