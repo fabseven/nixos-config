@@ -5,8 +5,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
-    # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     hosts.url = "github:StevenBlack/hosts";
+		zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -23,7 +23,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, zen-browser, ... }@inputs:
     let
       inherit (self) outputs;
       inherit (nixpkgs.lib) nixosSystem;
@@ -32,6 +32,7 @@
         inherit outputs;
         inherit nix-colors;
         inherit hosts;
+				inherit zen-browser;
       };
     in {
       nixosConfigurations = {
@@ -75,6 +76,20 @@
               networking.stevenBlackHosts.enable = true;
             }
             ./system/xps
+          ];
+        };
+        nano = nixosSystem {
+          specialArgs = specialArgs;
+          modules = [
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.users.dk = import ./home/nano;
+              home-manager.extraSpecialArgs = specialArgs;
+            }
+            hosts.nixosModule {
+              networking.stevenBlackHosts.enable = true;
+            }
+            ./system/nano
           ];
         };
       };

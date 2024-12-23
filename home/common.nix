@@ -15,6 +15,7 @@
     # ./modules/hyprlock.nix
     #./modules/kanshi.nix
     ./modules/helix.nix
+		./modules/proton.nix
     # ./modules/lan-mouse.nix
     # ./services/gammarelay.nix
   ];

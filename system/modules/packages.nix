@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
 
   environment.systemPackages = with pkgs; [
     wayland
@@ -34,9 +34,11 @@
     mpv
 		_1password-gui
     _1password
-    gam
+		lutris
+		heroic
     zoom-us
     ticktick
+		inputs.zen-browser.packages."${system}".specific
     wlogout
     gnome-keyring
     bottles-unwrapped

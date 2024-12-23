@@ -5,18 +5,10 @@
     ./hardware.nix
   ];
 
-  environment = {
-		systemPackages = with pkgs; [ 
-				powertop 
-				libinput 
-				acpi 
-				mangohud
-		];
-		localBinInPath = true;
-	};
+  environment.systemPackages = with pkgs; [ powertop libinput acpi ];
 
   networking = {
-    hostName = "cake";
+    hostName = "bibimbap";
     firewall.allowedTCPPorts = [ 22 80 443 ];
     stevenBlackHosts = {
       blockFakenews = true;
@@ -26,17 +18,12 @@
     };
   };
 
-  hardware.pulseaudio.enable = false;
+  #services.displayManager.ly.enable = true;
 
   programs = {
     _1password.enable = true;
     _1password-gui.enable = true;
     nm-applet.enable = true;
-		gamemode.enable = true;
-		steam = {
-			enable = true;
-			gamescopeSession.enable = true;
-		};
   };
 
   powerManagement.enable = true;
@@ -62,15 +49,16 @@
   hardware.sensor.iio.enable = true;
 
   # fingerprint sensor
-	#security.pam.services.login.fprintAuth = true;
-	#services.fprintd = {
-	#	enable = true;
-	#	tod = {
-	#		enable = true;
-	#		driver = pkgs.libfprint-2-tod1-goodix;
-	#	};
-	#};
+	/* security.pam.services.login.fprintAuth = true;
+	services.fprintd = {
+		enable = true;
+		tod = {
+			enable = true;
+			driver = pkgs.libfprint-2-tod1-goodix;
+		};
+	}; */
 
+  environment.localBinInPath = true;
 
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
@@ -83,31 +71,6 @@
       options = "--delete-older-than 7d";
     };
   };
-
-  #Nvidia drivers
-  #https://nixos.wiki/wiki/Nvidia - check the local settings to set with steam to use nvidia
-  services.xserver.videoDrivers = ["nvidia"];
-
-  hardware = {
-		nvidia = {
-			modesetting.enable = true;
-			powerManagement.enable = false;
-			powerManagement.finegrained = false;
-			open = false;
-			nvidiaSettings = true;
-			package = config.boot.kernelPackages.nvidiaPackages.production;
-			prime = {
-				offload = {
-					enable = true;
-					enableOffloadCmd = true;
-				};
-				#amdgpuBusId = "PCI:0:6:0";
-				intelBusId = "PCI:0:2:0";
-				nvidiaBusId = "PCI:14:0:0";
-			};
-		};
-	}; 
-
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
 }

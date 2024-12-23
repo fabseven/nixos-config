@@ -12,6 +12,7 @@ in {
 				https://github.com/NixOS/nixpkgs/issues/47932
 				enable = true;
 			driSupport32Bit = true;
+			driSupport = true;
 		};
 
 		# optionally enable 32bit pulseaudio support if pulseaudio is enabled
