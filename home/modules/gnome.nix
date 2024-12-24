@@ -9,16 +9,6 @@ in
 		settings = {
 			"org/gnome/shell" = {
 				disable-user-extensions = false;
-				enabled-extensions = [
-					"caffeine@patapon.info"
-					"tactile@lundal.io"
-					"undeccorate@sun.wxg@gmail.com"
-					"space-bar@luchrioh"
-					"notification-position@drugo.dev"
-					"just-perfection-desktop@just-perfection"
-					"blur-my-shell@aunetx"
-					"appindicatorsupport@rgcjonas.gmail.com"
-				];
 			};
 
 			"org/gnome/desktop/input-sources" = {
