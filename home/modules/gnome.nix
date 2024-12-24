@@ -1,8 +1,8 @@
 { pkgs, config, ... }: {
   dconf = {
     enable = true;
-		settings = {
-			"org/gnome/desktop/interface/".mkForce = {
+		settings = lib.mkOptionDefault {
+			"org/gnome/desktop/interface/" = {
 				color-scheme = "prefer-dark";
 			};
 
