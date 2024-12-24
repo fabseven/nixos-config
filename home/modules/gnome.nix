@@ -2,7 +2,9 @@
 	dconf = {
 		enable = true;
 		settings = {
-			disable-user-extensions = false;
+			"org/gnome/shell" = {
+				disable-user-extensions = false;
+			};
 		};
 	};
 	/* programs.gnome-shell = {
