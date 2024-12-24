@@ -1,5 +1,5 @@
 { pkgs, config, ... }: {
-	programs.gnome-shell = {
+	/* programs.gnome-shell = {
 		enable = true;
 		extensions = [
 			{ package = pkgs.gnomeExtensions.appindicator; }
@@ -37,5 +37,5 @@
       show-notifications = false;
       toggle-shortcut = [ "<Super>p" ];
     };
-  };
+  }; */
 }
