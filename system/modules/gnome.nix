@@ -8,7 +8,7 @@
   };
 
   environment = {
-		gnome.excludePackages = with pkgs.gnome; [
+		gnome.excludePackages = with pkgs; [
 			pkgs.gnome-backgrounds
 			pkgs.gnome-maps
 			pkgs.gnome-music
@@ -18,6 +18,16 @@
 		];
 
     systemPackages = with pkgs; [
+			gnomeExtensions.appindicator
+			gnomeExtensions.tophat
+			gnomeExtensions.caffeine
+			gnomeExtensions.undecorate
+			gnomeExtensions.space-bar
+			gnomeExtensions.notification-banner-position
+			gnomeExtensions.just-perfection
+			gnomeExtensions.alphabetical-app-grid
+			gnomeExtensions.tactile
+			gnomeExtensions.blur-my-shell
 			gnome-settings-daemon
     ];
   };

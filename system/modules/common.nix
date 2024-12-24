@@ -6,7 +6,7 @@
   imports = [
     ./boot.nix
     ./coding.nix
-		#./fonts.nix
+		./fonts.nix
     ./linux.nix
     ./locale.nix
     ./network.nix
