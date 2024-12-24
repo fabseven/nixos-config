@@ -28,6 +28,9 @@
     gthumb
     feh
     libnotify
+		dconf-editor
+		gnome-tweaks
+		adwaita-icon-theme
     nautilus
     stockfish
     lm_sensors
