@@ -22,8 +22,8 @@ in
 			};
 			"org/gnome/desktop/input-sources" = {
 				sources = [
-					"('xkb', 'us')"
-					"('xkb', 'fi')"
+					"'xkb', 'us'"
+					"'xkb', 'fi'"
 				];
 				xkb-options = [
 					"caps:super" # map capslock to windows/mac key
