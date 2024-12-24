@@ -9,7 +9,7 @@
 
   environment = {
 
-		gnome.excludePackages = with pkgs; [
+		/* gnome.excludePackages = with pkgs; [
 			orca
 			evince
 			geary
@@ -31,7 +31,7 @@
 			totem
 			yelp
 			gnome-software
-		];
+		]; */
 
     systemPackages = with pkgs; [
 			gnome-settings-daemon
