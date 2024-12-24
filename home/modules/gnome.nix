@@ -2,9 +2,9 @@
   dconf = {
     enable = true;
 		settings = {
-			"org/gnome/desktop/interface" = lib.mkForce {
+			/* "org/gnome/desktop/interface" = lib.mkForce {
 				color-scheme = "prefer-dark";
-			};
+			}; */
 			"org/gnome/shell" = {
 				disable-user-extensions = false;
 
