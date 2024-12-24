@@ -22,6 +22,11 @@
 			baobab
 			epiphany
 			gnome-text-editor
+			gnome-backgrounds
+			gnome-music
+			gnome-tour
+			gnome-user-docs
+			gnome-video-effects
 			gnome-console
 			gnome-contacts
 			gnome-logs
