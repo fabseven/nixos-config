@@ -1,16 +1,12 @@
 { pkgs, config, lib, ... }: {
   dconf = {
     enable = true;
-		/* settings = {
+		settings = {
 			"org/gnome/desktop/interface" = lib.mkForce {
 				color-scheme = "prefer-dark";
 			};
 			"org/gnome/shell" = {
 				disable-user-extensions = false;
-
-				favorite-apps = [
-					"spotify.desktop"
-				];
 				
 				enabled-extensions = [
 					"appindicatorsupport@rgcjonas.gmail.com"
@@ -23,6 +19,6 @@
 					"undecorate@sun.wxg@gmail.com"
 				];
 			};
-		}; */
+		};
   };
 }
