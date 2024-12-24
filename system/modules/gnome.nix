@@ -10,11 +10,7 @@
   environment = {
 
 		gnome.excludePackages = with pkgs; [
-			evince
 			geary
-			gnome-user-docs
-			baobab
-			epiphany
 			gnome-text-editor
 			gnome-backgrounds
 			gnome-music
@@ -25,11 +21,6 @@
 			gnome-contacts
 			gnome-logs
 			gnome-maps
-			simple-scan
-			snapshot
-			totem
-			yelp
-			gnome-software
 		];
 
     systemPackages = with pkgs; [
