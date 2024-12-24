@@ -41,7 +41,7 @@
       # };
 
       emoji = {
-        package = pkgs.nerd-fonts.noto-fonts-emoji;
+        package = pkgs.noto-fonts-emoji-color-emoji;
         name = "Noto Color Emoji";
       };
 
