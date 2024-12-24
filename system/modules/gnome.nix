@@ -67,6 +67,7 @@
 		];
 
     systemPackages = with pkgs; [
+			dconf-editor
       adwaita-icon-theme
 			gnome-tweaks
       gnomeExtensions.appindicator
