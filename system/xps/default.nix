@@ -50,6 +50,9 @@
   # Enable touchpad support
   services.libinput.enable = true;
 
+	# Blueman applet
+/*   services.blueman.enable = true; */
+
   # Printing
   services.printing.enable = true;
   services.avahi = {
