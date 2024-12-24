@@ -20,6 +20,7 @@
     ./sway.nix
     ./users.nix
     ./gnome.nix
+		./distrobox.nix
   ];
 
   services.dbus.enable = true;

@@ -33,6 +33,7 @@
     lm_sensors
     gping # ping with a graph
     trippy # network diagnostic https://github.com/fujiapple852/trippy
+		distrobox
     mpv
 		_1password-gui
     _1password
