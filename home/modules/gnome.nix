@@ -34,6 +34,10 @@ in
 				name = "flameshot screenshot";
 			};
 
+			"org/gnome/desktop/sound" = {
+				event-sounds = false;
+			};
+
 			"org/gtk/gtk4/settings/file-chooser" = {
 				sort-directories-first = true;
 			};
