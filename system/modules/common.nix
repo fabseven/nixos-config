@@ -6,6 +6,7 @@
   imports = [
     ./boot.nix
     ./coding.nix
+		./shell.nix
 		./fonts.nix
     ./linux.nix
     ./locale.nix
@@ -14,7 +15,6 @@
     ./packages.nix
     ./python.nix
     #./gam.nix
-    ./shell.nix
     ./sound.nix
     ./stylix.nix
     ./sway.nix
