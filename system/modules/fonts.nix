@@ -7,7 +7,7 @@
 		noto-fonts
 		# iosevka
     # iosevka-bin
-    # (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
     # (nerdfonts.override { fonts = [ "FiraMono" "JetBrainsMono" ]; })
   ];
 }
