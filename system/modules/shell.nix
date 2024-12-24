@@ -26,9 +26,8 @@
     eza
     keychain
     zoxide
-    fira-code
-    fira-code-nerdfont
-    nerdfonts
+		nerd-fonts.fira-code
+		nerd-fonts.jetbrains-mono
     noto-fonts-color-emoji
     pass
     gnupg
