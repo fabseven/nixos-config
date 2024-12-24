@@ -5,9 +5,6 @@
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
     };
-    udev.packages = with pkgs; [
-      gnome.gnome-settings-daemon
-    ];
   };
 
 	xdg.portal = {
@@ -38,6 +35,7 @@
 
     systemPackages = with pkgs; [
 			dconf-editor
+			gnome-settings-daemon
       adwaita-icon-theme
 			gnome-tweaks
       gnomeExtensions.appindicator
