@@ -17,7 +17,7 @@
 
   environment = {
 
-		gnome.excludePackages = with pkgs; [
+		/* gnome.excludePackages = with pkgs; [
 			orca
 			evince
 			# file-roller
@@ -64,7 +64,7 @@
 			totem
 			yelp
 			gnome-software
-		];
+		]; */
 
     systemPackages = with pkgs; [
 			dconf-editor
