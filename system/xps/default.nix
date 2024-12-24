@@ -34,6 +34,7 @@
     _1password-gui.enable = true;
     nm-applet.enable = true;
 		gamemode.enable = true;
+		gnome-shell.enable = true;
 		steam = {
 			enable = true;
 			gamescopeSession.enable = true;

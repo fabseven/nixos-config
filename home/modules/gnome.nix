@@ -1,6 +1,11 @@
 { pkgs, config, ... }: {
-	/* programs.gnome-shell = {
+	dconf = {
 		enable = true;
+		settings = {
+			disable-user-extensions = false;
+		};
+	};
+	/* programs.gnome-shell = {
 		extensions = [
 			{ package = pkgs.gnomeExtensions.appindicator; }
 			{ package = pkgs.gnomeExtensions.tophat; }
