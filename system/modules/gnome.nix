@@ -10,10 +10,10 @@
     ];
   };
 
-	xdg.portal = {
+	/* xdg.portal = {
 		enable = true;
 		wlr.enable = true;
-	};
+	}; */
 
   environment = {
 
@@ -66,7 +66,7 @@
 			gnome-software
 		]; */
 
-    systemPackages = with pkgs; [
+    /* systemPackages = with pkgs; [
 			dconf-editor
       adwaita-icon-theme
 			gnome-tweaks
@@ -79,6 +79,6 @@
       gnomeExtensions.alphabetical-app-grid
       gnomeExtensions.tactile
       gnomeExtensions.blur-my-shell
-    ];
+    ]; */
   };
 }
