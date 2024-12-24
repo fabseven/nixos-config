@@ -22,6 +22,7 @@ in
 			};
 
 			"org/gnome/desktop/input-sources" = {
+				#TODO: Add us and fi layout
 				xkb-options = [
 					"caps:ctrl_modifier" # map capslock to windows/mac key
 				];
@@ -31,6 +32,10 @@ in
 				binding = "<Shift><Super>s";
 				command = "${flameshot-gui}/bin/flameshot-gui";
 				name = "flameshot screenshot";
+			};
+
+			"org/gnome/desktop/sound" = {
+				event-sounds = false;
 			};
 
 			"org/gtk/gtk4/settings/file-chooser" = {
