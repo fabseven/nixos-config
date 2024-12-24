@@ -23,7 +23,7 @@ in
 
 			"org/gnome/desktop/input-sources" = {
 				sources = [
-					"(xkb, us), (xkb, fi)"
+					"('xkb', 'us'), ('xkb', 'fi')"
 				];
 				xkb-options = [
 					"caps:ctrl_modifier" # map capslock to windows/mac key
