@@ -42,7 +42,7 @@
     zoom-us
     ticktick
 		ulauncher
-		inputs.zen-browser.packages."${system}".specific
+		inputs.zen-browser.packages."${system}".generic
     wlogout
     gnome-keyring
     bottles-unwrapped
