@@ -43,7 +43,7 @@
 			gnome-settings-daemon
       adwaita-icon-theme
 			gnome-tweaks
-      gnomeExtensions.appindicator
+      /* gnomeExtensions.appindicator
       gnomeExtensions.tophat
       gnomeExtensions.undecorate
       gnomeExtensions.space-bar
@@ -51,7 +51,7 @@
       gnomeExtensions.just-perfection
       gnomeExtensions.alphabetical-app-grid
       gnomeExtensions.tactile
-      gnomeExtensions.blur-my-shell
+      gnomeExtensions.blur-my-shell */
     ];
   };
 }
