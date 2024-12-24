@@ -3,7 +3,9 @@
     enable = true;
 		settings = lib.mkOptionDefault {
 			"org/gnome/desktop/interface" = {
-				color-scheme = "prefer-dark";
+				color-scheme = [
+					"prefer-dark"
+				];
 			};
 
 			"org/gnome/shell" = {
