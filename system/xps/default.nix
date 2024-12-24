@@ -3,7 +3,7 @@
     ../modules/common.nix
     ../modules/bluetooth.nix
     ./hardware.nix
-		./offload-prime.nix
+/* 		./offload-prime.nix */
   ];
 
   environment = {
