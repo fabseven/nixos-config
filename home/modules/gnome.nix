@@ -1,11 +1,9 @@
-{ pkgs, config, lib, ... }: {
+{ pkgs, config, ... }: {
   dconf = {
     enable = true;
-		settings = lib.mkOptionDefault {
+		settings = {
 			"org/gnome/desktop/interface" = {
-				color-scheme = [
-					"prefer-dark"
-				];
+				color-scheme = "prefer-dark";
 			};
 
 			"org/gnome/shell" = {
