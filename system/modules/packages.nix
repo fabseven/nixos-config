@@ -40,6 +40,7 @@
 		heroic
     zoom-us
     ticktick
+		ulauncher
 		inputs.zen-browser.packages."${system}".specific
     wlogout
     gnome-keyring

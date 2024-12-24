@@ -30,9 +30,8 @@ TODOs:
         - [ ] Space Bar
         - [ ] Tactile
         - [ ] TopHat
-        - [ ] Tray Icons
         - [ ] Undecorate Window
-        - [ ] (Ubuntu) Appindicators
+        - [ ] Appindicators
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config
 - [x] Powershell scripting
 - [x] OpenVPN setup

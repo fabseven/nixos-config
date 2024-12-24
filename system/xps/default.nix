@@ -3,6 +3,7 @@
     ../modules/common.nix
     ../modules/bluetooth.nix
     ./hardware.nix
+		./offload-prime.nix
   ];
 
   environment = {
@@ -86,7 +87,7 @@
 
   #Nvidia drivers
   #https://nixos.wiki/wiki/Nvidia - check the local settings to set with steam to use nvidia
-  services.xserver.videoDrivers = ["nvidia"];
+/*   services.xserver.videoDrivers = ["nvidia"]; */
 
   hardware = {
 		nvidia = {
@@ -96,7 +97,7 @@
 			open = false;
 			nvidiaSettings = true;
 			package = config.boot.kernelPackages.nvidiaPackages.production;
-			prime = {
+			/* prime = {
 				offload = {
 					enable = true;
 					enableOffloadCmd = true;
@@ -104,7 +105,7 @@
 				#amdgpuBusId = "PCI:0:6:0";
 				intelBusId = "PCI:0:2:0";
 				nvidiaBusId = "PCI:1:0:0";
-			};
+			}; */
 		};
 	}; 
 
