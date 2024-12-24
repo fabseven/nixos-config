@@ -4,6 +4,9 @@
 		settings = {
 			"org/gnome/shell" = {
 				disable-user-extensions = false;
+				enabled-extensions = [
+					"tactile@lundal.io"
+				];
 			};
 		};
 	};
