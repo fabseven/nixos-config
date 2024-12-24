@@ -3,7 +3,10 @@
     enable = true;
 		settings = {
 			"org/gnome/desktop/interface" = {
-				color-scheme = lib.mkForce."prefer-dark";
+				color-scheme = lib.mkForce {
+					"prefer-dark"
+					};
+				};
 			};
 			"org/gnome/shell" = {
 				disable-user-extensions = false;
