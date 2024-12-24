@@ -28,6 +28,7 @@
     zoxide
 		nerd-fonts.fira-code
 		nerd-fonts.jetbrains-mono
+		nerd-fonts.symbols-only
     noto-fonts-color-emoji
     pass
     gnupg
