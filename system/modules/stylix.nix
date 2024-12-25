@@ -29,8 +29,8 @@
       sansSerif = monospace;
 
       monospace = {
-        package = pkgs.nerd-fonts.fira-mono;
-        name = "FiraMono Nerd Font";
+        package = pkgs.jetbrains-mono;
+        name = "JetBrains Mono";
       };
       # monospace = {
       #   package = pkgs.fira-code;
