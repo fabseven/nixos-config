@@ -1,7 +1,5 @@
 [general]
-import = [
-	"~/.config/alacritty/themes/moonfly.toml"
-]
+import = ["/home/dk/.config/alacritty/themes/moonfly.toml"]
 
 [env]
 TERM = "xterm-256color"
