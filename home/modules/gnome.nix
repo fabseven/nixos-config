@@ -9,6 +9,18 @@ in
 		settings = {
 			"org/gnome/shell" = {
 				disable-user-extensions = false;
+				enabled-extensions = [
+					#"AlphabeticalAppGrid@stuarthayhurst"
+					#"appindicatorsupport@rgcjonas.gmail.com"
+					#"blur-my-shell@aunetx"
+					#"just-perfection-desktop@just-perfection"
+					#"notification-position@drugo.dev"
+					"space-bar@luchrioh"
+					"tactile@lundal.io"
+					#"tophat@fflewddur.github.io"
+					#"undecorate@sun.wxg@gmail.com"
+					"caffeine@patapon.info"
+				];
 			};
 
 			"org/gnome/desktop/input-sources" = {
