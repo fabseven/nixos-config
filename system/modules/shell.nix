@@ -4,7 +4,7 @@
   environment.shells = with pkgs; [ zsh ];
   environment.variables = {
     EDITOR = "nvim";
-    TERMINAL = "wezterm -1";
+    TERMINAL = "kitty -1";
     TERM = "xterm-kitty";
   };
 
@@ -19,6 +19,7 @@
 
   environment.systemPackages = with pkgs; [
     kitty
+		alacritty
     wezterm
     zsh
     zsh-syntax-highlighting
