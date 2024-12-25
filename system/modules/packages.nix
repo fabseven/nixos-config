@@ -39,7 +39,7 @@
 		distrobox
     mpv
 		_1password-gui
-    _1password
+    _1password-cli
 		lutris
 		heroic
     zoom-us
