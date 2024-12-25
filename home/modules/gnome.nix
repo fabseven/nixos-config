@@ -19,7 +19,7 @@ in
 			};
 
 			"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-				binding = "print";
+				binding = "<Shift><Super>s";
 				command = "${flameshot-gui}/bin/flameshot-gui";
 				name = "flameshot screenshot";
 			};
