@@ -8,6 +8,11 @@
   };
 
   environment = {
+
+		sessionVariables = {
+			NIXOS_OZONE_WL = 1;
+		};
+
 		gnome.excludePackages = with pkgs; [
 			pkgs.gnome-backgrounds
 			pkgs.gnome-maps
