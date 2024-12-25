@@ -40,6 +40,7 @@
     mpv
 		_1password-gui
     _1password-cli
+		flameshot
 		lutris
 		heroic
     zoom-us
