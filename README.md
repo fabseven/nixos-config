@@ -21,6 +21,7 @@ TODOs:
     - [x] Add work setup
 - [x] Printing support - https://github.com/Qeatrix/nixos-config
 - [x] Garbage collector for old versions
+<<<<<<< HEAD
 - [x] Gnome stuff
     - [x] Extensions
         - [x] Blur my shell
@@ -29,6 +30,7 @@ TODOs:
         - [x] Tactile
         - [x] Undecorate Window
         - [x] Caffeine
+>>>>>>> 12f68bb61c0c3bb8bac057052b48ea91de8cd75f
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config
 - [x] Powershell scripting
 - [x] OpenVPN setup

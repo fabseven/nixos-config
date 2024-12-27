@@ -5,6 +5,7 @@
     ./modules/kitty.nix
     ./modules/lazygit.nix
     ./modules/neovim.nix
+		./modules/alacritty.nix
     ./modules/ssh.nix
     #./modules/sway.nix
     #./modules/waybar.nix

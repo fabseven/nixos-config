@@ -1,12 +1,13 @@
 { pkgs, ... }: {
   # more in stylix.lua
   fonts.packages = with pkgs; [
-    font-awesome # installed for waybar icons
-    jetbrains-mono # terminal
-		iosevka
+    nerd-fonts.jetbrains-mono # terminal
+		nerd-fonts.fira-mono
+		noto-fonts-color-emoji
+		noto-fonts-emoji-blob-bin
+		# iosevka
     # iosevka-bin
-		(nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
-    # (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+		# (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
     # (nerdfonts.override { fonts = [ "FiraMono" "JetBrainsMono" ]; })
   ];
 }

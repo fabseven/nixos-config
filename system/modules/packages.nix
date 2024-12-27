@@ -28,19 +28,25 @@
     gthumb
     feh
     libnotify
+		dconf-editor
+		gnome-tweaks
+		adwaita-icon-theme
     nautilus
     stockfish
     lm_sensors
     gping # ping with a graph
     trippy # network diagnostic https://github.com/fujiapple852/trippy
+		distrobox
     mpv
 		_1password-gui
-    _1password
+    _1password-cli
+		flameshot
 		lutris
 		heroic
     zoom-us
     ticktick
-		inputs.zen-browser.packages."${system}".specific
+		ulauncher
+		inputs.zen-browser.packages."${system}".default
     wlogout
     gnome-keyring
     bottles-unwrapped

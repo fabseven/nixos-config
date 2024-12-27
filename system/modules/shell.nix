@@ -4,7 +4,7 @@
   environment.shells = with pkgs; [ zsh ];
   environment.variables = {
     EDITOR = "nvim";
-    TERMINAL = "wezterm -1";
+    TERMINAL = "kitty -1";
     TERM = "xterm-kitty";
   };
 
@@ -19,6 +19,7 @@
 
   environment.systemPackages = with pkgs; [
     kitty
+		alacritty
     wezterm
     zsh
     zsh-syntax-highlighting
@@ -26,9 +27,10 @@
     eza
     keychain
     zoxide
-    fira-code
-    fira-code-nerdfont
-    nerdfonts
+		nerd-fonts.fira-code
+		nerd-fonts.jetbrains-mono
+		nerd-fonts.fira-mono
+		nerd-fonts.symbols-only
     noto-fonts-color-emoji
     pass
     gnupg

@@ -1,8 +1,9 @@
-{ pkgs, inputs, config, ... }: {
+{ pkgs, inputs, config, lib, ... }: {
   imports = [
     ../modules/common.nix
     ../modules/bluetooth.nix
     ./hardware.nix
+		./offload-prime.nix
   ];
 
   environment = {
@@ -49,6 +50,29 @@
   # Enable touchpad support
   services.libinput.enable = true;
 
+	# Blueman applet
+/*   services.blueman.enable = true; */
+
+	# TLP Settings and enabling
+	services.power-profiles-daemon.enable = false;
+	services.tlp.enable = lib.mkDefault true;
+	services.tlp.settings = {
+		CPU_BOOST_ON_AC = "1";
+    CPU_BOOST_ON_BAT = "0";
+    CPU_ENERGY_PERF_POLICY_ON_AC = "balance_power";
+    CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+    CPU_HWP_DYN_BOOST_ON_AC = "1";
+    CPU_HWP_DYN_BOOST_ON_BAT = "0";
+    CPU_MAX_PERF_ON_AC = "100";
+    CPU_MAX_PERF_ON_BAT = "75";
+    PLATFORM_PROFILE_ON_AC = "balanced";
+    PLATFORM_PROFILE_ON_BAT = "low-power";
+    RUNTIME_PM_ON_AC = "auto";
+    RUNTIME_PM_ON_BAT = "auto";
+    WIFI_PWR_ON_AC = "off";
+    WIFI_PWR_ON_BAT = "off";
+	};
+
   # Printing
   services.printing.enable = true;
   services.avahi = {
@@ -86,9 +110,10 @@
 
   #Nvidia drivers
   #https://nixos.wiki/wiki/Nvidia - check the local settings to set with steam to use nvidia
-  services.xserver.videoDrivers = ["nvidia"];
+/*   services.xserver.videoDrivers = ["nvidia"]; */
 
   hardware = {
+		cpu.intel.updateMicrocode = true;
 		nvidia = {
 			modesetting.enable = true;
 			powerManagement.enable = false;
@@ -96,7 +121,7 @@
 			open = false;
 			nvidiaSettings = true;
 			package = config.boot.kernelPackages.nvidiaPackages.production;
-			prime = {
+			/* prime = {
 				offload = {
 					enable = true;
 					enableOffloadCmd = true;
@@ -104,7 +129,7 @@
 				#amdgpuBusId = "PCI:0:6:0";
 				intelBusId = "PCI:0:2:0";
 				nvidiaBusId = "PCI:1:0:0";
-			};
+			}; */
 		};
 	}; 
 
