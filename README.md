@@ -21,18 +21,14 @@ TODOs:
     - [x] Add work setup
 - [x] Printing support - https://github.com/Qeatrix/nixos-config
 - [x] Garbage collector for old versions
-- [ ] Gnome stuff
-    - [ ] Extensions
-        - [ ] Alphabetical App Grid
-        - [ ] Blur my shell
-        - [ ] Just Perfection
-        - [ ] Notification Banner Position
-        - [ ] Space Bar
-        - [ ] Tactile
-        - [ ] TopHat
-        - [ ] Tray Icons
-        - [ ] Undecorate Window
-        - [ ] (Ubuntu) Appindicators
+- [x] Gnome stuff
+    - [x] Extensions
+        - [x] Blur my shell
+        - [x] Notification Banner Position
+        - [x] Space Bar
+        - [x] Tactile
+        - [x] Undecorate Window
+        - [x] Caffeine
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config
 - [x] Powershell scripting
 - [x] OpenVPN setup
@@ -47,5 +43,5 @@ TODOs:
     - [x] Tailscale
     - [x] Ticktick
     - [x] Zoom
-    - [ ] GAM - this is so painchamp, doesn't work properly
-    - [ ] Distrobox for the painchamp thing above
+    - [x] GAM - Only doable via distrobox
+    - [ ] Workspace One hub - might need to create one
