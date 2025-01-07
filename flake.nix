@@ -10,6 +10,11 @@
 		rose-pine-hyprcusror.url = "github:ndom91/rose-pine-hyprcursor";
 		base16.url = "github:SenchoPens/base16.nix";
 
+		tt-schemes = {
+			url = "github:tinted-theming/schemes";
+			flake = false;
+		};
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +30,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, zen-browser, base16, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, zen-browser, base16, tt-schemes, ... } @ inputs:
     let
       inherit (self) outputs;
       inherit (nixpkgs.lib) nixosSystem;
