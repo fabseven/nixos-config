@@ -9,14 +9,15 @@
     ./modules/ssh.nix
     #./modules/sway.nix
     #./modules/waybar.nix
-		./modules/waybar-hl.nix
+		#./modules/waybar-hl.nix
+		./modules/gnome.nix
     ./modules/xdg.nix
     ./modules/zsh.nix
     #./modules/swaylock.nix
     ./modules/syncthing.nix
     # ./modules/hyprlock.nix
     #./modules/kanshi.nix
-		./modules/hyprland.nix
+		#./modules/hyprland.nix
 		./modules/ghostty.nix
     ./modules/helix.nix
 		./modules/proton.nix

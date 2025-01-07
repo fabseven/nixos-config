@@ -13,10 +13,10 @@
 				acpi 
 				mangohud
 		];
-		sessionVariables = {
+		/* sessionVariables = {
 			WLR_NO_HARDWARE_CURSORS = "1";
 			NIXOS_OZONE_WL = "1";
-		};
+		}; */
 		localBinInPath = true;
 	};
 
@@ -42,18 +42,18 @@
 			enable = true;
 			gamescopeSession.enable = true;
 		};
-		hyprland = {
+		/* hyprland = {
 			enable = true;
 			xwayland.enable = true;
-		};
+		}; */
   };
 
-	xdg.portal = {
+	/* xdg.portal = {
 		enable = true;
 		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-	};
+	}; */
 
-	services.hypridle.enable = true;
+/* 	services.hypridle.enable = true; */
 
   powerManagement.enable = true;
 
