@@ -5,7 +5,7 @@
     ./modules/kitty.nix
     ./modules/lazygit.nix
     ./modules/neovim.nix
-		./modules/alacritty.nix
+		#./modules/alacritty.nix
     ./modules/ssh.nix
     #./modules/sway.nix
     #./modules/waybar.nix
@@ -17,6 +17,7 @@
     # ./modules/hyprlock.nix
     #./modules/kanshi.nix
 		./modules/hyprland.nix
+		./modules/ghostty.nix
     ./modules/helix.nix
 		./modules/proton.nix
     # ./modules/lan-mouse.nix
