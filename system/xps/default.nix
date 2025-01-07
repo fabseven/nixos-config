@@ -45,10 +45,13 @@
 		hyprland = {
 			enable = true;
 			xwayland.enable = true;
-			package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-			portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
 		};
   };
+
+	xdg.portal = {
+		enable = true;
+		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+	};
 
 	services.hypridle.enable = true;
 
@@ -62,7 +65,7 @@
   # Enable touchpad support
   services.libinput.enable = true;
 
-	# Blueman applet
+	# Blueman applet;
 /*   services.blueman.enable = true; */
 
 	# TLP Settings and enabling
