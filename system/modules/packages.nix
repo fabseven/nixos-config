@@ -41,6 +41,7 @@
 		_1password-gui
     _1password-cli
 		hyprpaper
+		wlogout
 		swaynotificationcenter
 		waybar
 		solaar
