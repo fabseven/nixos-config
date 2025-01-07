@@ -40,6 +40,8 @@
     mpv
 		_1password-gui
     _1password-cli
+		swaynotificationcenter
+		solaar
 		flameshot
 		lutris
 		heroic
