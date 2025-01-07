@@ -15,7 +15,7 @@
       base01 = "#232224";
     }; */
 
-		config.scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml";
+		base16Scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml";
 
     image = ../../home/wallpaper.jpg;
 
