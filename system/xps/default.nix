@@ -53,6 +53,8 @@
 		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 	}; */
 
+/*   services.blueman.enable = true; */
+
 /* 	services.hypridle.enable = true; */
 
   powerManagement.enable = true;
@@ -64,9 +66,6 @@
 
   # Enable touchpad support
   services.libinput.enable = true;
-
-	# Blueman applet;
-  services.blueman.enable = true;
 
 	# TLP Settings and enabling
 	services.power-profiles-daemon.enable = false;
