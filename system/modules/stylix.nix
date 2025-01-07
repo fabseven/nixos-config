@@ -29,8 +29,8 @@
       sansSerif = monospace;
 
       monospace = {
-        package = pkgs.jetbrains-mono;
-        name = "JetBrains Mono";
+        package = pkgs.geist-mono;
+        name = "Geist Mono";
       };
       # monospace = {
       #   package = pkgs.fira-code;
