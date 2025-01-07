@@ -25,7 +25,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, zen-browser, base16 ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, zen-browser, base16, ... } @ inputs:
     let
       inherit (self) outputs;
       inherit (nixpkgs.lib) nixosSystem;
