@@ -7,6 +7,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
     hosts.url = "github:StevenBlack/hosts";
 		zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    hyprland.url = "github:hyprwm/hyprland";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -23,7 +24,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, zen-browser, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, zen-browser, ... } @ inputs:
     let
       inherit (self) outputs;
       inherit (nixpkgs.lib) nixosSystem;
