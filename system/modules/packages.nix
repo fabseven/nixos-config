@@ -41,6 +41,7 @@
 		_1password-gui
     _1password-cli
 		swaynotificationcenter
+		waybar
 		solaar
 		flameshot
 		lutris
