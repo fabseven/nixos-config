@@ -40,6 +40,9 @@
     mpv
 		_1password-gui
     _1password-cli
+		hyprland
+		hypridle
+		hyprpaper
 		swaynotificationcenter
 		waybar
 		solaar
