@@ -40,7 +40,6 @@
     mpv
 		_1password-gui
     _1password-cli
-		hypridle
 		hyprpaper
 		swaynotificationcenter
 		waybar

@@ -50,6 +50,8 @@
 		};
   };
 
+	services.hypridle.enable = true;
+
   powerManagement.enable = true;
 
   services.fwupd.enable = true;
