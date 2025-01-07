@@ -19,6 +19,10 @@
 
 		cursor.size = 18;
 
+		targets = {
+			gnome.enable = true;
+			gtk.enable = true;
+		};
 
     fonts = rec {
       /* sansSerif = {

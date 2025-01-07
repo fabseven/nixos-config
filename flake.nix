@@ -8,6 +8,7 @@
     hosts.url = "github:StevenBlack/hosts";
 		zen-browser.url = "github:0xc000022070/zen-browser-flake";
 		rose-pine-hyprcusror.url = "github:ndom91/rose-pine-hyprcursor";
+		base16.url = "github:SenchoPens/base16.nix";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -76,6 +77,8 @@
             hosts.nixosModule {
               networking.stevenBlackHosts.enable = true;
             }
+						base16.nixosModule
+						{ scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml"; }
             ./system/xps
           ];
         };
