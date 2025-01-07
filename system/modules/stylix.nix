@@ -17,13 +17,8 @@
 
     image = ../../home/wallpaper.jpg;
 
-/* 		cursor.size = 18; */
+		cursor.size = 18;
 
-		cursor = {
-			package = inputs.rose-pine-hyprcusror.packages.${pkgs.system}.default;
-			name = "Rose Pine Hyprcursor";
-			size = 24;
-		};
 
     fonts = rec {
       /* sansSerif = {
