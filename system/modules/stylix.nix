@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, config, ... }: {
   imports = [ inputs.stylix.nixosModules.stylix ];
   stylix = {
 
@@ -15,8 +15,7 @@
       base01 = "#232224";
     }; */
 
-    base16Scheme = let theme = "ayu-dark";
-		in "${inputs.base16}/base16/ayu-dark.yaml";
+		config.scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml";
 
     image = ../../home/wallpaper.jpg;
 
