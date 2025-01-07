@@ -66,7 +66,7 @@
   services.libinput.enable = true;
 
 	# Blueman applet;
-/*   services.blueman.enable = true; */
+  services.blueman.enable = true;
 
 	# TLP Settings and enabling
 	services.power-profiles-daemon.enable = false;

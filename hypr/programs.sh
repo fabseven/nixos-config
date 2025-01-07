@@ -5,3 +5,5 @@ nm-applet --indicator &
 waybar &
 
 swaync &
+
+hyprpaper &
