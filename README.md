@@ -29,6 +29,9 @@ TODOs:
         - [x] Tactile
         - [x] Undecorate Window
         - [x] Caffeine
+    - [ ] Hotkeys
+        - [ ] Proper Super + 1,2,3,4,5 keys for Space Bar & Workspaces
+        - [ ] Launcher keybinds (ULauncher or similar)
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config
 - [x] Powershell scripting
 - [x] OpenVPN setup
