@@ -7,3 +7,5 @@ waybar &
 swaync &
 
 hyprpaper &
+
+blueman-applet &
