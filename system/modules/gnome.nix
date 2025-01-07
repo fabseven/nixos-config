@@ -33,7 +33,6 @@
 			gnomeExtensions.alphabetical-app-grid
 			gnomeExtensions.tactile
 			gnomeExtensions.blur-my-shell
-			gnome-settings-daemon
     ];
   };
 }
