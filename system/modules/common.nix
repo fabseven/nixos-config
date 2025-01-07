@@ -20,6 +20,7 @@
     ./sway.nix
     ./users.nix
     ./gnome.nix
+		./hyprland.nix
 		./distrobox.nix
   ];
 
