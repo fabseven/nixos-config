@@ -39,7 +39,7 @@
 		distrobox
     mpv
 		_1password-gui
-/*     _1password-cli */
+    _1password-cli
 		flameshot
 		lutris
 		heroic
