@@ -20,8 +20,8 @@
 /* 		cursor.size = 18; */
 
 		cursor = {
-			package = inputs.rose-pine-hyprcusror.packages.${pkgs.system}.default
-			name = "Rose Pine Hyprcursor"}
+			package = inputs.rose-pine-hyprcusror.packages.${pkgs.system}.default;
+			name = "Rose Pine Hyprcursor"};
 			size = 24;
 		};
 
