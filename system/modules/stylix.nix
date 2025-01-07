@@ -21,7 +21,7 @@
 
 		cursor = {
 			package = inputs.rose-pine-hyprcusror.packages.${pkgs.system}.default;
-			name = "Rose Pine Hyprcursor"};
+			name = "Rose Pine Hyprcursor";
 			size = 24;
 		};
 
