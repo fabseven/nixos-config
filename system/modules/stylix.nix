@@ -16,7 +16,7 @@
     }; */
 
     base16Scheme = let theme = "ayu-dark";
-		in "${inputs.tt-schemes}/base16/ayu-dark.yaml";
+		in "${inputs.base16}/base16/ayu-dark.yaml";
 
     image = ../../home/wallpaper.jpg;
 
