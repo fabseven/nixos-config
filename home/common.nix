@@ -9,12 +9,14 @@
     ./modules/ssh.nix
     #./modules/sway.nix
     #./modules/waybar.nix
+		./modules/waybar-hl.nix
     ./modules/xdg.nix
     ./modules/zsh.nix
     #./modules/swaylock.nix
     ./modules/syncthing.nix
     # ./modules/hyprlock.nix
     #./modules/kanshi.nix
+		./modules/hyprland.nix
     ./modules/helix.nix
 		./modules/proton.nix
     # ./modules/lan-mouse.nix
