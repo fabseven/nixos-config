@@ -15,6 +15,8 @@
       base01 = "#232224";
     }; */
 
+		base16Scheme = "ayu-dark";
+
     image = ../../home/wallpaper.jpg;
 
 		cursor.size = 18;
