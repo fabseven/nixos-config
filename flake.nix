@@ -7,6 +7,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
     hosts.url = "github:StevenBlack/hosts";
 		zen-browser.url = "github:0xc000022070/zen-browser-flake";
+		rose-pine-hyprcusror.url = "github:ndom91/rose-pine-hyprcursor";
 
     home-manager = {
       url = "github:nix-community/home-manager";

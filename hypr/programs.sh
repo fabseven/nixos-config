@@ -9,3 +9,7 @@ swaync &
 hyprpaper &
 
 blueman-applet &
+
+hypridle &
+
+

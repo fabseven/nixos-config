@@ -31,6 +31,7 @@
 		dconf-editor
 		gnome-tweaks
 		adwaita-icon-theme
+		inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     nautilus
     stockfish
     lm_sensors
