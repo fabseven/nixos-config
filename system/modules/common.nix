@@ -19,7 +19,7 @@
     ./stylix.nix
     ./sway.nix
     ./users.nix
-    ./gnome.nix
+		#./gnome.nix
 		#./hyprland.nix
 		./distrobox.nix
   ];
