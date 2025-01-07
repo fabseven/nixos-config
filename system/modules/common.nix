@@ -16,7 +16,7 @@
     ./python.nix
     #./gam.nix
     ./sound.nix
-		#./stylix.nix
+		./stylix.nix
     ./sway.nix
     ./users.nix
 		#./gnome.nix
