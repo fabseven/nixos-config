@@ -52,6 +52,8 @@ in
 			"org/gnome/desktop/wm/preferences" = {
 				num-workspaces = 6;
 				audible-bell = false;
+				auto-raise = true;
+				auto-raise-delay = 250;
 			};
 
 			"org/gnome/desktop/sound" = {
