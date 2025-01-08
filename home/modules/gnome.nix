@@ -36,6 +36,10 @@ in
 				name = "flameshot screenshot";
 			};
 
+			"org/gnome/desktop/wm/keybindings" = {
+				switch-to-workspace-1 = "<Super>1";
+			};
+
 			"org/gnome/desktop/sound" = {
 				event-sounds = false;
 			};
