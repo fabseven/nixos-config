@@ -45,8 +45,12 @@ in
 				switch-to-workspace-6 = ["<Super>6"];
 			};
 
+			"org/gnome/shell/extensions/space-bar/behavior" = {
+				show-empty-workspaces = true;
+			};
+
 			"org/gnome/desktop/wm/preferences/num-workspace" = {
-				num-workspaces = 6;
+				num-workspaces = "6";
 			};
 
 			"org/gnome/desktop/sound" = {
