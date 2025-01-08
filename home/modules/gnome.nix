@@ -50,7 +50,8 @@ in
 			};
 
 			"org/gnome/desktop/wm/preferences" = {
-				num-workspaces = 7;
+				num-workspaces = 6;
+				audible-bell = false;
 			};
 
 			"org/gnome/desktop/sound" = {
