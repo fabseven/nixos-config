@@ -37,7 +37,7 @@ in
 			};
 
 			"org/gnome/desktop/wm/keybindings" = {
-				switch-to-workspace-1 = ['<Super>1'];
+				switch-to-workspace-1 = ["<Super>1"];
 			};
 
 			"org/gnome/desktop/sound" = {
