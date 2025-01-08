@@ -49,8 +49,8 @@ in
 				show-empty-workspaces = true;
 			};
 
-			"org/gnome/desktop/wm/preferences/num-workspace" = {
-				num-workspaces = "6";
+			"org/gnome/desktop/wm/preferences" = {
+				num-workspaces = 7;
 			};
 
 			"org/gnome/desktop/sound" = {
