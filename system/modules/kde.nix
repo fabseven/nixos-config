@@ -8,7 +8,7 @@
 
   services = {
     xserver.enable = true;
-    xserver.displayManager.ly.enable = true;
+    displayManager.ly.enable = true;
     xserver.desktopManager.plasma6.enable = true;
   };
 
