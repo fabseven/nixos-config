@@ -19,7 +19,7 @@
 
     image = ../../home/wallpaper.jpg;
 
-		cursor.size = 18;
+		cursor.size = 12;
 
 		targets = {
 			gnome.enable = true;
@@ -55,10 +55,10 @@
       };
 
       sizes = {
-        applications = 10;
-        desktop = 10;
-        popups = 10;
-        terminal = 12;
+        applications = 8;
+        desktop = 8;
+        popups = 8;
+        terminal = 8;
       };
     };
   };
