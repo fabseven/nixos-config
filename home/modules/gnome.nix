@@ -48,6 +48,14 @@ in
 				switch-to-application-9 = [""];
 			};
 
+			"org/gnome/desktop/calendar" = {
+				show-weekdate = true;
+			};
+
+			"org/gnome/desktop/interface/enable-animations" = {
+				enable = false;
+			};
+
 			"org/gnome/desktop/wm/keybindings" = {
 				switch-to-workspace-1 = ["<Super>1"];
 				switch-to-workspace-2 = ["<Super>2"];
@@ -55,10 +63,14 @@ in
 				switch-to-workspace-4 = ["<Super>4"];
 				switch-to-workspace-5 = ["<Super>5"];
 				switch-to-workspace-6 = ["<Super>6"];
+				close = ["<Super>w"]
 			};
 
 			"org/gnome/shell/extensions/space-bar/behavior" = {
 				show-empty-workspaces = true;
+				toggle-overview = false;
+				enable-activate-workspace-shortcuts = true;
+				enable-move-to-workspace-shortcuts = true;
 			};
 
 			"org/gnome/desktop/wm/preferences" = {
