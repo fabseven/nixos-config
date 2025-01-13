@@ -63,7 +63,7 @@ in
 				switch-to-workspace-4 = ["<Super>4"];
 				switch-to-workspace-5 = ["<Super>5"];
 				switch-to-workspace-6 = ["<Super>6"];
-				close = ["<Super>w"]
+				close = ["<Super>w"];
 			};
 
 			"org/gnome/shell/extensions/space-bar/behavior" = {
