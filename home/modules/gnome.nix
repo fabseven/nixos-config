@@ -9,18 +9,17 @@ in
 		settings = {
 			"org/gnome/shell" = {
 				disable-user-extensions = false;
-			#enabled-extensions = [
-			#	#"AlphabeticalAppGrid@stuarthayhurst"
-			#	"appindicatorsupport@rgcjonas.gmail.com"
-			#	"blur-my-shell@aunetx"
-			#	#"just-perfection-desktop@just-perfection"
-			#	"notification-position@drugo.dev"
-			#	"space-bar@luchrioh"
-			#	"tactile@lundal.io"
-			#	#"tophat@fflewddur.github.io"
-			#	"undecorate@sun.wxg@gmail.com"
-			#	"caffeine@patapon.info"
-			#];
+				enabled-extensions = [
+					#"AlphabeticalAppGrid@stuarthayhurst"
+					"appindicatorsupport@rgcjonas.gmail.com"
+					"blur-my-shell@aunetx"
+					"space-bar@luchrioh"
+					"tactile@lundal.io"
+					#"tophat@fflewddur.github.io"
+					"undecorate@sun.wxg@gmail.com"
+					"caffeine@patapon.info"
+					"just-perfection-desktop@just-perfection"
+				];
 			};
 
 			"org/gnome/desktop/input-sources" = {
