@@ -1,13 +1,38 @@
 { inputs, pkgs, ...}: {
-	services.xserver = {
-		enable = true;
-		displayManager.gdm.enable = true;
-	};
-  programs.hyprland = {
-    enable = true;
-		nvidiaPatches = true;
-    xwayland.enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+
+  environment = {
+    systemPackages = with pkgs; [
+
+    ];
+    sessionVariables = {
+      WLR_NO_HARDWARE_CURSORS = "1";
+      NIXOS_OZONE_WL = "1";
+    };
   };
+
+  security.polkit.enable = true;
+
+	services = {
+    xserver = {
+      enable = true;
+      displayManager.ly.enable = true;
+    };
+
+    gnome.gnome-keyring.enable = true;
+
+    hypridle.enable = true;
+    blueman.enable = true;
+  };
+  programs = {
+    nm-applet.enable = true;
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
+    xdg.portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    };
+  };
+
 }

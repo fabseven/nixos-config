@@ -4,7 +4,6 @@
 		nerd-fonts.fira-mono
 		nerd-fonts.geist-mono
 		noto-fonts-color-emoji
-		ghostty
   ];
 
   home.file.".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink

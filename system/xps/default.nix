@@ -13,55 +13,25 @@
 				acpi 
 				mangohud
 		];
-		/* sessionVariables = {
-			WLR_NO_HARDWARE_CURSORS = "1";
-			NIXOS_OZONE_WL = "1";
-		}; */
 		localBinInPath = true;
 	};
 
-  networking = {
-    hostName = "cake";
-    firewall.allowedTCPPorts = [ 22 80 443 ];
-    stevenBlackHosts = {
-      blockFakenews = true;
-      blockGambling = true;
-      blockPorn = true;
-      blockSocial = false;
-    };
-  };
+  networking.hostName = "cake"; 
 
   hardware.pulseaudio.enable = false;
 
   programs = {
     _1password.enable = true;
     _1password-gui.enable = true;
-    nm-applet.enable = true;
 		gamemode.enable = true;
 		steam = {
 			enable = true;
 			gamescopeSession.enable = true;
 		};
-		/* hyprland = {
-			enable = true;
-			xwayland.enable = true;
-		}; */
   };
 
-	/* xdg.portal = {
-		enable = true;
-		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-	}; */
-
-/*   services.blueman.enable = true; */
-
-/* 	services.hypridle.enable = true; */
-
-  powerManagement.enable = true;
-
   services.fwupd.enable = true;
-
-  services.gnome.gnome-keyring.enable = true;
+  
 	services.tailscale.enable = true;
 
   # Enable touchpad support
@@ -98,17 +68,6 @@
   # Display backlight
   programs.light.enable = true;
   hardware.sensor.iio.enable = true;
-
-  # fingerprint sensor
-	#security.pam.services.login.fprintAuth = true;
-	#services.fprintd = {
-	#	enable = true;
-	#	tod = {
-	#		enable = true;
-	#		driver = pkgs.libfprint-2-tod1-goodix;
-	#	};
-	#};
-
 
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];

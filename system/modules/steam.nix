@@ -9,7 +9,7 @@ in {
 
 		config = mkIf cfg.enable {
 			hardware.opengl = { # this fixes the "glXChooseVisual failed" bug, context:
-				https://github.com/NixOS/nixpkgs/issues/47932
+				#https://github.com/NixOS/nixpkgs/issues/47932
 				enable = true;
 			driSupport32Bit = true;
 			driSupport = true;
@@ -26,4 +26,4 @@ in {
 	};
 
 meta.maintainers = with maintainers; [ mkg20001 ];
-	}
+}

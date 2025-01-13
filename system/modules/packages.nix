@@ -17,6 +17,9 @@
     signal-desktop
     ranger
     xfce.thunar
+    xfce.thunar-volman
+    xfce.thunar-archive-plugin
+    xfce.tumbler
     neofetch
     spotify
     playerctl

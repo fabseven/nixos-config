@@ -4,8 +4,8 @@
   environment.shells = with pkgs; [ zsh ];
   environment.variables = {
     EDITOR = "nvim";
-    TERMINAL = "kitty -1";
-    TERM = "xterm-kitty";
+    TERMINAL = "ghostty -1";
+    TERM = "xterm-ghostty";
   };
 
   environment.sessionVariables = rec {
@@ -19,6 +19,7 @@
 
   environment.systemPackages = with pkgs; [
     kitty
+    ghostty
 		alacritty
     wezterm
     zsh
