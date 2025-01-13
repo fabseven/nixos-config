@@ -18,7 +18,7 @@ in
 					#"tophat@fflewddur.github.io"
 					"undecorate@sun.wxg@gmail.com"
 					"caffeine@patapon.info"
-					"just-perfection-desktop@just-perfection"
+					#"just-perfection-desktop@just-perfection"
 				];
 			};
 
