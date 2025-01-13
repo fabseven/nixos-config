@@ -36,7 +36,7 @@ in
 				name = "flameshot screenshot";
 			};
 
-			"org/gnome/shell/keybindings/" = {
+			"org/gnome/shell/keybindings" = {
 				switch-to-application-1 = [""];
 				switch-to-application-2 = [""];
 				switch-to-application-3 = [""];
