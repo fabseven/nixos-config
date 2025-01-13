@@ -9,7 +9,7 @@
   services = {
     xserver.enable = true;
     displayManager.ly.enable = true;
-    xserver.desktopManager.plasma6.enable = true;
+    desktopManager.plasma6.enable = true;
   };
 
   qt = {
