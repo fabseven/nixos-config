@@ -13,7 +13,7 @@ in
 					#"AlphabeticalAppGrid@stuarthayhurst"
 					"appindicatorsupport@rgcjonas.gmail.com"
 					"blur-my-shell@aunetx"
-					"just-perfection-desktop@just-perfection"
+					#"just-perfection-desktop@just-perfection"
 					"notification-position@drugo.dev"
 					"space-bar@luchrioh"
 					"tactile@lundal.io"
