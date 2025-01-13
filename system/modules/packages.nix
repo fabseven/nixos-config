@@ -53,7 +53,7 @@
 		flameshot
 		lutris
 		heroic
-    zoom-us
+		#zoom-us
     ticktick
 		ulauncher
 		inputs.zen-browser.packages."${system}".default
