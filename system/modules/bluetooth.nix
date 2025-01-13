@@ -1,7 +1,7 @@
 { ... }: {
 
   hardware.bluetooth = {
-    enable = enable;
+    enable = true;
     powerOnBoot = true;
     hsphfpd.enable = false;
     settings = {
