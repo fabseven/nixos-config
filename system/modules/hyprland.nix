@@ -2,7 +2,7 @@
 
   environment = {
     systemPackages = with pkgs; [
-
+      pyprland
     ];
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
