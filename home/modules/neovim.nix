@@ -15,7 +15,6 @@
 
   #xdg.configFile."nvim".source = "${config.home.homeDirectory}/nixos-config/nvim";
 
-  # Use the external dotfiles nvim config for quicker hacking
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
     "${config.home.homeDirectory}/nixos-config/nvim";
 }

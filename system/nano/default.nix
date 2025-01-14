@@ -64,14 +64,14 @@
   hardware.sensor.iio.enable = true;
 
   # Fingerprint sensor
-	security.pam.services.login.fprintAuth = true;
-	services.fprintd = {
-		enable = true;
-		tod = {
-			enable = true;
-			driver = pkgs.libfprint-2-tod1-goodix;
-		};
-	};
+#security.pam.services.login.fprintAuth = true;
+#services.fprintd = {
+#	enable = true;
+#	tod = {
+#		enable = true;
+#		driver = pkgs.libfprint-2-tod1-goodix;
+#	};
+#};
 
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
