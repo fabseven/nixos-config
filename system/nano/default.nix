@@ -15,7 +15,7 @@
 		localBinInPath = true;
 	};
 
-  networking.hostName = "bibimbap";
+  networking.hostName = "melon";
 
   hardware.pulseaudio.enable = false;
 
