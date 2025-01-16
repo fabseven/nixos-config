@@ -19,7 +19,7 @@
 
     image = ../../home/wallpaper.jpg;
 
-		cursor.size = 18;
+		cursor.size = 16;
     cursor.package = pkgs.qogir-icon-theme;
     cursor.name = "Qogir Cursors";
 
