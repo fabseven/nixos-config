@@ -43,32 +43,18 @@
       };
     in {
       nixosConfigurations = {
-        rb = nixosSystem {
+        thinkbook = nixosSystem {
           specialArgs = specialArgs;
           modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.users.dk = import ./home/rb;
+              home-manager.users.dk = import ./home/thinkbook;
               home-manager.extraSpecialArgs = specialArgs;
             }
             hosts.nixosModule {
               networking.stevenBlackHosts.enable = true;
             }
-            ./system/rb
-          ];
-        };
-        thinkpad = nixosSystem {
-          specialArgs = specialArgs;
-          modules = [
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.users.dk = import ./home/thinkpad;
-              home-manager.extraSpecialArgs = specialArgs;
-            }
-            hosts.nixosModule {
-              networking.stevenBlackHosts.enable = true;
-            }
-            ./system/thinkpad
+            ./system/thinkbook
           ];
         };
         xps = nixosSystem {

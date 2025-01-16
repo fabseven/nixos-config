@@ -1,4 +1,4 @@
-# Thinkbook E14
+# Lenovo Thinkpad Nano G2
 { ... }: {
   imports = [ ../common.nix ./sway.nix ./waybar.nix ];
 
