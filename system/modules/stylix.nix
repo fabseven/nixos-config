@@ -19,9 +19,9 @@
 
     image = ../../home/wallpaper.jpg;
 
-		cursor.size = 16;
+		cursor.size = 14;
     cursor.package = pkgs.qogir-icon-theme;
-    cursor.name = "Qogir Cursors";
+    cursor.name = "Qogir";
 
 		targets = {
 			gnome.enable = true;
