@@ -4,7 +4,7 @@
   nixpkgs = {};
 
   imports = [
-    #./boot.nix
+    ./boot.nix
     ./coding.nix
 		./shell.nix
 		./fonts.nix
