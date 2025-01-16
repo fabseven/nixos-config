@@ -2,6 +2,7 @@
 
   environment.systemPackages = with pkgs; [
     kdePackages.kate
+		ulauncher
   ];
 
   services = {
