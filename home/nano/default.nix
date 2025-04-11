@@ -1,6 +1,6 @@
 # Lenovo Thinkpad Nano G2
 { ... }: {
-  imports = [ ../common.nix ./sway.nix ./waybar.nix ];
+  imports = [ ../common.nix ../modules/gnome.nix ];
 
 	/* lib.mkForce.home.pointerCursor = {
 		size = 14;

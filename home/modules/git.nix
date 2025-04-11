@@ -38,6 +38,7 @@
     ignores = [
       ".idea"
       ".venv"
+      ".env"
     ];
   };
   programs.gh = {

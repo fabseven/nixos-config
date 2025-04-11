@@ -1,4 +1,4 @@
-font-family = JetBrains Mono
+font-family = GeistMono Nerd Font
 font-style = Regular
 font-size = 12
 
@@ -70,7 +70,7 @@ clipboard-write = allow
  palette = 13=#c792ea
  palette = 14=#89ddff
  palette = 15=#ffffff
- gtk-titlebar = false
+ #gtk-titlebar = false
 
 #theme = Hybrid
 #background = #0c0c0c
