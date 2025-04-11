@@ -25,7 +25,6 @@
 
 		targets = {
 			gtk.enable = true;
-      qtct.enable = true;
 		};
 
     fonts = rec {
