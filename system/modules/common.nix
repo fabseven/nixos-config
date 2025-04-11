@@ -17,10 +17,10 @@
     #./gam.nix
     ./sound.nix
 		./stylix.nix
-    ./sway.nix
+    #./sway.nix
     ./users.nix
-		#./gnome.nix
-    ./kde.nix
+		./gnome.nix
+    #./kde.nix
 		#./hyprland.nix
 		./distrobox.nix
   ];
