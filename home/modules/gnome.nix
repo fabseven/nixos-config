@@ -10,7 +10,6 @@ in
 			"org/gnome/shell" = {
 				disable-user-extensions = false;
 				enabled-extensions = [
-					#"AlphabeticalAppGrid@stuarthayhurst"
 					"appindicatorsupport@rgcjonas.gmail.com"
 					"blur-my-shell@aunetx"
 					"space-bar@luchrioh"
@@ -18,7 +17,7 @@ in
 					#"tophat@fflewddur.github.io"
 					"undecorate@sun.wxg@gmail.com"
 					"caffeine@patapon.info"
-					#"just-perfection-desktop@just-perfection"
+					"just-perfection-desktop@just-perfection"
 				];
 			};
 
