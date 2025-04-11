@@ -24,8 +24,8 @@
     cursor.name = "Qogir";
 
 		targets = {
-			gnome.enable = true;
 			gtk.enable = true;
+      qtct.enable = true;
 		};
 
     fonts = rec {
