@@ -6,7 +6,7 @@
     ./modules/lazygit.nix
     ./modules/neovim.nix
     ./modules/ssh.nix
-    ./modules/gnome.nix
+    ./modules/desktop.nix
     ./modules/xdg.nix
     ./modules/zsh.nix
     ./modules/syncthing.nix
@@ -14,6 +14,12 @@
     ./modules/helix.nix
     ./modules/proton.nix
   ];
+
+  # Enable desktop configuration (matches system config)
+  desktop = {
+    enable = true;
+    environment = "gnome";
+  };
 
   home = rec {
     username = "dk";

@@ -31,16 +31,65 @@ A well-structured NixOS configuration following best practices for managing mult
 - **Home Manager integration** for user-space configuration
 - **Modular design** with reusable components
 - **Centralized dotfiles management**
-- **Multiple desktop environments** (GNOME, Sway, Hyprland)
+- **Multiple desktop environments** (GNOME, KDE Plasma, Sway, Hyprland)
+- **Easy desktop switching** between GNOME and KDE
 - **Consistent theming** with Stylix
 - **Power management** with TLP
 - **Development tools** and environments
+
+## Desktop Environment Support
+
+This configuration supports both GNOME and KDE Plasma desktop environments with easy switching:
+
+### Available Configurations
+
+- **GNOME variants** (default):
+  - `thinkbook` - ThinkPad with GNOME
+  - `xps` - Dell XPS with GNOME  
+  - `nano` - Nano with GNOME
+
+- **KDE variants**:
+  - `thinkbook-kde` - ThinkPad with KDE Plasma
+  - `xps-kde` - Dell XPS with KDE Plasma
+  - `nano-kde` - Nano with KDE Plasma
+
+### Switching Desktop Environments
+
+To switch from GNOME to KDE on any system:
+
+```bash
+# Switch to KDE variant
+sudo nixos-rebuild switch --flake .#{hostname}-kde
+
+# Switch back to GNOME
+sudo nixos-rebuild switch --flake .#{hostname}
+```
+
+### Desktop Features
+
+**GNOME Configuration:**
+- Custom GNOME extensions (Space Bar, Tactile, Blur My Shell, etc.)
+- Custom keybindings and shortcuts
+- Optimized settings for productivity
+
+**KDE Configuration:**
+- Full KDE Plasma 6 desktop
+- KDE applications (Dolphin, Kate, Spectacle, etc.)
+- KDE Connect for device integration
+- Custom shortcuts matching GNOME layout
 
 ## Quick Start
 
 1. Clone this repository
 2. Update hardware configurations for your systems
-3. Build and switch: `sudo nixos-rebuild switch --flake .#{hostname}`
+3. Choose your desktop environment:
+   ```bash
+   # For GNOME (default)
+   sudo nixos-rebuild switch --flake .#{hostname}
+   
+   # For KDE Plasma
+   sudo nixos-rebuild switch --flake .#{hostname}-kde
+   ```
 
 ## References
 

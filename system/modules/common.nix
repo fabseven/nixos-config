@@ -15,9 +15,15 @@
     ./sound.nix
     ./stylix.nix
     ./users.nix
-    ./gnome.nix
+    ./desktop.nix
     ./distrobox.nix
   ];
+
+  # Enable desktop by default with GNOME
+  desktop = {
+    enable = true;
+    environment = "gnome";
+  };
 
   services.dbus.enable = true;
 }
