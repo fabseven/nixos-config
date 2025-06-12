@@ -225,8 +225,5 @@
     };
   };
 
-  # I love TOML configs more
-  home.file.".config/helix".source =
-    config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homeDirectory}/nixos-config/helix";
+  # Config file managed centrally in common.nix
 }

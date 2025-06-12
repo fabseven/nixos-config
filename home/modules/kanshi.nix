@@ -5,10 +5,5 @@
   ...
 }: {
   services.kanshi.enable = true;
-  xdg.configFile = {
-    "kanshi/config" = {
-      enable = true;
-      source = ../../kanshi/config;
-    };
-  };
+  # Config file managed centrally in common.nix
 }

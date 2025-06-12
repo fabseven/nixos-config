@@ -6,6 +6,5 @@
 		noto-fonts-color-emoji
   ];
 
-  home.file.".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homeDirectory}/nixos-config/ghostty";
+  # Config file managed centrally in common.nix
 }

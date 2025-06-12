@@ -1,20 +1,11 @@
 
 {
-  description = "Ghetto nixos";
+  description = "Personal NixOS Configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
-    hosts.url = "github:StevenBlack/hosts";
-		zen-browser.url = "github:0xc000022070/zen-browser-flake";
-		rose-pine-hyprcusror.url = "github:ndom91/rose-pine-hyprcursor";
-		base16.url = "github:SenchoPens/base16.nix";
-
-		tt-schemes = {
-			url = "github:tinted-theming/schemes";
-			flake = false;
-		};
-
+    
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,64 +18,86 @@
         home-manager.follows = "home-manager";
       };
     };
+
+    hosts.url = "github:StevenBlack/hosts";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+    base16.url = "github:SenchoPens/base16.nix";
     nix-colors.url = "github:misterio77/nix-colors";
+
+    tt-schemes = {
+      url = "github:tinted-theming/schemes";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-colors, hosts, zen-browser, base16, tt-schemes, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
-      inherit (self) outputs;
-      inherit (nixpkgs.lib) nixosSystem;
       specialArgs = {
         inherit inputs;
-        inherit outputs;
-        inherit nix-colors;
-        inherit hosts;
-				inherit zen-browser;
+        inherit (inputs) nix-colors hosts zen-browser;
       };
     in {
       nixosConfigurations = {
-        thinkbook = nixosSystem {
+        thinkbook = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
           specialArgs = specialArgs;
           modules = [
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.users.dk = import ./home/thinkbook;
-              home-manager.extraSpecialArgs = specialArgs;
-            }
-            hosts.nixosModule {
-              networking.stevenBlackHosts.enable = true;
-            }
+            ./system/modules/common.nix
             ./system/thinkbook
-          ];
-        };
-        xps = nixosSystem {
-          specialArgs = specialArgs;
-          modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.users.dk = import ./home/xps;
-              home-manager.extraSpecialArgs = specialArgs;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.dk = import ./home/thinkbook;
+                extraSpecialArgs = specialArgs;
+              };
             }
-            hosts.nixosModule {
-              networking.stevenBlackHosts.enable = true;
-            }
-						base16.nixosModule
-						{ scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml"; }
+            inputs.hosts.nixosModule
+            { networking.stevenBlackHosts.enable = true; }
+          ];
+        };
+        
+        xps = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = specialArgs;
+          modules = [
+            ./system/modules/common.nix
             ./system/xps
-          ];
-        };
-        nano = nixosSystem {
-          specialArgs = specialArgs;
-          modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.users.dk = import ./home/nano;
-              home-manager.extraSpecialArgs = specialArgs;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.dk = import ./home/xps;
+                extraSpecialArgs = specialArgs;
+              };
             }
-            hosts.nixosModule {
-              networking.stevenBlackHosts.enable = true;
-            }
+            inputs.hosts.nixosModule
+            { networking.stevenBlackHosts.enable = true; }
+            inputs.base16.nixosModule
+            { scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml"; }
+          ];
+        };
+        
+        nano = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = specialArgs;
+          modules = [
+            ./system/modules/common.nix
             ./system/nano
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.dk = import ./home/nano;
+                extraSpecialArgs = specialArgs;
+              };
+            }
+            inputs.hosts.nixosModule
+            { networking.stevenBlackHosts.enable = true; }
           ];
         };
       };

@@ -17,7 +17,7 @@
 
   networking.hostName = "melon";
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
 
   programs = {
     _1password.enable = true;

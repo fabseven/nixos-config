@@ -334,7 +334,7 @@
     "hyprlang": {
       "inputs": {
         "nixpkgs": [
-          "rose-pine-hyprcusror",
+          "rose-pine-hyprcursor",
           "nixpkgs"
         ],
         "systems": "systems"
@@ -496,24 +496,24 @@
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable",
-        "rose-pine-hyprcusror": "rose-pine-hyprcusror",
+        "rose-pine-hyprcursor": "rose-pine-hyprcursor",
         "stylix": "stylix",
         "tt-schemes": "tt-schemes",
         "zen-browser": "zen-browser"
       }
     },
-    "rose-pine-hyprcusror": {
+    "rose-pine-hyprcursor": {
       "inputs": {
         "hyprlang": "hyprlang",
         "nixpkgs": "nixpkgs_3",
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1740132177,
-        "narHash": "sha256-gNc20APKMefFdH5RONBuHhOps14aiMdgIT0I6RaSN64=",
+        "lastModified": 1748096947,
+        "narHash": "sha256-ouuA8LVBXzrbYwPW2vNjh7fC9H2UBud/1tUiIM5vPvM=",
         "owner": "ndom91",
         "repo": "rose-pine-hyprcursor",
-        "rev": "568067f35a85932192bd43ddf64fc05eff850f9f",
+        "rev": "4b02963d0baf0bee18725cf7c5762b3b3c1392f1",
         "type": "github"
       },
       "original": {
