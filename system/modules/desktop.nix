@@ -10,21 +10,17 @@ in
     enable = mkEnableOption "desktop environment";
     
     environment = mkOption {
-      type = types.enum [ "gnome" "kde" "both" ];
+      type = types.enum [ "gnome" ];
       default = "gnome";
       description = ''
         Which desktop environment to enable.
-        - "gnome": GNOME desktop only
-        - "kde": KDE Plasma desktop only  
-        - "both": Both desktops available at login
+        Currently only GNOME is supported.
       '';
     };
   };
 
-  # Import desktop environments based on selection
   imports = [
-    (mkIf (cfg.enable && (cfg.environment == "gnome" || cfg.environment == "both")) ./gnome.nix)
-    (mkIf (cfg.enable && (cfg.environment == "kde" || cfg.environment == "both")) ./kde.nix)
+    ./gnome.nix
   ];
 
   config = mkIf cfg.enable {
@@ -49,14 +45,7 @@ in
           support32Bit = true;
         };
       };
-    } // (mkIf (cfg.environment == "both") {
-      # If both are enabled, set up proper conflict resolution
-      xserver.displayManager = {
-        # Use SDDM as it supports both GNOME and KDE better
-        sddm.enable = mkForce true;
-        gdm.enable = mkForce false;
-      };
-    });
+    };
 
     # Common fonts
     fonts.packages = with pkgs; [

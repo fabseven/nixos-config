@@ -10,19 +10,18 @@ in
     enable = mkEnableOption "desktop environment home configuration";
     
     environment = mkOption {
-      type = types.enum [ "gnome" "kde" "both" ];
+      type = types.enum [ "gnome" ];
       default = "gnome";
       description = ''
         Which desktop environment configuration to enable.
-        Should match the system desktop.environment setting.
+        Currently only GNOME is supported.
       '';
     };
   };
 
   # Import desktop-specific configurations
   imports = [
-    (mkIf (cfg.enable && (cfg.environment == "gnome" || cfg.environment == "both")) ./gnome.nix)
-    (mkIf (cfg.enable && (cfg.environment == "kde" || cfg.environment == "both")) ./kde.nix)
+    ./gnome.nix
   ];
 
   config = mkIf cfg.enable {

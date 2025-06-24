@@ -39,7 +39,6 @@
       };
     in {
       nixosConfigurations = {
-        # GNOME variants (default)
         thinkbook = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = specialArgs;
@@ -52,6 +51,26 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 users.dk = import ./home/thinkbook;
+                extraSpecialArgs = specialArgs;
+              };
+            }
+            inputs.hosts.nixosModule
+            { networking.stevenBlackHosts.enable = true; }
+          ];
+        };
+
+        thinkpad = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = specialArgs;
+          modules = [
+            ./system/modules/common.nix
+            ./system/thinkpad
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.dk = import ./home/thinkpad;
                 extraSpecialArgs = specialArgs;
               };
             }
@@ -94,66 +113,6 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 users.dk = import ./home/nano;
-                extraSpecialArgs = specialArgs;
-              };
-            }
-            inputs.hosts.nixosModule
-            { networking.stevenBlackHosts.enable = true; }
-          ];
-        };
-
-        # KDE variants
-        thinkbook-kde = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = specialArgs;
-          modules = [
-            ./system/thinkbook/kde.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.dk = import ./home/thinkbook/kde.nix;
-                extraSpecialArgs = specialArgs;
-              };
-            }
-            inputs.hosts.nixosModule
-            { networking.stevenBlackHosts.enable = true; }
-          ];
-        };
-
-        xps-kde = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = specialArgs;
-          modules = [
-            ./system/xps/kde.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.dk = import ./home/xps/kde.nix;
-                extraSpecialArgs = specialArgs;
-              };
-            }
-            inputs.hosts.nixosModule
-            { networking.stevenBlackHosts.enable = true; }
-            inputs.base16.nixosModule
-            { scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml"; }
-          ];
-        };
-
-        nano-kde = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = specialArgs;
-          modules = [
-            ./system/nano/kde.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.dk = import ./home/nano/kde.nix;
                 extraSpecialArgs = specialArgs;
               };
             }
