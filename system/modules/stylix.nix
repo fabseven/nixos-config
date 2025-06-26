@@ -1,4 +1,4 @@
-{ pkgs, inputs, config, ... }: {
+{ pkgs, inputs, config, lib, ... }: {
   imports = [ inputs.stylix.nixosModules.stylix ];
   stylix = {
 
@@ -25,6 +25,10 @@
 
 		targets = {
 			gtk.enable = true;
+			qt = {
+				enable = true;
+				platform = lib.mkForce "qtct";
+			};
 		};
 
     fonts = rec {

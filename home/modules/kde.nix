@@ -151,7 +151,7 @@ in
   # KDE theming through Home Manager
   qt = {
     enable = true;
-    platformTheme.name = "kde";
+    platformTheme.name = "adwaita";
     style = {
       name = "breeze";
       package = pkgs.kdePackages.breeze;

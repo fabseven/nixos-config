@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, lib, ... }: {
   programs.zsh = let
 
     stty = # sh
@@ -98,18 +98,20 @@
       size = 100000;
       save = 100000;
     };
-    initExtraBeforeCompInit = ''
-      ${stty}
-      ${constants}
-      ${fzfCompletion}
-      ${keychain}
-      ${editCommandLine}
-      ${keyMappings}
-      ${functions}
-    '';
-    initExtra = ''
-      ${zshCompletion}
-    '';
+    initContent = lib.mkMerge [
+      (lib.mkOrder 550 ''
+        ${stty}
+        ${constants}
+        ${fzfCompletion}
+        ${keychain}
+        ${editCommandLine}
+        ${keyMappings}
+        ${functions}
+      '')
+      (lib.mkOrder 600 ''
+        ${zshCompletion}
+      '')
+    ];
     shellAliases = let
       home = config.home.homeDirectory;
       dotfiles = "${home}/nixos-config";

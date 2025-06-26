@@ -29,7 +29,6 @@
     dart-sass
     delta
     redis
-    ruff-lsp
     pyright
     cargo
     rustc
