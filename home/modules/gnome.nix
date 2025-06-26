@@ -29,6 +29,12 @@ in
 			};
 
 			"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+				binding = "<Super>d";
+				command = "${pkgs.ulauncher}/bin/ulauncher-toggle";
+				name = "ulauncher";
+			};
+
+			"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
 				binding = "<Shift><Super>s";
 				command = "${flameshot-gui}/bin/flameshot-gui";
 				name = "flameshot screenshot";
