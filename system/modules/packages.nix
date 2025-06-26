@@ -33,6 +33,7 @@
     libnotify
 		dconf-editor
 		gnome-tweaks
+    ulauncher
 		adwaita-icon-theme
 		inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     nautilus
