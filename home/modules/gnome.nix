@@ -30,7 +30,7 @@ in
 
 			"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
 				binding = "<Super>d";
-				command = "${pkgs.ulauncher}/bin/ulauncher-toggle";
+				command = "${pkgs.ulauncher}/bin/ulauncher --no-window-shadow";
 				name = "ulauncher";
 			};
 
