@@ -36,7 +36,7 @@ in
 
 			"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
 				binding = "<Shift><Super>s";
-				command = "${flameshot-gui}/bin/flameshot-gui";
+				command = "/etc/profiles/per-user/dk/bin/flameshot-gui";
 				name = "flameshot screenshot";
 			};
 
