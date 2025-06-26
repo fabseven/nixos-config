@@ -5,7 +5,6 @@
     lua-language-server
     yaml-language-server
     vscode-langservers-extracted
-    prettierd
     rust-analyzer
     solargraph
     shfmt
