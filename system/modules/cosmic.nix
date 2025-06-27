@@ -14,8 +14,4 @@
       enable = true;
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    cosmic-desktop
-  ];
 } 
