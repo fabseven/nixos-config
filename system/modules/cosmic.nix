@@ -14,6 +14,15 @@
     };
   };
   environment.systemPackages = with pkgs; [
-    cosmic-desktop
+    cosmic-idle
+    cosmic-edit
+    cosmic-comp
+    cosmic-store
+    cosmic-randr
+    cosmic-panel
+    cosmic-icons
+    cosmic-files
+    cosmic-applets
+    cosmic-screenshot
   ];
 } 
