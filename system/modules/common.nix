@@ -19,11 +19,5 @@
     ./distrobox.nix
   ];
 
-  # Enable desktop by default with Cinnamon
-  desktop = {
-    enable = true;
-    environment = "cinnamon";
-  };
-
   services.dbus.enable = true;
 }

@@ -15,12 +15,6 @@
     ./modules/proton.nix
   ];
 
-  # Enable desktop configuration (matches system config)
-  desktop = {
-    enable = true;
-    environment = "cinnamon";
-  };
-
   home = rec {
     username = "dk";
     homeDirectory = "/home/${username}";

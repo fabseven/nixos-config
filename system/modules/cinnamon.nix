@@ -1,9 +1,13 @@
 { config, pkgs, lib, ... }: {
   services.xserver = {
     enable = true;
-    displayManager.lightdm.enable = true;
+    displayManager = {
+      lightdm = {
+        enable = true;
+      };
+      defaultSession = "cinnamon";
+    };
     desktopManager.cinnamon.enable = true;
-    displayManager.defaultSession = "cinnamon";
     libinput.enable = true;
   };
 

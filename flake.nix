@@ -104,8 +104,7 @@
           system = "x86_64-linux";
           specialArgs = specialArgs;
           modules = [
-            ./system/modules/common.nix
-            ./system/nano
+            ./system/nano/default.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
