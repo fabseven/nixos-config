@@ -6,7 +6,6 @@
     ./modules/lazygit.nix
     ./modules/neovim.nix
     ./modules/ssh.nix
-    ./modules/desktop.nix
     ./modules/xdg.nix
     ./modules/zsh.nix
     ./modules/syncthing.nix

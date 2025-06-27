@@ -42,8 +42,7 @@
           system = "x86_64-linux";
           specialArgs = specialArgs;
           modules = [
-            ./system/modules/common.nix
-            ./system/thinkbook
+            ./system/thinkbook/default.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -62,8 +61,7 @@
           system = "x86_64-linux";
           specialArgs = specialArgs;
           modules = [
-            ./system/modules/common.nix
-            ./system/thinkpad
+            ./system/thinkpad/default.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -82,8 +80,7 @@
           system = "x86_64-linux";
           specialArgs = specialArgs;
           modules = [
-            ./system/modules/common.nix
-            ./system/xps
+            ./system/xps/default.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
