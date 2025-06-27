@@ -18,7 +18,7 @@
   # Enable desktop configuration (matches system config)
   desktop = {
     enable = true;
-    environment = "gnome";
+    environment = "cinnamon";
   };
 
   home = rec {

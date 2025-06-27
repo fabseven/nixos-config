@@ -1,0 +1,14 @@
+# Nix
+result*
+*~
+.#*
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# AI Generated Files
+.opencode/
+CLAUDE.md
+OpenCode.md

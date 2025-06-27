@@ -10,17 +10,17 @@ in
     enable = mkEnableOption "desktop environment";
     
     environment = mkOption {
-      type = types.enum [ "gnome" ];
-      default = "gnome";
+      type = types.enum [ "cinnamon" ];
+      default = "cinnamon";
       description = ''
         Which desktop environment to enable.
-        Currently only GNOME is supported.
+        Currently only Cinnamon is supported.
       '';
     };
   };
 
   imports = [
-    ./gnome.nix
+    ./cinnamon.nix
   ];
 
   config = mkIf cfg.enable {

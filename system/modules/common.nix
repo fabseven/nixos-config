@@ -19,10 +19,10 @@
     ./distrobox.nix
   ];
 
-  # Enable desktop by default with GNOME
+  # Enable desktop by default with Cinnamon
   desktop = {
     enable = true;
-    environment = "gnome";
+    environment = "cinnamon";
   };
 
   services.dbus.enable = true;
