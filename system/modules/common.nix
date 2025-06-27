@@ -15,7 +15,7 @@
     ./sound.nix
     ./stylix.nix
     ./users.nix
-    ./desktop.nix
+    ./cosmic.nix
     ./distrobox.nix
   ];
 
