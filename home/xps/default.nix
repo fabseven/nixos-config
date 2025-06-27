@@ -1,6 +1,6 @@
 # Dell XPS 15"
 { ... }: {
-  imports = [ ../common.nix ../modules/gnome.nix ../modules/kanshi.nix ];
+  imports = [ ../common.nix ../modules/kanshi.nix ];
 
 	/* lib.mkForce.home.pointerCursor = {
 		size = 14;
