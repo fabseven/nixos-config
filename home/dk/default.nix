@@ -1,12 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
-
-  imports = [
-  ];
+{ ... }: {
 
   home.username = "dk";
   home.homeDirectory = "/home/dk";

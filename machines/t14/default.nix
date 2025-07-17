@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{ ... }: {
   imports = [
     ../../modules/users/dk.nix
     ./configuration.nix

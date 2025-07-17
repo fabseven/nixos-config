@@ -3,6 +3,7 @@
     inputs.omarchy-nix.nixosModules.default
   ];
 
+  programs.waybar.settings.mainBar.position = "bottom";
   omarchy = {
     full_name = "fabseven";
     email_address = "fabbycrafted@gmail.com";
