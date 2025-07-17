@@ -21,9 +21,9 @@
   programs.git = {
   };
 
-  programs.waybar.settings = lib.mkForce {
+  programs.waybar.settings = {
     mainBar = {
-      position = "bottom";
+      position = lib.mkForce "bottom";
     };
   };
 
