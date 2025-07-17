@@ -19,14 +19,7 @@
         omarchy-nix.nixosModules.default
         home-manager.nixosModules.home-manager
         {
-          programs.waybar = {
-            enable = true;
-            settings = {
-              mainBar = {
-                position = "bottom";
-              };
-            };
-          };
+          programs.waybar.settings.mainBar.position = "bottom";
           omarchy = {
             full_name = "fabseven";
             email_address = "fabbycrafted@gmail.com";
