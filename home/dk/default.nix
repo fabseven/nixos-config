@@ -1,4 +1,4 @@
-{ inputs, lib, pkgs, ... }: {
+{ inputs, lib, ... }: {
 
   imports = [
     inputs.omarchy-nix.homeManagerModules.default
@@ -11,10 +11,6 @@
   programs.home-manager.enable = true;
 
   programs.git = {
-  };
-
-  programs.waybar.settings = lib.mkForce {
-    mainBar.position = "bottom";
   };
 
   omarchy = {
