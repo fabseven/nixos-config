@@ -1,4 +1,4 @@
-{ inputs, lib, ... }: {
+{ inputs, lib, pkgs, ... }: {
 
   imports = [
     inputs.omarchy-nix.homeManagerModules.default
@@ -21,17 +21,12 @@
   programs.git = {
   };
 
-  programs.waybar.settings = {
-    mainBar = {
-      position = lib.mkForce "bottom";
-    };
+  programs.waybar.settings = lib.mkForce {
+    mainBar.position = "bottom";
   };
 
-  omarchy = lib.mkForce {
-    full_name = "fabseven";
-    email_address = "fabbycrafted@gmail.com";
-    theme = "tokyo-night";
-    primary_font = "CaskaydiaMono Nerd Font";
+  omarchy = {
+    primary_font = lib.mkForce "CaskaydiaMono Nerd Font";
     vscode_settings = {
       "editor.fontFamily" = "CaskaydiaMono Nerd Font";
       "editor.minimap.enabled" = false;
