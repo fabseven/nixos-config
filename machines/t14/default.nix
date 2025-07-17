@@ -5,7 +5,6 @@
     ./hardware.nix
   ];
 
-  home-manager.useGlobalPkgs = true;
   services.fwupd.enable = true;
   networking.hostName = "piss";
   services.openssh = {

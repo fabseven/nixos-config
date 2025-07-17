@@ -19,15 +19,19 @@
         omarchy-nix.nixosModules.default
         home-manager.nixosModules.home-manager
         {
-          omarchy = {
-            full_name = "fabseven";
-            email_address = "fabbycrafted@gmail.com";
-            theme = "tokyo-night";
-          };
+           omarchy = {
+             full_name = "fabseven";
+             email_address = "fabbycrafted@gmail.com";
+             theme = "tokyo-night";
+           };
           home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = { inputs = { inherit omarchy-nix; }; };
             users.dk = {
-              home.stateVersion = "25.11";
-              imports = [ omarchy-nix.homeManagerModules.default ];
+              imports = [
+                ./home/dk/default.nix
+              ];
             };
           };
         }
