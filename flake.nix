@@ -23,6 +23,7 @@
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     base16.url = "github:SenchoPens/base16.nix";
     nix-colors.url = "github:misterio77/nix-colors";
+    hyprland.url = "github:hyprwm/Hyprland";
 
     tt-schemes = {
       url = "github:tinted-theming/schemes";
