@@ -4,11 +4,11 @@
   lib,
   ...
 }: let
-  cfg = config.omarchy;
+  #cfg = config.omarchy;
 in {
   imports = [
     ./autostart.nix
-    ./bindings.nix
+    #./bindings.nix
     ./envs.nix
     ./input.nix
     ./looknfeel.nix
@@ -24,6 +24,5 @@ in {
     "$messenger" = lib.mkDefault "signal-desktop";
     "$webapp" = lib.mkDefault "$browser --app";
 
-    monitor = cfg.monitors;
   };
 }
