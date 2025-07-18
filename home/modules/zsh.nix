@@ -114,7 +114,7 @@
     ];
     shellAliases = let
       home = config.home.homeDirectory;
-      dotfiles = "${home}/nixos-config";
+      dotfiles = "${home}/nixos-config/dotfiles";
     in {
       "su" = "systemctl --user";
       "sr" = "sudo systemctl";
