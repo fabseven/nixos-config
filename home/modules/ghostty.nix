@@ -5,6 +5,5 @@
 		nerd-fonts.geist-mono
 		noto-fonts-color-emoji
   ];
-  home.file.".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homeDirectory}/nixos-config/dotfiles/ghostty";
+  xdg.configFile."ghostty".source = ../../dotfiles/ghostty;
 }

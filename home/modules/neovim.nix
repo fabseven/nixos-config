@@ -12,6 +12,5 @@
     nodePackages_latest.vscode-json-languageserver
   ];
 
-  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homeDirectory}/nixos-config/dotfiles/nvim";
+  xdg.configFile."nvim".source = ../../dotfiles/nvim;
 }

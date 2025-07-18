@@ -17,12 +17,12 @@
   home = rec {
     username = "dk";
     homeDirectory = "/home/${username}";
-/*     file = {
+    file = {
       ".local/bin".source =
         config.lib.file.mkOutOfStoreSymlink "${homeDirectory}/nixos-config/scripts";
       ".p10k.zsh".source = 
         config.lib.file.mkOutOfStoreSymlink "${homeDirectory}/nixos-config/dotfiles/p10k/p10k.zsh";
-    }; */
+    };
   };
 
   programs.home-manager.enable = true;
