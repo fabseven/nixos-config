@@ -4,18 +4,15 @@
     systemPackages = with pkgs; [
       pyprland
     ];
-    sessionVariables = {
-      WLR_NO_HARDWARE_CURSORS = "1";
-      NIXOS_OZONE_WL = "1";
-    };
+    # sessionVariables = {
+    #   WLR_NO_HARDWARE_CURSORS = "1";
+    #   NIXOS_OZONE_WL = "1";
+    # };
   };
 
   security.polkit.enable = true;
 
 	services = {
-    xserver = {
-      enable = true;
-    };
     gnome.gnome-keyring.enable = true;
     displayManager.ly.enable = true;
 
@@ -28,7 +25,6 @@
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-      xwayland.enable = true;
     };
   };
 }
