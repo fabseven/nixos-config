@@ -6,7 +6,7 @@
   ...
 }:
 let
-  cfg = config.omarchy;
+  #cfg = config.omarchy;
   hasNvidiaDrivers = builtins.elem "nvidia" osConfig.services.xserver.videoDrivers;
   nvidiaEnv = [
     "NVD_BACKEND,direct"
@@ -18,7 +18,7 @@ in
   wayland.windowManager.hyprland.settings = {
     # Environment variables
     env = (lib.optionals hasNvidiaDrivers nvidiaEnv) ++ [
-      "GDK_SCALE,${toString cfg.scale}"
+      "GDK_SCALE,1"
       
       # Cursor size
       "XCURSOR_SIZE,24"

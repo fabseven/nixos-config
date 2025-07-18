@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  cfg = config.omarchy;
+  #cfg = config.omarchy;
 in {
   wayland.windowManager.hyprland.settings = {
     bind =
