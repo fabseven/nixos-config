@@ -34,6 +34,6 @@
   services.hyprpolkitagent.enable = true;
   
   # # I am too lazy to write a nix config for hyprland
-  home.file.".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homeDirectory}/nixos-config/dotfiles/hypr/hyprland.conf";
+  home.file.".config/hypr".source = config.lib.file.mkOutOfStoreSymlink
+    "${config.home.homeDirectory}/nixos-config/dotfiles/hypr";
 }
