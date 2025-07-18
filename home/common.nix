@@ -5,7 +5,7 @@
     ./modules/kitty.nix
     ./modules/lazygit.nix
     ./modules/neovim.nix
-    ./modules/ssh.nix
+    #./modules/ssh.nix
     ./modules/xdg.nix
     ./modules/zsh.nix
     ./modules/syncthing.nix
