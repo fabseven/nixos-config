@@ -15,10 +15,9 @@
 	services = {
     xserver = {
       enable = true;
-      displayManager.ly.enable = true;
     };
-
     gnome.gnome-keyring.enable = true;
+    displayManager.ly.enable = true;
 
     hypridle.enable = true;
     blueman.enable = true;
