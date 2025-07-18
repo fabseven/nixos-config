@@ -25,39 +25,6 @@
     };
   };
 
-  # Dotfiles management
-  xdg.configFile = {
-    # Application configurations
-    "alacritty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/dotfiles/alacritty";
-      recursive = true;
-    };
-    "hypr" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/dotfiles/hypr";
-      recursive = true;
-    };
-    "ghostty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/dotfiles/ghostty";
-      recursive = true;
-    };
-    "helix" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/dotfiles/helix";
-      recursive = true;
-    };
-    "kanshi" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/dotfiles/kanshi";
-      recursive = true;
-    };
-    "nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/dotfiles/nvim";
-      recursive = true;
-    };
-    "waybar-hl" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/dotfiles/waybar-hl";
-      recursive = true;
-    };
-  };
-
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 }

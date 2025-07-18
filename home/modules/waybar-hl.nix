@@ -1,4 +1,4 @@
-{pkgs, config, ...}: {
+{ config, ...}: {
   home.file.".config/waybar".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homeDirectory}/nixos-config/waybar-hl";
+    "${config.home.homeDirectory}/nixos-config/dotfiles/waybar-hl";
 }

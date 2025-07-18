@@ -12,5 +12,6 @@
     nodePackages_latest.vscode-json-languageserver
   ];
 
-  # Config file managed centrally in common.nix
+  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
+    "${config.home.homeDirectory}/nixos-config/dotfiles/nvim";
 }

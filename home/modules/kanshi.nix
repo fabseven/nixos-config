@@ -1,9 +1,10 @@
 # NixOS workstation Kanshi config
 {
   config,
-  pkgs,
   ...
 }: {
   services.kanshi.enable = true;
-  # Config file managed centrally in common.nix
+
+  home.file.".config/kanshi".source = config.lib.file.mkOutOfStoreSymlink
+    "${config.home.homeDirectory}/nixos-config/dotfiles/kanshi";
 }

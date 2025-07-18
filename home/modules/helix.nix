@@ -34,6 +34,9 @@
     yaml-language-server
   ];
 
+  home.file.".config/helix".source = config.lib.file.mkOutOfStoreSymlink
+    "${config.home.homeDirectory}/nixos-config/dotfiles/helix";
+
   programs.helix = {
     languages = {
       language = [
