@@ -35,6 +35,8 @@
     enable = true;
     settings = {
       grace = 5;
+      no_fade_in = false;
+      disable_loading_bar = false;
     };
   };
 
