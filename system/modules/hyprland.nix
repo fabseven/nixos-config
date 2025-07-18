@@ -4,10 +4,10 @@
     systemPackages = with pkgs; [
       pyprland
     ];
-    # sessionVariables = {
-    #   WLR_NO_HARDWARE_CURSORS = "1";
-    #   NIXOS_OZONE_WL = "1";
-    # };
+    sessionVariables = {
+      WLR_NO_HARDWARE_CURSORS = "1";
+      NIXOS_OZONE_WL = "1";
+    };
   };
 
   security.polkit.enable = true;
