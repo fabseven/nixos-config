@@ -31,8 +31,18 @@
     };
   };
 
+  programs.hyprlock = {
+    enable = true;
+    settings = {
+      grace = 5;
+    };
+  };
+
   services.hyprpolkitagent.enable = true;
   
   # I am too lazy to write a nix config for hyprland
-  xdg.configFile."hypr".source = ../../dotfiles/hypr;
+  xdg.configFile = {
+    "hypr".source = ../../dotfiles/hypr;
+    "wlogout".source = ../../dotfiles/wlogout;
+  };
 }

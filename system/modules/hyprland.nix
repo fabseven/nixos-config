@@ -3,6 +3,7 @@
   environment = {
     systemPackages = with pkgs; [
       pyprland
+      hyprshot
     ];
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
