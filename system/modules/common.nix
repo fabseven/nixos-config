@@ -13,7 +13,7 @@
     ./packages.nix
     ./python.nix
     ./sound.nix
-    #./stylix.nix
+    ./stylix.nix
     ./users.nix
     #./cosmic.nix
     ./hyprland.nix

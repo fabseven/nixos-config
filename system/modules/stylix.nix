@@ -17,11 +17,11 @@
 
 		base16Scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml";
 
-    image = ../../home/wallpaper.jpg;
+/*     image = ../../home/wallpaper.jpg;
 
 		cursor.size = 18;
     cursor.package = pkgs.qogir-icon-theme;
-    cursor.name = "Qogir";
+    cursor.name = "Qogir"; */
 
 		targets = {
 			gtk.enable = true;
@@ -31,11 +31,11 @@
 			};
 		};
 
-    fonts = rec {
-      /* sansSerif = {
+/*     fonts = rec {
+      sansSerif = {
         package = pkgs.raleway;
         name = "Raleway";
-      }; */
+      }; 
 
       serif = monospace;
       sansSerif = monospace;
@@ -44,15 +44,6 @@
         package = pkgs.jetbrains-mono;
         name = "JetBrains Mono";
       };
-      # monospace = {
-      #   package = pkgs.fira-code;
-      #   name = "Fira Code";
-      # };
-
-      # monospace = {
-      #   package = pkgs.iosevka-bin;
-      #   name = "Iosevka Term";
-      # };
 
       emoji = {
         package = pkgs.noto-fonts-color-emoji;
@@ -65,6 +56,6 @@
         popups = 10;
         terminal = 12;
       };
-    };
+    }; */
   };
 }
