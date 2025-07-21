@@ -37,6 +37,8 @@
 		adwaita-icon-theme
 		inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     nautilus
+    moonlight-qt
+    parsec-bin
     stockfish
     lm_sensors
     gping # ping with a graph
