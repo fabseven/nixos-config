@@ -24,6 +24,7 @@
 
   programs.nix-ld = {
     enable = true;
+    dev.enable = false;
   }; 
 
   # enable zsh completion for system packages
