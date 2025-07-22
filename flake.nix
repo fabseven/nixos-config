@@ -32,7 +32,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-ld, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
       specialArgs = {
         inherit inputs;
