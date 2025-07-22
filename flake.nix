@@ -64,10 +64,6 @@
           specialArgs = specialArgs;
           modules = [
             ./system/thinkpad/default.nix
-            nix-ld.nixosModules.nix-ld
-            {
-              programs.nix-ld.dev.enable = true;
-            }
             home-manager.nixosModules.home-manager
             {
               home-manager = {

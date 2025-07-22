@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
+
+  imports = [
+    inputs.nix-ld.nixosModules.nix-ld
+  ];
 
   environment.systemPackages = with pkgs; [
     fzf
@@ -17,6 +21,11 @@
     iprange
     ps_mem
   ];
+
+  programs.nix-ld = {
+    enable = true;
+    dev.enable = true; # enable nix-ld for development
+  }; 
 
   # enable zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
