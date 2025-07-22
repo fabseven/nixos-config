@@ -18,6 +18,7 @@
       };
     };
 
+    nix-ld.url = "github:Mic92/nix-ld";
     hosts.url = "github:StevenBlack/hosts";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
@@ -63,6 +64,10 @@
           specialArgs = specialArgs;
           modules = [
             ./system/thinkpad/default.nix
+            nix-ld.nixosModules.nix-ld
+            {
+              programs.nix-ld.dev.enable = true;
+            }
             home-manager.nixosModules.home-manager
             {
               home-manager = {
