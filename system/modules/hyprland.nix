@@ -19,6 +19,7 @@
     blueman.enable = true;
   };
   programs = {
+    uwsm.enable = true;
     nm-applet.enable = true;
     # hyprland = {
     #   enable = true;
