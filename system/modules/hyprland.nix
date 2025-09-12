@@ -13,7 +13,7 @@
 
 	services = {
     gnome.gnome-keyring.enable = true;
-    displayManager.ly.enable = true;
+    displayManager.gdm.enable = true;
     hypridle.enable = true;
     blueman.enable = true;
   };
