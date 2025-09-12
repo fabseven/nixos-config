@@ -19,7 +19,10 @@
     };
 
     nix-ld.url = "github:Mic92/nix-ld";
-    hosts.url = "github:StevenBlack/hosts";
+    hosts = {
+      url = "github:StevenBlack/hosts";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     base16.url = "github:SenchoPens/base16.nix";
