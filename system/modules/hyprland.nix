@@ -20,6 +20,9 @@
   };
   programs = {
     uwsm.enable = true;
+    hyprland = {
+      withUWSM = true;
+    };
     nm-applet.enable = true;
     # hyprland = {
     #   enable = true;
