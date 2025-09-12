@@ -28,6 +28,10 @@
     base16.url = "github:SenchoPens/base16.nix";
     nix-colors.url = "github:misterio77/nix-colors";
     hyprland.url = "github:hyprwm/Hyprland";
+    waybar = {
+      url = "github:Alexays/Waybar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     tt-schemes = {
       url = "github:tinted-theming/schemes";
