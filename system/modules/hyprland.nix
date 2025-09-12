@@ -35,14 +35,7 @@
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       withUWSM = true;
     };
-    hyprlock = {
-      enable = true;
-      settings = {
-        grace = 5;
-        no_fade_in = false;
-        disable_loading_bar = false;
-      };
-    };
+    hyprlock.enable = true;
     nm-applet.enable = true;
   };
 }
