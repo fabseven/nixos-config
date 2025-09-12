@@ -16,7 +16,6 @@
     xserver = {
       displayManager.lightdm.enable = true;
     };
-    hyprpolkitagent.enable = true;
     hypridle.enable = true;
     blueman.enable = true;
   };
