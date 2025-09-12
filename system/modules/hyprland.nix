@@ -14,6 +14,7 @@
 	services = {
     gnome.gnome-keyring.enable = true;
     xserver = {
+      enable = true;
       displayManager.lightdm.enable = true;
     };
     hypridle.enable = true;
