@@ -26,17 +26,6 @@
       ];
     };
   };
-
-  programs.hyprlock = {
-    enable = true;
-    settings = {
-      grace = 5;
-      no_fade_in = false;
-      disable_loading_bar = false;
-    };
-  };
-
-  services.hyprpolkitagent.enable = true;
   
   # I am too lazy to write a nix config for hyprland
   xdg.configFile = {

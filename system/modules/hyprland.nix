@@ -13,8 +13,8 @@
 
 	services = {
     gnome.gnome-keyring.enable = true;
-    displayManager.ly.enable = true;
-
+    displayManager.lightdm.enable = true;
+    hyprpolkitagent.enable = true;
     hypridle.enable = true;
     blueman.enable = true;
   };
@@ -34,6 +34,14 @@
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       withUWSM = true;
+    };
+    hyprlock = {
+      enable = true;
+      settings = {
+        grace = 5;
+        no_fade_in = false;
+        disable_loading_bar = false;
+      };
     };
     nm-applet.enable = true;
   };
