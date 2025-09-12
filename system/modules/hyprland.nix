@@ -14,7 +14,6 @@
 	services = {
     gnome.gnome-keyring.enable = true;
     displayManager.ly.enable = true;
-    displayManager.gdm.enable = false;
     hypridle.enable = true;
     blueman.enable = true;
   };
