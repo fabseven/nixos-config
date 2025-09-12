@@ -8,8 +8,6 @@
     rust-analyzer
     solargraph
     shfmt
-    nodePackages_latest.typescript-language-server
-    nodePackages_latest.vscode-json-languageserver
   ];
 
   xdg.configFile."nvim".source = ../../dotfiles/nvim;
