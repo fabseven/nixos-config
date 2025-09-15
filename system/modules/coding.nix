@@ -29,7 +29,6 @@
     corepack
     dart-sass
     delta
-    redis
     pyright
     cargo
     rustc
@@ -44,5 +43,4 @@
 
   programs.java.enable = true;
 
-  services.redis.servers."".enable = true;
 }
