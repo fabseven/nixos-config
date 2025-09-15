@@ -31,8 +31,7 @@
     glib
     gsettings-desktop-schemas
     xdg-utils
-    xdg-desktop-portal
-    xdg-desktop-portal-kde
+    kdePackages.xdg-desktop-portal-kde
   ];
 
   # Enable KDE Plasma 6
