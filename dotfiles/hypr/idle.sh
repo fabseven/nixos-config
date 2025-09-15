@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/run/current-system/sw/bin/bash
 
 if pgrep -x hypridle >/dev/null; then
   pkill -x hypridle
