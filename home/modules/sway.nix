@@ -1,5 +1,6 @@
 { config, lib, ... }:
-with config.lib.stylix.colors.withHashtag; {
+with config.lib.stylix.colors.withHashtag;
+{
   # auto start
   # programs.zsh.profileExtra = ''
   #   if [ -z "$DISPLAY" ] && [ "''${XDG_VTNR:-0}" -eq 1 ]; then
@@ -7,11 +8,13 @@ with config.lib.stylix.colors.withHashtag; {
   #   fi
   # '';
 
-	programs.wofi = {
-		enable = true;
-	};
+  programs.wofi = {
+    enable = true;
+  };
 
-  gtk = { enable = true; };
+  gtk = {
+    enable = true;
+  };
 
   wayland.windowManager.sway = {
     enable = true;
@@ -33,48 +36,50 @@ with config.lib.stylix.colors.withHashtag; {
         "type:keyboard" = {
           xkb_layout = "us,fi";
           xkb_variant = "qwerty";
-					xkb_options = "caps:ctrl_modifier";
+          xkb_options = "caps:ctrl_modifier";
           repeat_rate = "50";
           repeat_delay = "250";
         };
       };
-      colors = let
-        text = base04;
-        urgent = base09;
-        focused = base04;
-        unfocused = base00;
-        background = base00;
-        indicator = base0C;
-      in lib.mkForce {
-        inherit background;
-        urgent = {
-          inherit background indicator text;
-          border = urgent;
-          childBorder = urgent;
+      colors =
+        let
+          text = base04;
+          urgent = base09;
+          focused = base04;
+          unfocused = base00;
+          background = base00;
+          indicator = base0C;
+        in
+        lib.mkForce {
+          inherit background;
+          urgent = {
+            inherit background indicator text;
+            border = urgent;
+            childBorder = urgent;
+          };
+          focused = {
+            border = focused;
+            childBorder = focused;
+            background = focused;
+            indicator = focused;
+            text = focused;
+          };
+          focusedInactive = {
+            inherit background indicator text;
+            border = unfocused;
+            childBorder = unfocused;
+          };
+          unfocused = {
+            inherit background indicator text;
+            border = unfocused;
+            childBorder = unfocused;
+          };
+          placeholder = {
+            inherit background indicator text;
+            border = unfocused;
+            childBorder = unfocused;
+          };
         };
-        focused = {
-          border = focused;
-          childBorder = focused;
-          background = focused;
-          indicator = focused;
-          text = focused;
-        };
-        focusedInactive = {
-          inherit background indicator text;
-          border = unfocused;
-          childBorder = unfocused;
-        };
-        unfocused = {
-          inherit background indicator text;
-          border = unfocused;
-          childBorder = unfocused;
-        };
-        placeholder = {
-          inherit background indicator text;
-          border = unfocused;
-          childBorder = unfocused;
-        };
-      };
       focus.followMouse = false;
       floating.modifier = modifier;
       keybindings = {
@@ -138,12 +143,12 @@ with config.lib.stylix.colors.withHashtag; {
         "ctrl+f6" = "mode gaming";
       };
 
-			startup = [
-				{
-					command = "kanshi";
-					always = true;
-				} 
-			];
+      startup = [
+        {
+          command = "kanshi";
+          always = true;
+        }
+      ];
 
       modes = {
         resize = {
@@ -173,10 +178,12 @@ with config.lib.stylix.colors.withHashtag; {
           "${modifier}+ctrl+0" = "workspace number 10";
         };
       };
-      bars = [{
-        position = "bottom";
-        command = "waybar";
-      }];
+      bars = [
+        {
+          position = "bottom";
+          command = "waybar";
+        }
+      ];
     };
     extraConfig = ''
       default_border pixel 1
@@ -194,36 +201,35 @@ with config.lib.stylix.colors.withHashtag; {
     ignoreTimeout = false;
   };
 
- #services.swaync = {
- #  enable = true;
- #  settings = {
- #    positionX = "right";
- #    positionY = "top"; 
- #    control-center-margin-top = 10;
- #    control-center-margin-bottom = 10;
- #    control-center-margin-right = 10;
- #    control-center-margin-left = 10;
- #    notification-icon-size = 64;
- #    notification-body-image-height = 100;
- #    notification-body-image-width = 200;
- #    timeout = 10;
- #    timeout-low = 5;
- #    timeout-critical = 0;
- #    fit-to-screen = false;
- #    control-center-width = 500;
- #    control-center-height = 1025;
- #    notification-window-width = 500;
- #    keyboard-shortcuts = true;
- #    image-visibility = "when-available";
- #    transition-time = 200;
- #    hide-on-clear = false;
- #    hide-on-action = true;
- #    script-fail-notify = true;
- #  };
- #};
+  #services.swaync = {
+  #  enable = true;
+  #  settings = {
+  #    positionX = "right";
+  #    positionY = "top";
+  #    control-center-margin-top = 10;
+  #    control-center-margin-bottom = 10;
+  #    control-center-margin-right = 10;
+  #    control-center-margin-left = 10;
+  #    notification-icon-size = 64;
+  #    notification-body-image-height = 100;
+  #    notification-body-image-width = 200;
+  #    timeout = 10;
+  #    timeout-low = 5;
+  #    timeout-critical = 0;
+  #    fit-to-screen = false;
+  #    control-center-width = 500;
+  #    control-center-height = 1025;
+  #    notification-window-width = 500;
+  #    keyboard-shortcuts = true;
+  #    image-visibility = "when-available";
+  #    transition-time = 200;
+  #    hide-on-clear = false;
+  #    hide-on-action = true;
+  #    script-fail-notify = true;
+  #  };
+  #};
 
   # fixes:
   # Unable to connect to the compositor. If your compositor is running, check or set the WAYLAND_DISPLAY environment variable.
-  systemd.user.services.swayidle.Service.Environment =
-    lib.mkAfter [ "WAYLAND_DISPLAY='wayland-1'" ];
+  systemd.user.services.swayidle.Service.Environment = lib.mkAfter [ "WAYLAND_DISPLAY='wayland-1'" ];
 }

@@ -1,8 +1,18 @@
-{ ... }: {
+{ ... }:
+{
   users.users = {
     dk = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "video" "nginx" "onepassword" "audio" "vboxusers" "networkmanager" "lpadmin"];
+      extraGroups = [
+        "wheel"
+        "video"
+        "nginx"
+        "onepassword"
+        "audio"
+        "vboxusers"
+        "networkmanager"
+        "lpadmin"
+      ];
       homeMode = "750"; # for nginx to read assets
     };
   };

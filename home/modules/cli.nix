@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
@@ -14,13 +15,17 @@
     enable = true;
     enableZshIntegration = true;
   };
-  programs.bat = { enable = true; };
+  programs.bat = {
+    enable = true;
+  };
   # man with bat
   home.sessionVariables = {
     MANPAGER = "sh -c 'col -bx | bat -l man -p'";
     MANROFFOPT = "-c";
   };
-  programs.ripgrep = { enable = true; };
+  programs.ripgrep = {
+    enable = true;
+  };
   programs.btop = {
     enable = true;
     settings = {

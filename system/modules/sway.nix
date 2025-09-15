@@ -1,10 +1,11 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   environment.systemPackages = with pkgs; [
     sway
     glib # gsettings
     swaylock
-		hyprlock
+    hyprlock
     swayidle
     grim
     slurp
@@ -25,10 +26,12 @@
   security.polkit.enable = true;
 
   # faster sway maybe? https://nixos.wiki/wiki/Sway
-  security.pam.loginLimits = [{
-    domain = "@users";
-    item = "rtprio";
-    type = "-";
-    value = 1;
-  }];
+  security.pam.loginLimits = [
+    {
+      domain = "@users";
+      item = "rtprio";
+      type = "-";
+      value = 1;
+    }
+  ];
 }

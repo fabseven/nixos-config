@@ -1,9 +1,14 @@
-{ ... }: {
+{ ... }:
+{
 
   networking = {
-    firewall = { 
-      enable = true; 
-      allowedTCPPorts = [ 22 80 443 ];
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [
+        22
+        80
+        443
+      ];
     };
     nftables.enable = true; # the new iptables
     networkmanager.enable = true;

@@ -1,17 +1,19 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, ... }:
+{
   imports = [
     ../modules/bluetooth.nix
     ../modules/common.nix
+    ./modules/kde.nix
     ./hardware.nix
   ];
 
   networking.hostName = "thinkpad";
 
   environment = {
-    systemPackages = with pkgs; [ 
-      powertop 
-      libinput 
-      acpi 
+    systemPackages = with pkgs; [
+      powertop
+      libinput
+      acpi
       mangohud
     ];
     localBinInPath = true;
@@ -29,7 +31,7 @@
     fwupd.enable = true;
     tailscale.enable = true;
     libinput.enable = true;
-    
+
     printing.enable = true;
     avahi = {
       enable = true;

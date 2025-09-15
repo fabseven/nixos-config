@@ -13,7 +13,9 @@
       };
       delta = {
         enable = true;
-        options = { "navigate" = true; };
+        options = {
+          "navigate" = true;
+        };
       };
       diff.tool = "meld";
       web.browser = "google-chrome-stable";
@@ -29,8 +31,10 @@
     };
 
     aliases.l =
-      let format = "%Cred%h%Creset %Cblue%ad%Creset %Cgreen%an%Creset %s";
-      in ''log --pretty=format:"${format}"'';
+      let
+        format = "%Cred%h%Creset %Cblue%ad%Creset %Cgreen%an%Creset %s";
+      in
+      ''log --pretty=format:"${format}"'';
 
     diff-so-fancy.enable = true;
     # difftastic.enable = true;

@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
 
   imports = [
     inputs.nix-ld.nixosModules.nix-ld
@@ -25,7 +26,7 @@
   programs.nix-ld = {
     enable = true;
     dev.enable = false;
-  }; 
+  };
 
   # enable zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
@@ -44,7 +45,7 @@
   services.openssh = {
     enable = true;
     settings = {
-        PasswordAuthentication = false;
+      PasswordAuthentication = false;
     };
   };
 }

@@ -1,12 +1,13 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
 
   environment.systemPackages = with pkgs; [
     wayland
     wlr-randr
     wget
     tldr
-		pciutils
-		lshw
+    pciutils
+    lshw
     xdg-utils
     glib
     ffmpeg
@@ -24,18 +25,18 @@
     spotify
     playerctl
     gimp
-		way-displays
+    way-displays
     discord
-		wdisplays
+    wdisplays
     zed-editor
     gthumb
     feh
     libnotify
-		dconf-editor
-		gnome-tweaks
+    dconf-editor
+    gnome-tweaks
     ulauncher
-		adwaita-icon-theme
-		inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    adwaita-icon-theme
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     nautilus
     moonlight-qt
     parsec-bin
@@ -43,25 +44,25 @@
     lm_sensors
     gping # ping with a graph
     trippy # network diagnostic https://github.com/fujiapple852/trippy
-		distrobox
+    distrobox
     mpv
-		_1password-gui
+    _1password-gui
     _1password-cli
-		hyprpaper
+    hyprpaper
     hyprsunset
     wiremix
-		wofi
-		wlogout
-		swaynotificationcenter
-		waybar
-		solaar
-		flameshot
-		lutris
-		heroic
-		#zoom-us
+    wofi
+    wlogout
+    swaynotificationcenter
+    waybar
+    solaar
+    flameshot
+    lutris
+    heroic
+    #zoom-us
     ticktick
-		ulauncher
-		inputs.zen-browser.packages."${system}".default
+    ulauncher
+    inputs.zen-browser.packages."${system}".default
     brave
     impala
     wlogout
@@ -69,11 +70,11 @@
     bottles-unwrapped
     google-chrome
     telegram-desktop
-		tailscale
+    tailscale
     netflix
-		slack
-		slack-term
-		kanshi
+    slack
+    slack-term
+    kanshi
     fastfetch
   ];
 

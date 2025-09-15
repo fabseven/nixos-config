@@ -1,4 +1,5 @@
-{ inputs, pkgs, ...}: {
+{ inputs, pkgs, ... }:
+{
 
   environment = {
     systemPackages = with pkgs; [
@@ -11,7 +12,7 @@
     };
   };
 
-	services = {
+  services = {
     gnome.gnome-keyring.enable = true;
     displayManager.gdm.enable = true;
     hypridle.enable = true;
@@ -31,7 +32,8 @@
     hyprland = {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      portalPackage =
+        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       withUWSM = true;
     };
     hyprlock.enable = true;

@@ -1,8 +1,9 @@
-{ config, lib, ... }: 
+{ config, lib, ... }:
 
 let
   wallpaper = ../digital.jpg;
-in {
+in
+{
   home.file.".config/swaylock/config".text = ''
     daemonize
     font=JetBrains Mono
@@ -37,5 +38,5 @@ in {
     text-caps-lock-color=fab387
     text-ver-color=89b4fa
     text-wrong-color=eba0ac
-  '';  
+  '';
 }

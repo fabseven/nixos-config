@@ -1,10 +1,11 @@
 # ThinkPad
-{ ... }: {
-  imports = [ 
-    ../common.nix 
+{ ... }:
+{
+  imports = [
+    ../common.nix
     ../modules/kanshi.nix
-    ../modules/hyprland.nix
-    ../modules/waybar-hl.nix
+    # ../modules/hyprland.nix
+    # ../modules/waybar-hl.nix
   ];
 
   home.stateVersion = "25.11";

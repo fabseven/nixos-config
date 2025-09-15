@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
@@ -20,7 +21,7 @@
   environment.systemPackages = with pkgs; [
     kitty
     ghostty
-		alacritty
+    alacritty
     wezterm
     zsh
     zsh-syntax-highlighting
@@ -28,10 +29,10 @@
     eza
     keychain
     zoxide
-		nerd-fonts.fira-code
-		nerd-fonts.jetbrains-mono
-		nerd-fonts.fira-mono
-		nerd-fonts.symbols-only
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-mono
+    nerd-fonts.symbols-only
     noto-fonts-color-emoji
     pass
     gnupg

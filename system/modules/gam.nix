@@ -1,11 +1,17 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 
 let
   cfg = config.services.gam;
   gamHomeDir = "/home/${cfg.user}/.gam";
-in {
+in
+{
   options.services.gam = {
     enable = mkEnableOption "GAM";
     user = mkOption {
@@ -61,7 +67,7 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = [ cfg.package ];
-    
+
     # Create necessary directories and files with correct ownership
     system.activationScripts.gamDirs = ''
       mkdir -p ${gamHomeDir}/{gamcache,drive}

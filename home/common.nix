@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   imports = [
     ./modules/cli.nix
     ./modules/git.nix
@@ -18,9 +19,8 @@
     username = "dk";
     homeDirectory = "/home/${username}";
     file = {
-      ".local/bin".source =
-        config.lib.file.mkOutOfStoreSymlink "${homeDirectory}/nixos-config/scripts";
-      ".p10k.zsh".source = 
+      ".local/bin".source = config.lib.file.mkOutOfStoreSymlink "${homeDirectory}/nixos-config/scripts";
+      ".p10k.zsh".source =
         config.lib.file.mkOutOfStoreSymlink "${homeDirectory}/nixos-config/dotfiles/p10k/p10k.zsh";
     };
   };

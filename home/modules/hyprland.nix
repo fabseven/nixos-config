@@ -1,4 +1,10 @@
-{ config, inputs, pkgs, ...}: {
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
+{
 
   wayland.windowManager.hyprland = {
     settings = {
@@ -6,9 +12,9 @@
         "wl-clip-persist --clipboard regular & clipse -listen"
       ];
       input = {
-      kb_options = "ctrl:nocaps";
-      accel_profile = "flat";
-      sensitivity = 0.25;
+        kb_options = "ctrl:nocaps";
+        accel_profile = "flat";
+        sensitivity = 0.25;
         touchpad = {
           clickfinger_behavior = 2;
           natural_scroll = true;
@@ -38,7 +44,7 @@
   services = {
     hyprpolkitagent.enable = true;
   };
-  
+
   # I am too lazy to write a nix config for hyprland
   xdg.configFile = {
     "hypr".source = ../../dotfiles/hypr;

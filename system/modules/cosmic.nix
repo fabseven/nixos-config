@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   services.displayManager = {
     autoLogin = {
       enable = true;
@@ -25,4 +26,4 @@
     cosmic-applets
     cosmic-screenshot
   ];
-} 
+}

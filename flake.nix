@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
-    
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,13 +39,20 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       specialArgs = {
         inherit inputs;
         inherit (inputs) nix-colors hosts zen-browser;
       };
-    in {
+    in
+    {
       nixosConfigurations = {
         thinkbook = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
@@ -84,7 +91,7 @@
             { networking.stevenBlackHosts.enable = true; }
           ];
         };
-        
+
         xps = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = specialArgs;
@@ -105,7 +112,7 @@
             { scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml"; }
           ];
         };
-        
+
         nano = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = specialArgs;
@@ -124,6 +131,12 @@
             { networking.stevenBlackHosts.enable = true; }
           ];
         };
+      };
+
+      # Add formatter for each system
+      formatter = {
+        x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+        aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-rfc-style;
       };
     };
 }
