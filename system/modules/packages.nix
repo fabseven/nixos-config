@@ -15,7 +15,7 @@
     unzip
     dtrx
     signal-desktop
-    ranger
+    yazi
     xfce.thunar
     xfce.thunar-volman
     xfce.thunar-archive-plugin
@@ -48,6 +48,8 @@
 		_1password-gui
     _1password-cli
 		hyprpaper
+    hyprsunset
+    wiremix
 		wofi
 		wlogout
 		swaynotificationcenter
@@ -60,6 +62,8 @@
     ticktick
 		ulauncher
 		inputs.zen-browser.packages."${system}".default
+    brave
+    impala
     wlogout
     gnome-keyring
     bottles-unwrapped
@@ -67,7 +71,6 @@
     telegram-desktop
 		tailscale
     netflix
-		brave
 		slack
 		slack-term
 		kanshi
