@@ -17,7 +17,7 @@
     #./stylix.nix
     ./users.nix
     #./cosmic.nix
-    ./hyprland.nix
+    #./hyprland.nix
     ./distrobox.nix
   ];
 
