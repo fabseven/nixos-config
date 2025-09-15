@@ -24,51 +24,17 @@
       };
     */
 
-    base16Scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml";
+    base16Scheme = "${inputs.tt-schemes}/base16/gruvbox-dark-medium.yaml";
 
-    /*
-      image = ../../home/wallpaper.jpg;
+    image = ../../home/wallpaper.jpg;
 
-      		cursor.size = 18;
-          cursor.package = pkgs.qogir-icon-theme;
-          cursor.name = "Qogir";
-    */
+    cursor.size = 18;
+    cursor.package = pkgs.rose-pine-hyprcursor;
+    cursor.name = "Rose Pine Hyprcursor";
 
     targets = {
       gtk.enable = true;
-      qt = {
-        enable = true;
-        platform = lib.mkForce "qtct";
-      };
+      qt.enable = true;
     };
-
-    /*
-      fonts = rec {
-         sansSerif = {
-           package = pkgs.raleway;
-           name = "Raleway";
-         };
-
-         serif = monospace;
-         sansSerif = monospace;
-
-         monospace = {
-           package = pkgs.jetbrains-mono;
-           name = "JetBrains Mono";
-         };
-
-         emoji = {
-           package = pkgs.noto-fonts-color-emoji;
-           name = "Noto Color Emoji";
-         };
-
-         sizes = {
-           applications = 10;
-           desktop = 10;
-           popups = 10;
-           terminal = 12;
-         };
-       };
-    */
   };
 }

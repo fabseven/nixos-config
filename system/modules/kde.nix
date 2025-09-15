@@ -77,15 +77,6 @@
     kdePackages.plasma-workspace
   ];
 
-  # Font configuration (handled by fonts.nix module)
-
-  # Qt theming
-  qt = {
-    enable = true;
-    platformTheme = "kde";
-    style = "breeze";
-  };
-
   # XDG desktop integration
   xdg = {
     portal = {
@@ -109,8 +100,6 @@
     enable = true;
     enable32Bit = true;
   };
-
-  # Sound configuration (handled by sound.nix module)
 
   # Security and permissions
   security.pam.services.kwallet = {
