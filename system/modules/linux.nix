@@ -31,6 +31,7 @@
       with pkgs; [
         glib
         nspr
+        nss_latest
       ]
     );
   };
