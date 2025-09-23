@@ -42,26 +42,6 @@
         gdk-pixbuf-xlib
         pango
         gtk3
-        libepoxy
-        libGL
-        libGLU
-        libICE
-        libSM
-        libX11
-        libXScrnSaver
-        libXcomposite
-        libXcursor
-        libXdamage
-        libXext
-        libXfixes
-        libXi
-        libXinerama
-        libXrandr
-        libXrender
-        libXtst
-        libXxf86vm
-        libXau
-        libXdmcp
       ]
     );
   };
