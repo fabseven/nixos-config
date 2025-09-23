@@ -33,6 +33,13 @@
         nspr
         nss_latest
         dbus
+        at-spi2-atk
+        at-spi2-core
+        atk
+        cairo
+        gdk-pixbuf
+        gdk-pixbuf-xlib
+        pango
       ]
     );
   };
