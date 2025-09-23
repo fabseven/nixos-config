@@ -35,6 +35,7 @@
         dbus
         at-spi2-atk
         at-spi2-core
+        cups
         atk
         cairo
         gdk-pixbuf
