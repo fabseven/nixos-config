@@ -30,32 +30,6 @@
     libraries = options.programs.nix-ld.libraries.default ++ (
       with pkgs; [
         glib
-        nspr
-        nss_latest
-        dbus
-        at-spi2-atk
-        at-spi2-core
-        cups
-        atk
-        cairo
-        gdk-pixbuf
-        gdk-pixbuf-xlib
-        xorg.libX11
-        xorg.libXcomposite
-        xorg.libXcursor
-        xorg.libXdamage
-        xorg.libXext
-        xorg.libXfixes
-        xorg.libXi
-        xorg.libXinerama
-        xorg.libXrandr
-        xorg.libXrender
-        xorg.libXtst
-        xorg.libXxf86vm
-        xorg.libXau
-        xorg.libXdmcp
-        pango
-        gtk3
       ]
     );
   };
