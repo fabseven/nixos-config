@@ -30,6 +30,7 @@
     libraries = options.programs.nix-ld.libraries.default ++ (
       with pkgs; [
         glib
+        nspr
       ]
     );
   };
