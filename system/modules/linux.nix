@@ -11,6 +11,7 @@
     jq
     bat
     httpie
+    libglibutil
     mosh
     dust
     psmisc # fuser
