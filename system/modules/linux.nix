@@ -32,6 +32,7 @@
         glib
         nspr
         nss_latest
+        dbus
       ]
     );
   };
