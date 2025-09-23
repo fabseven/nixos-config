@@ -40,6 +40,7 @@
         cairo
         gdk-pixbuf
         gdk-pixbuf-xlib
+        xorg.libX11
         pango
         gtk3
       ]
