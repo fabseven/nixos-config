@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
     bash-language-server
@@ -14,8 +10,6 @@
     golangci-lint-langserver
     gopls
     gotools
-    helix-gpt
-    marksman
     nil
     nixpkgs-fmt
     nodePackages.typescript-language-server
@@ -29,9 +23,6 @@
         python-lsp-server
       ])
     ))
-    rust-analyzer
-    taplo
-    taplo-lsp
     terraform-ls
     typescript
     vscode-langservers-extracted

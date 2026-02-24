@@ -1,9 +1,4 @@
-{
-  config,
-  inputs,
-  pkgs,
-  ...
-}:
+{ ... }:
 {
 
   wayland.windowManager.hyprland = {
@@ -34,6 +29,7 @@
   };
 
   programs.hyprlock = {
+    enable = true;
     settings = {
       grace = 5;
       no_fade_in = false;

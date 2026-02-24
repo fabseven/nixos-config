@@ -19,7 +19,6 @@
         urllib3
         numpy
         chardet
-        cryptography
         distro
         filelock
         google-api-python-client

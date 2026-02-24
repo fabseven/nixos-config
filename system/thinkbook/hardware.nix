@@ -1,4 +1,5 @@
-# Hardware configuration for ThinkPad
+# Hardware configuration for ThinkBook (kimchi)
+# TODO: Replace with actual hardware-configuration.nix from nixos-generate-config on target machine
 {
   config,
   lib,
@@ -12,8 +13,6 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  # Placeholder hardware configuration
-  # TODO: Replace with actual hardware-configuration.nix from nixos-generate-config
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "thunderbolt"

@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{ pkgs, lib, ... }:
 {
 
   # Essential KDE packages
@@ -31,17 +26,12 @@
     glib
     gsettings-desktop-schemas
     xdg-utils
-    kdePackages.xdg-desktop-portal-kde
   ];
 
-  # Enable KDE Plasma 6
-  services.xserver = {
+  services.xserver.enable = true;
+  services.displayManager.sddm = {
     enable = true;
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
-    libinput.enable = true;
+    wayland.enable = true;
   };
 
   # Enable KDE Plasma 6

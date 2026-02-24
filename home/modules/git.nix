@@ -11,12 +11,6 @@
         editor = "nvim";
         whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol";
       };
-      delta = {
-        enable = true;
-        options = {
-          "navigate" = true;
-        };
-      };
       diff.tool = "meld";
       web.browser = "google-chrome-stable";
       push.default = "tracking";

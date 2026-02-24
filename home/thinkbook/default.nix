@@ -1,4 +1,4 @@
-# Lenovo ThinkPad X1 Nano G2
+# Lenovo ThinkBook (kimchi)
 { ... }:
 {
   imports = [

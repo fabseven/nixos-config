@@ -8,5 +8,6 @@
     # ../modules/waybar-hl.nix
   ];
 
-  home.stateVersion = "25.11";
+  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+  home.stateVersion = "25.05";
 }

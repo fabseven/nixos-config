@@ -29,11 +29,7 @@
     eza
     keychain
     zoxide
-    nerd-fonts.fira-code
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-mono
-    nerd-fonts.symbols-only
-    noto-fonts-color-emoji
+    # Font packages are in system/modules/fonts.nix
     pass
     gnupg
     pinentry-tty

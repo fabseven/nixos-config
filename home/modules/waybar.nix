@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 {
   programs.waybar = {
     enable = true;
@@ -6,7 +6,7 @@
       mainBar = {
         layer = "top";
         position = "bottom";
-        lib.mkForce.height = 5;
+        height = 5;
         modules-left = [
           "sway/workspaces"
           "sway/mode"

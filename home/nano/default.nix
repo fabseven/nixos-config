@@ -1,5 +1,5 @@
-# Lenovo Thinkpad Nano G2
-{ ... }:
+# Lenovo ThinkPad X1 Nano G2
+{ lib, ... }:
 {
   imports = [
     ../common.nix
@@ -8,9 +8,8 @@
     ../modules/waybar-hl.nix
   ];
 
-  lib.mkForce.home.pointerCursor = {
-    size = 14;
-  };
+  # Override stylix default (18) — smaller cursor for high-DPI screen
+  home.pointerCursor.size = lib.mkForce 14;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "25.05";

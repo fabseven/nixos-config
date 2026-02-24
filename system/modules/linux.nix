@@ -1,4 +1,9 @@
-{ pkgs, inputs, options, ... }:
+{
+  pkgs,
+  inputs,
+  options,
+  ...
+}:
 {
 
   imports = [
@@ -27,11 +32,11 @@
   programs.nix-ld = {
     enable = true;
     dev.enable = false;
-    libraries = options.programs.nix-ld.libraries.default ++ (
-      with pkgs; [
+    libraries =
+      options.programs.nix-ld.libraries.default
+      ++ (with pkgs; [
         glib
-      ]
-    );
+      ]);
   };
 
   # enable zsh completion for system packages

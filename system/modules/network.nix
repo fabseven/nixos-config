@@ -12,8 +12,8 @@
     };
     nftables.enable = true; # the new iptables
     networkmanager.enable = true;
-    stevenblack.enable = true;
     stevenBlackHosts = {
+      enable = true;
       blockFakenews = true;
       blockGambling = true;
       blockPorn = true;

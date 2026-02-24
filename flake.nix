@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -25,8 +24,6 @@
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
-    base16.url = "github:SenchoPens/base16.nix";
-    nix-colors.url = "github:misterio77/nix-colors";
     hyprland.url = "github:hyprwm/Hyprland";
     waybar = {
       url = "github:Alexays/Waybar";
@@ -47,89 +44,54 @@
       ...
     }@inputs:
     let
+      system = "x86_64-linux";
       specialArgs = {
         inherit inputs;
-        inherit (inputs) nix-colors hosts zen-browser;
+        inherit (inputs) hosts zen-browser;
       };
+      mkHost =
+        {
+          systemConfig,
+          homeConfig,
+          extraModules ? [ ],
+        }:
+        nixpkgs.lib.nixosSystem {
+          inherit system specialArgs;
+          modules = [
+            systemConfig
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.dk = import homeConfig;
+                extraSpecialArgs = specialArgs;
+              };
+            }
+            inputs.hosts.nixosModule
+          ] ++ extraModules;
+        };
     in
     {
       nixosConfigurations = {
-        thinkbook = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = specialArgs;
-          modules = [
-            ./system/thinkbook/default.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.dk = import ./home/thinkbook;
-                extraSpecialArgs = specialArgs;
-              };
-            }
-            inputs.hosts.nixosModule
-            { networking.stevenBlackHosts.enable = true; }
-          ];
+        thinkbook = mkHost {
+          systemConfig = ./system/thinkbook/default.nix;
+          homeConfig = ./home/thinkbook;
         };
 
-        thinkpad = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = specialArgs;
-          modules = [
-            ./system/thinkpad/default.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.dk = import ./home/thinkpad;
-                extraSpecialArgs = specialArgs;
-              };
-            }
-            inputs.hosts.nixosModule
-            { networking.stevenBlackHosts.enable = true; }
-          ];
+        thinkpad = mkHost {
+          systemConfig = ./system/thinkpad/default.nix;
+          homeConfig = ./home/thinkpad;
         };
 
-        xps = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = specialArgs;
-          modules = [
-            ./system/xps/default.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.dk = import ./home/xps;
-                extraSpecialArgs = specialArgs;
-              };
-            }
-            inputs.hosts.nixosModule
-            { networking.stevenBlackHosts.enable = true; }
-            inputs.base16.nixosModule
-            { scheme = "${inputs.tt-schemes}/base16/ayu-dark.yaml"; }
-          ];
+        xps = mkHost {
+          systemConfig = ./system/xps/default.nix;
+          homeConfig = ./home/xps;
         };
 
-        nano = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = specialArgs;
-          modules = [
-            ./system/nano/default.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.dk = import ./home/nano;
-                extraSpecialArgs = specialArgs;
-              };
-            }
-            inputs.hosts.nixosModule
-            { networking.stevenBlackHosts.enable = true; }
-          ];
+        nano = mkHost {
+          systemConfig = ./system/nano/default.nix;
+          homeConfig = ./home/nano;
         };
       };
 
