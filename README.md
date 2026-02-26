@@ -32,22 +32,22 @@ A well-structured NixOS configuration following best practices for managing mult
 - **Home Manager integration** for user-space configuration
 - **Modular design** with reusable components
 - **Centralized dotfiles management**
-- **GNOME desktop environment** with consistent configuration
-- **Alternative window managers** available (Sway, Hyprland) via dotfiles
+- **Host-specific desktop environments** (KDE Plasma, Hyprland)
+- **Additional desktop options** available as modules (Sway, COSMIC)
 - **Consistent theming** with Stylix
 - **Power management** with TLP
 - **Development tools** and environments
 
 ## Desktop Environment Support
 
-This configuration uses GNOME as the primary desktop environment across all hosts:
+Desktop environments are configured per host by importing system modules.
 
 ### Available Configurations
 
-- `thinkbook` - ThinkPad with GNOME
-- `thinkpad` - ThinkPad with GNOME
-- `xps` - Dell XPS with GNOME  
-- `nano` - Nano with GNOME
+- `thinkbook` - Lenovo ThinkBook (base shared modules; no host-specific DE module imported)
+- `thinkpad` - ThinkPad with KDE Plasma 6 (`system/modules/kde.nix`)
+- `xps` - Dell XPS (base shared modules; no host-specific DE module imported)
+- `nano` - ThinkPad X1 Nano with Hyprland (`system/modules/hyprland.nix`)
 
 ### Building Configurations
 
@@ -66,11 +66,11 @@ sudo nixos-rebuild switch --flake .#nano
 
 ### Desktop Features
 
-**GNOME Configuration:**
-- Custom GNOME extensions (Space Bar, Tactile, Blur My Shell, etc.)
-- Custom keybindings and shortcuts
-- Optimized settings for productivity
-- Consistent theming with Stylix
+**Desktop Notes:**
+- KDE Plasma 6 support is provided by `system/modules/kde.nix`
+- Hyprland support is provided by `system/modules/hyprland.nix`
+- Additional desktop modules (for example `system/modules/cosmic.nix`) can be imported per host
+- Shared theming is provided through Stylix
 
 ## Quick Start
 
@@ -108,17 +108,17 @@ TODOs:
     - [x] Add work setup
 - [x] Printing support - https://github.com/Qeatrix/nixos-config
 - [x] Garbage collector for old versions
-- [x] Gnome stuff
-    - [x] Extensions
+- [x] GNOME desktop setup (legacy)
+    - [x] Extensions (legacy GNOME)
         - [x] Blur my shell
         - [x] Notification Banner Position
         - [x] Space Bar
         - [x] Tactile
         - [x] Undecorate Window
         - [x] Caffeine
-    - [ ] Hotkeys
-        - [ ] Proper Super + 1,2,3,4,5 keys for Space Bar & Workspaces
-        - [ ] Launcher keybinds (ULauncher or similar)
+    - [ ] Hotkeys (legacy GNOME)
+        - [ ] Proper Super + 1,2,3,4,5 keys for GNOME Space Bar workspaces
+        - [ ] Launcher keybinds (GNOME/ULauncher or similar)
 - [ ] Firefox setup - https://github.com/Qeatrix/nixos-config
 - [x] Powershell scripting
 - [x] OpenVPN setup
