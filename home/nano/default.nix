@@ -4,8 +4,6 @@
   imports = [
     ../common.nix
     ../modules/kanshi.nix
-    ../modules/hyprland.nix
-    ../modules/waybar-hl.nix
   ];
 
   # Override stylix default (18) — smaller cursor for high-DPI screen

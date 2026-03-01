@@ -3,7 +3,7 @@
   imports = [
     ../modules/common.nix
     ../modules/bluetooth.nix
-    ../modules/hyprland.nix
+    ../modules/kde.nix
     ./hardware.nix
   ];
 
