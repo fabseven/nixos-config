@@ -1,7 +1,7 @@
 { ... }:
 {
-  # Stylix Qt: only qtct is supported; KDE auto-selects "kde" which is unsupported
-  stylix.targets.qt.platform = "qtct";
+  # KDE handles Qt theming itself; disable Stylix Qt target to avoid conflict
+  stylix.targets.qt.enable = false;
 
   imports = [
     ../modules/bluetooth.nix
