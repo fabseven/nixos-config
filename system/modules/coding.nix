@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     neovim
     helix
-    helix-gpt
     git
     lazygit
     gh
