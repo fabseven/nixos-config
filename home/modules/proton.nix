@@ -2,7 +2,7 @@
 {
   home = {
     packages = with pkgs; [
-      protonup
+      protonup-ng
     ];
 
     sessionVariables = {
