@@ -3,10 +3,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "Fabseven";
-    userEmail = "fabbycrafted@gmail.com";
-
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Fabseven";
+        email = "fabbycrafted@gmail.com";
+      };
       core = {
         editor = "nvim";
         whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol";
@@ -22,23 +23,26 @@
       rerere.enabled = true;
       color.ui = true;
       blame.date = "relative";
+      alias = {
+        l =
+          let
+            format = "%Cred%h%Creset %Cblue%ad%Creset %Cgreen%an%Creset %s";
+          in
+          ''log --pretty=format:"${format}"'';
+      };
     };
-
-    aliases.l =
-      let
-        format = "%Cred%h%Creset %Cblue%ad%Creset %Cgreen%an%Creset %s";
-      in
-      ''log --pretty=format:"${format}"'';
-
-    diff-so-fancy.enable = true;
-    # difftastic.enable = true;
-
     ignores = [
       ".idea"
       ".venv"
       ".env"
     ];
   };
+
+  programs.diff-so-fancy = {
+    enable = true;
+    enableGitIntegration = true;
+  };
+
   programs.gh = {
     enable = true;
     gitCredentialHelper.enable = true;

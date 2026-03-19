@@ -16,10 +16,10 @@
     dtrx
     signal-desktop
     yazi
-    xfce.thunar
-    xfce.thunar-volman
-    xfce.thunar-archive-plugin
-    xfce.tumbler
+    thunar
+    thunar-volman
+    thunar-archive-plugin
+    tumbler
     spotify
     playerctl
     gimp

@@ -10,7 +10,7 @@
   environment.systemPackages = with pkgs; [
     nh
     nix-search-cli
-    nixfmt-classic
+    nixfmt
     nil
   ];
 
