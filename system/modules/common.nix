@@ -7,7 +7,6 @@
     ./coding.nix
     ./shell.nix
     ./fonts.nix
-    ./laptop.nix
     ./linux.nix
     ./locale.nix
     ./network.nix
