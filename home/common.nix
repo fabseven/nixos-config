@@ -13,6 +13,7 @@
     ./modules/ghostty.nix
     ./modules/helix.nix
     ./modules/proton.nix
+    ./modules/obs.nix
   ];
 
   home = rec {
