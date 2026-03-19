@@ -23,7 +23,7 @@
 
     targets = {
       gtk.enable = true;
-      qt.enable = true;
+      qt.enable = false;
     };
   };
 }
