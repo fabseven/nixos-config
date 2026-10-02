@@ -62,11 +62,6 @@
     })
   '';
 
-  # D-Bus configuration (dbus already enabled in common.nix)
-  services.dbus.packages = with pkgs; [
-    kdePackages.plasma-workspace
-  ];
-
   # XDG desktop integration
   xdg = {
     portal = {
@@ -77,24 +72,10 @@
     };
   };
 
-  # Environment variables for KDE
-  environment.variables = {
-    QT_QPA_PLATFORMTHEME = "kde";
-    QT_STYLE_OVERRIDE = "breeze";
-    XDG_CURRENT_DESKTOP = "KDE";
-    XDG_SESSION_DESKTOP = "KDE";
-  };
-
   # Hardware acceleration (using newer graphics API)
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-  };
-
-  # Security and permissions
-  security.pam.services.kwallet = {
-    name = "kwallet";
-    enableKwallet = true;
   };
 
 }
