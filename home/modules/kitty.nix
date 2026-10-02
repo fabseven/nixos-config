@@ -5,7 +5,6 @@
     settings = {
       enable_audio_bell = false;
       cursor_blink_interval = 0;
-      open_url_with = "google-chrome-stable";
     };
     shellIntegration.enableZshIntegration = true;
     keybindings = {

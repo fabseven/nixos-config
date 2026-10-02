@@ -16,10 +16,6 @@
     dtrx
     signal-desktop
     yazi
-    thunar
-    thunar-volman
-    thunar-archive-plugin
-    tumbler
     spotify
     playerctl
     gimp
