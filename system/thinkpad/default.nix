@@ -1,8 +1,5 @@
 { ... }:
 {
-  # KDE handles Qt theming itself; disable Stylix Qt target to avoid conflict
-  stylix.targets.qt.enable = false;
-
   imports = [
     ../modules/bluetooth.nix
     ../modules/common.nix

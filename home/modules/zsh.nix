@@ -144,7 +144,6 @@
           "reload" = ". ~/.zshrc";
           # Stuff
           "st" = "_ systemctl-tui";
-          "on" = ''swaymsg " output * power on"'';
         };
     };
 }

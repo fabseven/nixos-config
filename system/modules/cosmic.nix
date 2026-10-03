@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  # Stylix has no Cosmic target yet, so the vesper colors from stylix.nix
+  # don't reach here automatically — Cosmic's own theme editor is still needed.
   services.displayManager = {
     autoLogin = {
       enable = true;

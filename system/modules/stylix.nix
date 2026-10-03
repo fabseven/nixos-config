@@ -1,10 +1,4 @@
-{
-  pkgs,
-  inputs,
-  config,
-  lib,
-  ...
-}:
+{ inputs, ... }:
 {
   imports = [ inputs.stylix.nixosModules.stylix ];
   stylix = {
@@ -13,14 +7,14 @@
 
     polarity = "dark";
 
-    base16Scheme = "${inputs.tt-schemes}/base16/gruvbox-dark-medium.yaml";
+    base16Scheme = ./themes/vesper.yaml;
 
     image = ../../home/wallpaper.jpg;
 
     cursor.size = 18;
-    cursor.package = pkgs.rose-pine-hyprcursor;
-    cursor.name = "Rose Pine Hyprcursor";
 
+    # KDE's own target (targets.kde) themes Plasma's colorscheme directly;
+    # the generic qt target would fight it, so it stays off.
     targets = {
       gtk.enable = true;
       qt.enable = false;

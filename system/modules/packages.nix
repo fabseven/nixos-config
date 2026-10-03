@@ -2,8 +2,6 @@
 {
 
   environment.systemPackages = with pkgs; [
-    wayland
-    wlr-randr
     wget
     tldr
     pciutils
@@ -26,7 +24,6 @@
     libnotify
     ulauncher
     adwaita-icon-theme
-    inputs.rose-pine-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}.default
     moonlight-qt
     parsec-bin
     stockfish
@@ -34,12 +31,7 @@
     gping # ping with a graph
     trippy # network diagnostic https://github.com/fujiapple852/trippy
     mpv
-    hyprpaper
-    hyprsunset
     wiremix
-    wofi
-    wlogout
-    swaynotificationcenter
     solaar
     flameshot
     lutris

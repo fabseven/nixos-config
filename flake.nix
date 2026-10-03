@@ -23,17 +23,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
-    hyprland.url = "github:hyprwm/Hyprland";
-    waybar = {
-      url = "github:Alexays/Waybar";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    tt-schemes = {
-      url = "github:tinted-theming/schemes";
-      flake = false;
-    };
   };
 
   outputs =

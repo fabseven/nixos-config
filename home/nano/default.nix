@@ -3,7 +3,6 @@
 {
   imports = [
     ../common.nix
-    ../modules/kanshi.nix
   ];
 
   # Override stylix default (18) — smaller cursor for high-DPI screen
