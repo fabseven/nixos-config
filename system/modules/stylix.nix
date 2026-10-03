@@ -11,7 +11,7 @@
 
     image = ../../home/wallpaper.jpg;
 
-    cursor.size = 18;
+    cursor.size = 14;
 
     # KDE's own target (targets.kde) themes Plasma's colorscheme directly;
     # the generic qt target would fight it, so it stays off.
