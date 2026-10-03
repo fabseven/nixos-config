@@ -39,34 +39,39 @@ committing, and use `test-configs.sh` before changes that touch shared modules.
 
 ```
 nixos-config/
-├── flake.nix             # 13 inputs; outputs: 4 nixosConfigurations (x86_64-linux)
+├── flake.nix             # 6 inputs; outputs: 4 nixosConfigurations (x86_64-linux)
 ├── Makefile              # Shortcuts: nixos, fmt, update, gc, macos (stub)
 ├── test-configs.sh       # Bash test suite: flake check + build all hosts
 ├── pkgs/default.nix      # Custom packages stub (currently empty)
 ├── scripts/              # Shell scripts symlinked into ~/.local/bin
 ├── dotfiles/             # Raw config files, symlinked via xdg.configFile
-│   ├── hypr/             # Hyprland, hypridle, hyprlock, hyprpaper configs
 │   ├── nvim/             # Neovim config
-│   ├── waybar-hl/        # Waybar config for Hyprland
-│   └── ...               # alacritty, ghostty, helix, kanshi, p10k, wlogout
+│   └── ...               # alacritty, ghostty, helix, p10k
 ├── system/
-│   ├── modules/          # 22 shared system-wide NixOS modules
-│   ├── thinkbook/        # hostname: kimchi  (Lenovo ThinkBook)
-│   ├── thinkpad/         # hostname: thinkpad (uses KDE Plasma 6)
-│   ├── xps/              # hostname: cake    (Dell XPS 15", NVIDIA PRIME)
-│   └── nano/             # hostname: melon   (ThinkPad X1 Nano G2)
+│   ├── modules/          # 18 shared system-wide NixOS modules
+│   │   ├── kde.nix        # KDE Plasma 6 (used by thinkbook, thinkpad, nano)
+│   │   ├── cosmic.nix     # Cosmic desktop (defined, not currently used by any host)
+│   │   ├── stylix.nix     # Theming; base16 scheme at system/modules/themes/vesper.yaml
+│   │   └── themes/        # Custom base16 color schemes (vesper, ported from Omarchy)
+│   ├── thinkbook/        # hostname: kimchi  (Lenovo ThinkBook, KDE)
+│   ├── thinkpad/         # hostname: thinkpad (KDE)
+│   ├── xps/              # hostname: cake    (Dell XPS 15", NVIDIA PRIME, no DE configured)
+│   └── nano/             # hostname: melon   (ThinkPad X1 Nano G2, KDE)
 └── home/
     ├── common.nix         # Imports all shared home modules
-    ├── modules/           # 21 shared Home Manager modules
+    ├── modules/           # 12 shared Home Manager modules
     ├── thinkbook/         # Host-specific home config
     ├── thinkpad/
     ├── xps/
     └── nano/
 ```
 
-**Key flake inputs:** `nixpkgs` (nixos-unstable), `home-manager`, `stylix`, `hyprland` (from
-flake, not nixpkgs), `waybar` (from flake), `zen-browser`, `nix-ld`, `hosts` (StevenBlack),
-`base16`/`nix-colors`, `rose-pine-hyprcursor`.
+**Key flake inputs:** `nixpkgs` (nixos-unstable), `home-manager`, `stylix`, `zen-browser`,
+`nix-ld`, `hosts` (StevenBlack).
+
+**No Sway, Hyprland, or waybar.** All desktop hosts run KDE Plasma 6; `cosmic.nix` exists as
+an alternative but isn't wired to any host yet. Stylix has no Cosmic target, so switching a
+host to Cosmic won't pick up the base16 theme automatically — it needs its own theme file.
 
 **Single user:** `dk` across all hosts. All hosts use Home Manager with
 `useGlobalPkgs = true` and `useUserPackages = true`.
@@ -131,14 +136,9 @@ services.tlp.enable = lib.mkDefault true;
 
 ### Multi-line Strings
 
-Use Nix indented strings (`''...''`) for shell scripts, CSS, and embedded configs. Add a
+Use Nix indented strings (`''...''`) for shell scripts and embedded configs. Add a
 language hint comment before the string for editor syntax highlighting:
 ```nix
-style = # css
-  ''
-    window#waybar > box { opacity: 0.9; }
-  '';
-
 initExtra = # bash
   ''
     stty -ixon
@@ -191,10 +191,8 @@ in
 
 Host configs append/override shared module config using `lib.mk*` priority helpers:
 ```nix
-# home/thinkbook/sway.nix — extends home/modules/sway.nix
-wayland.windowManager.sway.config.keybindings = lib.mkAfter {
-  "XF86MonBrightnessDown" = "exec 'light -U 10'";
-};
+# home/nano/default.nix — overrides the stylix default cursor size for a high-DPI screen
+home.pointerCursor.size = lib.mkForce 14;
 ```
 
 | Helper | Purpose |
@@ -210,7 +208,7 @@ wayland.windowManager.sway.config.keybindings = lib.mkAfter {
 Raw dotfiles live in `dotfiles/` and are linked via Home Manager. Prefer this over writing
 full Nix configs for complex third-party apps:
 ```nix
-xdg.configFile."hypr".source = ../../dotfiles/hypr;
+xdg.configFile."ghostty".source = ../../dotfiles/ghostty;
 ```
 
 For mutable paths that change outside the Nix store:
@@ -235,18 +233,18 @@ in
 
 When a package is sourced from a flake input rather than nixpkgs:
 ```nix
-package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 ```
 
 ## Naming Conventions
 
 | Thing | Convention | Example |
 |---|---|---|
-| Files and directories | kebab-case | `waybar-hl.nix`, `offload-prime.nix` |
+| Files and directories | kebab-case | `offload-prime.nix`, `distrobox.nix` |
 | Module entry points | always `default.nix` | `system/thinkbook/default.nix` |
 | Hardware configs | always `hardware.nix` | `system/xps/hardware.nix` |
 | Nix attribute names | camelCase | `useGlobalPkgs`, `enableZshIntegration` |
-| Tool-native config keys | follow the tool | `kb_options` (Hyprland), `format-icons` (waybar) |
+| Tool-native config keys | follow the tool | `enable_audio_bell` (kitty), `scrollback_lines` (kitty) |
 | Environment variable keys | SCREAMING_SNAKE_CASE | `CPU_BOOST_ON_AC` |
 | Flake host attributes | machine shortname | `thinkbook`, `xps` |
 | Actual hostnames | friendly name | `kimchi`, `cake`, `melon` |
@@ -267,4 +265,4 @@ package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 - Default branch: `master`
 - Rebase workflow (`git pull --rebase`); `autoSetupRemote = true` in git config
 - Run `make fmt` before committing to keep formatting consistent
-- `CLAUDE.md` is gitignored (local-only AI notes); `AGENTS.md` is tracked
+- `AGENTS.md` is the single tracked AI-instructions file for this repo (no separate CLAUDE.md)
