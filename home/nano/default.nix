@@ -1,5 +1,5 @@
 # Lenovo ThinkPad X1 Nano G2
-{ lib, ... }:
+{ ... }:
 {
   imports = [
     ../common.nix
