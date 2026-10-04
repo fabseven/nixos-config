@@ -34,12 +34,13 @@
         ];
         # Opinionated: disable global registry
         flake-registry = "";
+        # make nix path match flake inputs
+        nix-path = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
       };
       # Opinionated: disable channels
       channel.enable = false;
 
-      # make flake registry and nix path match flake inputs
-      nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+      # make flake registry match flake inputs
       registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
     };
 
