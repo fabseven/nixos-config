@@ -25,6 +25,10 @@
     };
   };
 
+  # Home Manager's stylix module has its own targets; the Kvantum qt target
+  # exports QT_STYLE_OVERRIDE=kvantum, which breaks Plasma's QML (no panel).
+  stylix.targets.qt.enable = false;
+
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 }
