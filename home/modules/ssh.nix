@@ -1,11 +1,8 @@
 { ... }:
-
 {
   programs.ssh = {
     enable = true;
-    forwardAgent = true;
-    extraConfig = '''';
+    enableDefaultConfig = false;
+    matchBlocks."*".extraOptions.IdentityAgent = "~/.1password/agent.sock";
   };
-
-  services.ssh-agent.enable = true;
 }
