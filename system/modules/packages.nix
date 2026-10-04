@@ -42,6 +42,7 @@
     brave
     impala
     bottles-unwrapped
+    claude-code
     google-chrome
     telegram-desktop
     netflix
