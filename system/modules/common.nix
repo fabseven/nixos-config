@@ -9,6 +9,7 @@
     ./fonts.nix
     ./linux.nix
     ./locale.nix
+    ./hardening.nix
     ./network.nix
     ./nix.nix
     ./packages.nix
