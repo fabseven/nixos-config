@@ -53,6 +53,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
+                backupFileExtension = "hm-backup";
                 users.dk = import homeConfig;
                 extraSpecialArgs = specialArgs;
               };
