@@ -13,6 +13,7 @@
     ./modules/ghostty.nix
     ./modules/proton.nix
     ./modules/obs.nix
+    ./modules/cinnamon.nix
   ];
 
   home = rec {

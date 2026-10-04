@@ -4,6 +4,7 @@
     ../modules/bluetooth.nix
     ../modules/common.nix
     ../modules/kde.nix
+    ../modules/cinnamon.nix
     ./hardware.nix
   ];
 
