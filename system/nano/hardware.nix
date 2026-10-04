@@ -13,27 +13,31 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.initrd.luks.devices."luks-fce2431b-8052-4449-a15b-16196a7ccf6a".device = "/dev/disk/by-uuid/fce2431b-8052-4449-a15b-16196a7ccf6a";
-
   fileSystems."/" =
-    { device = "/dev/mapper/luks-5eefa20b-1dce-41a2-be53-115a5a6f6b38";
-      fsType = "ext4";
+    { device = "/dev/disk/by-uuid/57238074-8bf6-4413-90d8-5bae3bb62cd4";
+      fsType = "btrfs";
     };
 
-  boot.initrd.luks.devices."luks-5eefa20b-1dce-41a2-be53-115a5a6f6b38".device = "/dev/disk/by-uuid/5eefa20b-1dce-41a2-be53-115a5a6f6b38";
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/57238074-8bf6-4413-90d8-5bae3bb62cd4";
+      fsType = "btrfs";
+      options = [ "subvol=home" ];
+    };
+
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-uuid/57238074-8bf6-4413-90d8-5bae3bb62cd4";
+      fsType = "btrfs";
+      options = [ "subvol=nix" ];
+    };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/B3C2-FB78";
+    { device = "/dev/disk/by-uuid/5B15-B304";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/mapper/luks-fce2431b-8052-4449-a15b-16196a7ccf6a"; }
+    [ { device = "/dev/disk/by-uuid/5fdf7409-da31-49d4-b6f8-b5c571d1bdf3"; }
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
