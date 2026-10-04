@@ -14,6 +14,7 @@
     ./modules/proton.nix
     ./modules/obs.nix
     ./modules/cinnamon.nix
+    ./modules/tailscale.nix
   ];
 
   home = rec {

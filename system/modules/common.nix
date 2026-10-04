@@ -23,7 +23,10 @@
   services = {
     dbus.enable = true;
     fwupd.enable = true;
-    tailscale.enable = true;
+    tailscale = {
+      enable = true;
+      extraSetFlags = [ "--operator=dk" ];
+    };
     printing.enable = true;
   };
 
