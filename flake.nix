@@ -59,7 +59,8 @@
               };
             }
             inputs.hosts.nixosModule
-          ] ++ extraModules;
+          ]
+          ++ extraModules;
         };
     in
     {
